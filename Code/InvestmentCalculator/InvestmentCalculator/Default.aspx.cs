@@ -11,7 +11,9 @@ namespace InvestmentCalculator
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            for(int i=50; i <= 500; i += 50)
+            UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
+
+            for (int i=50; i <= 500; i += 50)
             {
                 ddlInvestment.Items.Add(i.ToString());
             }
@@ -37,6 +39,15 @@ namespace InvestmentCalculator
                 futureValue = (futureValue + monthlyInvestment) * (1 + monthlyInterestRate);
             }
             return futureValue;
+        }
+
+        protected void btnClear_Click(object sender, EventArgs e)
+        {
+            txtName.Text = "";
+            ddlInvestment.ClearSelection();
+            txtRate.Text = "";
+            txtYears.Text = "";
+            txtName.Focus();
         }
     }
 }

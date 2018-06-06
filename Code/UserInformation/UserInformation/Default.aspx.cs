@@ -11,74 +11,117 @@ namespace UserInformation
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (ddlProvence.Items.Count <= 0)
+            UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
+            if (isFirst.Value == "true")
             {
-                ddlProvence.Items.Add("Ontario");
-                ddlProvence.Items.Add("Quebec");
-                ddlProvence.Items.Add("Nova Scotia");
-                ddlProvence.Items.Add("New Brunswick");
-                ddlProvence.Items.Add("Manitoba");
-                ddlProvence.Items.Add("British Columbia");
-                ddlProvence.Items.Add("Prince Edward Island");
-                ddlProvence.Items.Add("Saskatchewan");
-                ddlProvence.Items.Add("Alberta");
-                ddlProvence.Items.Add("Newfoundland and Labrador");
+                isFirst.Value = "false";
+                txtBirthDate.Text = DateTime.Today.ToString("yyyy-MM-dd");
+                ddlProvence_SelectedIndexChanged(null, null);
             }
         }
 
         protected void ddlProvence_SelectedIndexChanged(object sender, EventArgs e)
         {
             ddlCity.Items.Clear();
-            switch (ddlProvence.SelectedIndex)
+            ddlCity.Items.Add(new ListItem("Select city!", "0"));
+            switch (ddlProvence.SelectedValue)
             {
-                case 0:
-                    ddlCity.Items.Add("Toronto");
+                case "Ontario":
+                    ddlCity.Items.Add(new ListItem("Toronto", "1"));
+
                     break;
-                case 1:
-                    ddlCity.Items.Add("Quebec city");
-                    ddlCity.Items.Add("Montreal");
+                case "Quebec":
+                    ddlCity.Items.Add(new ListItem("Quebec city", "1"));
+                    ddlCity.Items.Add(new ListItem("Montreal", "2"));
                     break;
-                case 2:
-                    ddlCity.Items.Add("Halifax");
+                case "Nova Scotia":
+                    ddlCity.Items.Add(new ListItem("Halifax", "1"));
                     break;
-                case 3:
-                    ddlCity.Items.Add("Fredericton");
-                    ddlCity.Items.Add("Moncton");
+                case "New Brunswick":
+                    ddlCity.Items.Add(new ListItem("Fredericton", "1"));
+                    ddlCity.Items.Add(new ListItem("Moncton", "2"));
                     break;
-                case 4:
-                    ddlCity.Items.Add("Winnipeg");
+                case "Manitoba":
+                    ddlCity.Items.Add(new ListItem("Winnipeg", "1"));
                     break;
-                case 5:
-                    ddlCity.Items.Add("Victoria");
-                    ddlCity.Items.Add("Vancouver");
+                case "British Columbia":
+                    ddlCity.Items.Add(new ListItem("Victoria", "1"));
+                    ddlCity.Items.Add(new ListItem("Vancouver", "2"));
                     break;
-                case 6:
-                    ddlCity.Items.Add("Charottetown");
+                case "Prince Edward Island":
+                    ddlCity.Items.Add(new ListItem("Charottetown", "1"));
                     break;
-                case 7:
-                    ddlCity.Items.Add("Regina");
-                    ddlCity.Items.Add("Saskatoon");
+                case "Saskatchewan":
+                    ddlCity.Items.Add(new ListItem("Regina", "1"));
+                    ddlCity.Items.Add(new ListItem("Saskatoon", "2"));
                     break;
-                case 8:
-                    ddlCity.Items.Add("Edmonton");
-                    ddlCity.Items.Add("Calgary");
+                case "Alberta":
+                    ddlCity.Items.Add(new ListItem("Edmonton", "1"));
+                    ddlCity.Items.Add(new ListItem("Calgary", "2"));
                     break;
-                case 9:
-                    ddlCity.Items.Add("St. Jonh's");
+                case "Newfoundland and Labrador":
+                    ddlCity.Items.Add(new ListItem("St. Jonh's", "1"));
                     break;
             }
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            lblInfo.Text = txtName.Text + " : " + txtBirthDate.Text + ", " + txtEmail.Text + ", " + ddlProvence.SelectedValue + ", " + ddlCity.SelectedValue;
-            lbUsers.Items.Add(lblInfo.Text);
+            Page.Validate();
+
+            if (Page.IsValid)
+            {
+                lblInfo.Text = txtName.Text + "|" +
+                    txtBirthDate.Text + "|" +
+                    txtEmail.Text + "|" +
+                    ddlProvence.SelectedValue + "|" +
+                    ddlCity.SelectedValue;
+                lbUsers.Items.Add(lblInfo.Text);
+
+                clearForm();
+
+                lblInfo.Text = "Submitted successfully! Number of record is " + updateCounter();
+            }
+
+        }
+
+        private void clearForm()
+        {
             txtName.Text = "";
             txtBirthDate.Text = "";
             txtEmail.Text = "";
+            ddlProvence.ClearSelection();
             ddlProvence.SelectedIndex = 0;
+            ddlProvence_SelectedIndexChanged(null, null);
+            txtBirthDate.Text = DateTime.Today.ToString("yyyy-MM-dd");
+            lblInfo.Text = "";
         }
 
+        private int updateCounter()
+        {
+            int value = int.Parse(hidVal.Value);
+            hidVal.Value = (++value).ToString();
+            return value;
+        }
 
+        protected void lbUsers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lblInfo.Text = lbUsers.SelectedValue;
+            String record = lbUsers.SelectedValue; ;
+            string[] words = record.Split('|');
+            txtName.Text = words[0];
+            txtBirthDate.Text = words[1];
+            txtEmail.Text = words[2];
+            //ddlProvence.Items.FindByValue(words[3]).Selected = true;
+            //ddlCity.Items.FindByValue(words[4]).Selected = true;
+            ddlProvence.SelectedValue = words[3];
+            ddlProvence_SelectedIndexChanged(null, null);
+            ddlCity.SelectedValue = words[4];
+        }
+
+        protected void btnClear_Click(object sender, EventArgs e)
+        {
+            clearForm();
+        }
     }
 }
