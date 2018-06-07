@@ -32,7 +32,7 @@
         <td class="auto-style5">
             <asp:TextBox ID="txbWidth" runat="server"></asp:TextBox>
             <br />
-            <asp:RequiredFieldValidator ID="rfvWidth" runat="server" ErrorMessage="Width is required" Font-Bold="True" ForeColor="Red">Width is required</asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="rfvWidth" runat="server" ErrorMessage="Width is required" Font-Bold="True" ForeColor="Red" ControlToValidate="txbWidth">Width is required</asp:RequiredFieldValidator>
             <br />
             <asp:RangeValidator ID="rvWidth" runat="server" ControlToValidate="txbWidth" ErrorMessage="Positive number only" Font-Bold="True" ForeColor="Red" MaximumValue="999999" MinimumValue="0" Type="Double">Positive number only</asp:RangeValidator>
         </td>
@@ -44,9 +44,9 @@
         <td class="auto-style5">
             <asp:TextBox ID="txbHeight" runat="server"></asp:TextBox>
             <br />
-            <asp:RequiredFieldValidator ID="rfvHeight" runat="server" ErrorMessage="Height is required" Font-Bold="True" ForeColor="Red">Height is required</asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="rfvHeight" runat="server" ErrorMessage="Height is required" Font-Bold="True" ForeColor="Red" ControlToValidate="txbHeight">Height is required</asp:RequiredFieldValidator>
             <br />
-            <asp:RangeValidator ID="rvHeight" runat="server" ControlToValidate="txbWidth" ErrorMessage="Positive number only" Font-Bold="True" ForeColor="Red" MaximumValue="999999" MinimumValue="0" Type="Double">Positive number only</asp:RangeValidator>
+            <asp:RangeValidator ID="rvHeight" runat="server" ControlToValidate="txbHeight" ErrorMessage="Positive number only" Font-Bold="True" ForeColor="Red" MaximumValue="999999" MinimumValue="0" Type="Double">Positive number only</asp:RangeValidator>
         </td>
     </tr>
     <tr>

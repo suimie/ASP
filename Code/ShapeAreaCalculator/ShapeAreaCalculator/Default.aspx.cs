@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShapeAreaCalculator.UserControls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,33 +12,47 @@ namespace ShapeAreaCalculator
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
         }
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            PlaceHolder1.Controls.Clear();
             switch (DropDownList1.SelectedValue)
             {
                 case "Square":
-                    /*
-                    UserControl squareCtrl =
-                        (UserControl)LoadControl("UserControls/Square.ascx.cs");
+                    Square squareCtrl =
+                        (Square)Page.LoadControl("~/UserControls/Square.ascx");
                     PlaceHolder1.Controls.Add(squareCtrl);
-                    */
-                    UserControl squareCtrl =
-                        (UserControl)LoadControl("UserControls/test.ascx.cs");
-                    PlaceHolder1.Controls.Add(squareCtrl);
+
                     break;
                 case "Rectangle":
+                    Rectangle rectangleCtrl =
+                        (Rectangle)Page.LoadControl("~/UserControls/Rectangle.ascx");
+                    PlaceHolder1.Controls.Add(rectangleCtrl);
                     break;
                 case "Triangle":
+                    Triangle triangelCtrl =
+                        (Triangle)Page.LoadControl("~/UserControls/Triangle.ascx");
+                    PlaceHolder1.Controls.Add(triangelCtrl);
                     break;
                 case "Circle":
+                    Circle circleCtrl =
+                        (Circle)Page.LoadControl("~/UserControls/Circle.ascx");
+                    PlaceHolder1.Controls.Add(circleCtrl);
                     break;
-                case "Ellipse":
-                    break;
-                case "Trapezoid":
-                    break;
+                /*
+            case "Ellipse":
+                Ellipse ellipseCtrl =
+                   (Ellipse)Page.LoadControl("~/UserControls/Ellipse.ascx");
+                PlaceHolder1.Controls.Add(ellipseCtrl);
+                break;
+            case "Trapezoid":
+                Trapezoid trapezoidCtrl =
+                    (Trapezoid)Page.LoadControl("~/UserControls/Trapezoid.ascx");
+                PlaceHolder1.Controls.Add(trapezoidCtrl);
+                break;
+                */
                 default:
                     break;
             }

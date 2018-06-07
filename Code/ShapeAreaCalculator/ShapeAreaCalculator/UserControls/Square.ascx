@@ -36,14 +36,14 @@
         <td class="auto-style7" colspan="2">
             <asp:TextBox ID="txbWidth" runat="server"></asp:TextBox>
             <br />
-            <asp:RequiredFieldValidator ID="rfvWidth" runat="server" ErrorMessage="Width is required" Font-Bold="True" ForeColor="Red">Width is required</asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="rfvWidth" runat="server" ErrorMessage="Width is required" Font-Bold="True" ForeColor="Red" ControlToValidate="txbWidth">Width is required</asp:RequiredFieldValidator>
             <br />
             <asp:RangeValidator ID="rvWidth" runat="server" ControlToValidate="txbWidth" ErrorMessage="Positive number only" Font-Bold="True" ForeColor="Red" MaximumValue="999999" MinimumValue="0" Type="Double">Positive number only</asp:RangeValidator>
         </td>
     </tr>
     <tr>
         <td class="auto-style7" colspan="2">
-            <asp:Button ID="btnCalculate" runat="server" OnClick="btnCalculate_Click" Text="Calculate Area" />
+            <asp:Button ID="btnCalculateS" runat="server" OnClick="btnCalculateS_Click" Text="Calculate Area" />
         </td>
     </tr>
     <tr>

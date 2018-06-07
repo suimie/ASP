@@ -77,6 +77,13 @@
   <ItemGroup>
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Images\circle.png" />
+    <Content Include="Images\ellapse.png" />
+    <Content Include="Images\geometry.png" />
+    <Content Include="Images\rectangle.png" />
+    <Content Include="Images\square.png" />
+    <Content Include="Images\trapezoid.png" />
+    <Content Include="Images\triangle.png" />
     <Content Include="UserControls\Circle.ascx" />
     <Content Include="UserControls\Images\circle.png" />
     <Content Include="UserControls\Images\ellapse.png" />
@@ -89,7 +96,6 @@
     <Content Include="UserControls\Images\triangle.png" />
     <Content Include="UserControls\Rectangle.ascx" />
     <Content Include="UserControls\Square.ascx" />
-    <Content Include="UserControls\test.ascx" />
     <Content Include="UserControls\Triangle.ascx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -139,13 +145,6 @@
     </Compile>
     <Compile Include="UserControls\Square.ascx.designer.cs">
       <DependentUpon>Square.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\test.ascx.cs">
-      <DependentUpon>test.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UserControls\test.ascx.designer.cs">
-      <DependentUpon>test.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Triangle.ascx.cs">
       <DependentUpon>Triangle.ascx</DependentUpon>

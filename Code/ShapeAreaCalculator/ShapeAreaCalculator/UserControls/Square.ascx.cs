@@ -14,11 +14,13 @@ namespace ShapeAreaCalculator.UserControls
 
         }
 
-        protected void btnCalculate_Click(object sender, EventArgs e)
+        protected void btnCalculateS_Click(object sender, EventArgs e)
         {
             double width = double.Parse(txbWidth.Text);
             double area = width * width;
             lblArea.Text = area.ToString();
         }
+
+
     }
 }

@@ -35,9 +35,10 @@
         </td>
         <td class="auto-style7" colspan="2">
             <asp:TextBox ID="txbRadius" runat="server"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="rfvRadius" runat="server" ErrorMessage="Radius is required" Font-Bold="True" ForeColor="Red">Radius is required</asp:RequiredFieldValidator>
             <br />
-            <asp:RangeValidator ID="rvRadius" runat="server" ControlToValidate="txbWidth" ErrorMessage="Positive number only" Font-Bold="True" ForeColor="Red" MaximumValue="999999" MinimumValue="0" Type="Double">Positive number only</asp:RangeValidator>
+            <asp:RequiredFieldValidator ID="rfvRadius" runat="server" ErrorMessage="Radius is required" Font-Bold="True" ForeColor="Red" ControlToValidate="txbRadius">Radius is required</asp:RequiredFieldValidator>
+            <br />
+            <asp:RangeValidator ID="rvRadius" runat="server" ControlToValidate="txbRadius" ErrorMessage="Positive number only" Font-Bold="True" ForeColor="Red" MaximumValue="999999" MinimumValue="0" Type="Double">Positive number only</asp:RangeValidator>
         </td>
     </tr>
     <tr>

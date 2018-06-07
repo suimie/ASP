@@ -32,9 +32,9 @@
         <td class="auto-style5">
             <asp:TextBox ID="txbBase" runat="server"></asp:TextBox>
             <br />
-            <asp:RequiredFieldValidator ID="rfvBase" runat="server" ErrorMessage="Base is required" Font-Bold="True" ForeColor="Red">Base is required</asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="rfvBase" runat="server" ErrorMessage="Base is required" Font-Bold="True" ForeColor="Red" ControlToValidate="txbBase">Base is required</asp:RequiredFieldValidator>
             <br />
-            <asp:RangeValidator ID="rvBase" runat="server" ControlToValidate="txbWidth" ErrorMessage="Positive number only" Font-Bold="True" ForeColor="Red" MaximumValue="999999" MinimumValue="0" Type="Double">Positive number only</asp:RangeValidator>
+            <asp:RangeValidator ID="rvBase" runat="server" ControlToValidate="txbBase" ErrorMessage="Positive number only" Font-Bold="True" ForeColor="Red" MaximumValue="999999" MinimumValue="0" Type="Double">Positive number only</asp:RangeValidator>
         </td>
     </tr>
     <tr>
@@ -44,9 +44,9 @@
         <td class="auto-style5">
             <asp:TextBox ID="txbHeight" runat="server"></asp:TextBox>
             <br />
-            <asp:RequiredFieldValidator ID="rfvHeight" runat="server" ErrorMessage="Height is required" Font-Bold="True" ForeColor="Red">Height is required</asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="rfvHeight" runat="server" ErrorMessage="Height is required" Font-Bold="True" ForeColor="Red" ControlToValidate="txbHeight">Height is required</asp:RequiredFieldValidator>
             <br />
-            <asp:RangeValidator ID="rvHeight" runat="server" ControlToValidate="txbWidth" ErrorMessage="Positive number only" Font-Bold="True" ForeColor="Red" MaximumValue="999999" MinimumValue="0" Type="Double">Positive number only</asp:RangeValidator>
+            <asp:RangeValidator ID="rvHeight" runat="server" ControlToValidate="txbHeight" ErrorMessage="Positive number only" Font-Bold="True" ForeColor="Red" MaximumValue="999999" MinimumValue="0" Type="Double">Positive number only</asp:RangeValidator>
         </td>
     </tr>
     <tr>
