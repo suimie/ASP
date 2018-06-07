@@ -13,18 +13,25 @@ namespace ShapeAreaCalculator
         protected void Page_Load(object sender, EventArgs e)
         {
             UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
+            LoadControl();
         }
 
+        
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            PlaceHolder1.Controls.Clear();
+
+        }
+        
+
+
+        private void LoadControl()
+        {
             switch (DropDownList1.SelectedValue)
             {
                 case "Square":
                     Square squareCtrl =
                         (Square)Page.LoadControl("~/UserControls/Square.ascx");
                     PlaceHolder1.Controls.Add(squareCtrl);
-
                     break;
                 case "Rectangle":
                     Rectangle rectangleCtrl =
@@ -42,21 +49,21 @@ namespace ShapeAreaCalculator
                     PlaceHolder1.Controls.Add(circleCtrl);
                     break;
                 /*
-            case "Ellipse":
-                Ellipse ellipseCtrl =
-                   (Ellipse)Page.LoadControl("~/UserControls/Ellipse.ascx");
-                PlaceHolder1.Controls.Add(ellipseCtrl);
-                break;
-            case "Trapezoid":
-                Trapezoid trapezoidCtrl =
-                    (Trapezoid)Page.LoadControl("~/UserControls/Trapezoid.ascx");
-                PlaceHolder1.Controls.Add(trapezoidCtrl);
-                break;
-                */
+                case "Ellipse":
+                    Ellipse ellipseCtrl =
+                       (Ellipse)Page.LoadControl("~/UserControls/Ellipse.ascx");
+                    PlaceHolder1.Controls.Add(ellipseCtrl);
+                    break;
+                case "Trapezoid":
+                    Trapezoid trapezoidCtrl =
+                        (Trapezoid)Page.LoadControl("~/UserControls/Trapezoid.ascx");
+                    PlaceHolder1.Controls.Add(trapezoidCtrl);
+                    break;
+                    */
                 default:
                     break;
             }
-
         }
+
     }
 }

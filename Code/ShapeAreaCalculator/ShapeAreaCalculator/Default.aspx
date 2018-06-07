@@ -38,15 +38,18 @@
                         <asp:ListItem>Select Shape</asp:ListItem>
                         <asp:ListItem>Square</asp:ListItem>
                         <asp:ListItem>Rectangle</asp:ListItem>
-                        <asp:ListItem>Triangel</asp:ListItem>
+                        <asp:ListItem>Triangle</asp:ListItem>
                         <asp:ListItem>Circle</asp:ListItem>
                         <asp:ListItem>Ellipse</asp:ListItem>
                         <asp:ListItem>Trapezoid</asp:ListItem>
                     </asp:DropDownList>
+                    <br />
                 </td>
             </tr>
             <tr>
                 <td colspan="2">
+                    <br />
+                    <br />
                     <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
                     <br />
                     <br />
