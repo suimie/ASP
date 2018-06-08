@@ -19,11 +19,12 @@ namespace CheckoutPage
             UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
             if (ckbSameAddress.Checked)
             {
-                // Clear textbox in shipping address part
-                tbShippingAddress.Text = "";
-                tbShippingCity.Text = "";
-                tbShippingState.Text = "";
-                tbShippingZip.Text = "";
+                // put information in billing address part in textbox in shipping address part
+                tbShippingAddress.Text = tbAddress.Text;
+                tbShippingCity.Text = tbCity.Text;
+                tbShippingState.Text = tbState.Text;
+                tbShippingZip.Text = tbZip.Text;
+
 
                 // disable every textbox in shipping address part
                 shippingAddress.Disabled = true;
@@ -35,11 +36,12 @@ namespace CheckoutPage
             }
             else
             {
-                // put information in billing address part in textbox in shipping address part
-                tbShippingAddress.Text = tbAddress.Text;
-                tbShippingCity.Text = tbCity.Text;
-                tbShippingState.Text = tbState.Text;
-                tbShippingZip.Text = tbZip.Text;
+                // Clear textbox in shipping address part
+                tbShippingAddress.Text = "";
+                tbShippingCity.Text = "";
+                tbShippingState.Text = "";
+                tbShippingZip.Text = "";
+
 
                 shippingAddress.Disabled = false;
 
