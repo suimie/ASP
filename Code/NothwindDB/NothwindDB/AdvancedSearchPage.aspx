@@ -22,7 +22,7 @@
                     <td>
                         <asp:DropDownList ID="ddlSearchField" runat="server" DataSourceID="SQLdsFields" DataTextField="COLUMN_NAME" DataValueField="COLUMN_NAME">
                         </asp:DropDownList>
-                        <asp:SqlDataSource ID="SQLdsFields" runat="server" ConnectionString="<%$ ConnectionStrings:NORTHWNDConnectionString %>" SelectCommand="SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.columns WHERE table_name='Customers'"></asp:SqlDataSource>
+                        <asp:SqlDataSource ID="SQLdsFields" runat="server" ConnectionString="<%$ ConnectionStrings:NothwindDB %>" SelectCommand="select column_name from INFORMATION_SCHEMA.COLUMNS WHERE table_name='Customers';"></asp:SqlDataSource>
                     </td>
                 </tr>
                 <tr>
@@ -66,7 +66,7 @@
             <SortedDescendingCellStyle BackColor="#D6DFDF" />
             <SortedDescendingHeaderStyle BackColor="#002876" />
         </asp:GridView>
-        <asp:SqlDataSource ID="SQLdsCustomerDetail" runat="server" ConnectionString="<%$ ConnectionStrings:NORTHWNDConnectionString %>" SelectCommand="SELECT * FROM [Customers] WHERE ([CustomerID] = @CustomerID)">
+        <asp:SqlDataSource ID="SQLdsCustomerDetail" runat="server" ConnectionString="<%$ ConnectionStrings:NothwindDB %>" SelectCommand="SELECT * FROM [Customers] WHERE ([CustomerID] = @CustomerID)">
             <SelectParameters>
                 <asp:ControlParameter ControlID="tbSearchKey" DefaultValue="null" Name="CustomerID" PropertyName="Text" Type="String" />
             </SelectParameters>
@@ -102,7 +102,7 @@
             <SortedDescendingCellStyle BackColor="#D6DFDF" />
             <SortedDescendingHeaderStyle BackColor="#002876" />
         </asp:GridView>
-        <asp:SqlDataSource ID="SQLdsOrders" runat="server" ConnectionString="<%$ ConnectionStrings:NORTHWNDConnectionString %>" SelectCommand="SELECT * FROM [Orders] WHERE ([CustomerID] = @CustomerID)">
+        <asp:SqlDataSource ID="SQLdsOrders" runat="server" ConnectionString="<%$ ConnectionStrings:NothwindDB %>" SelectCommand="SELECT * FROM [Orders] WHERE ([CustomerID] = @CustomerID)">
             <SelectParameters>
                 <asp:ControlParameter ControlID="GridView1" DefaultValue="null" Name="CustomerID" PropertyName="SelectedValue" Type="String" />
             </SelectParameters>

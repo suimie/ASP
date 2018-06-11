@@ -1,0 +1,22 @@
+﻿h1 {
+    margin: 30px 0px 20px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20pt;
+    font-weight: bold;
+    color: #775533;
+}
+
+#layoutTable td {
+    border: 1px dotted #BBBBBB;
+    padding: 10px;
+}
+
+#cblFood td, #rblPayment td {
+    border: none;
+    padding: 0;
+}
+
+#submitButtonCell {
+    text-align: center;
+    text-align: center;
+}

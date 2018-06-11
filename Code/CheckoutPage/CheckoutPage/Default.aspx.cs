@@ -12,6 +12,7 @@ namespace CheckoutPage
         protected void Page_Init(object sender, EventArgs e)
         {
             summary.Visible = false;
+            tbEmail.Focus();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -20,36 +21,56 @@ namespace CheckoutPage
             if (ckbSameAddress.Checked)
             {
                 // put information in billing address part in textbox in shipping address part
-                tbShippingAddress.Text = tbAddress.Text;
-                tbShippingCity.Text = tbCity.Text;
-                tbShippingState.Text = tbState.Text;
-                tbShippingZip.Text = tbZip.Text;
-
+                /*
+                tbShipAddress.Text = tbAddress.Text;
+                tbShipCity.Text = tbCity.Text;
+                ddlShipProvince.SelectedValue = ddlProvence.SelectedValue;
+                tbShipPostal.Text = tbPostal.Text;
+                */
+                tbShipAddress.Text = "";
+                tbShipCity.Text = "";
+                ddlShipProvince.SelectedIndex = 0;
+                tbShipPostal.Text = "";
 
                 // disable every textbox in shipping address part
-                shippingAddress.Disabled = true;
+                //shipAddress.Disabled = true;
 
-                tbShippingAddress.Enabled = false;
-                tbShippingCity.Enabled = false;
-                tbShippingState.Enabled = false;
-                tbShippingZip.Enabled = false;
+                tbShipAddress.Enabled = false;
+                tbShipCity.Enabled = false;
+                ddlShipProvince.Enabled = false;
+                tbShipPostal.Enabled = false;
+
+                rfvShipAddress.Enabled = false;
+                rfvShipCity.Enabled = false;
+                rfvShipProvince.Enabled = false;
+                cvShipPostal.Enabled = false;
+
+                isCheckBoxClick.Value = "true";
             }
-            else
+            else if (isCheckBoxClick.Value == "true")
             {
                 // Clear textbox in shipping address part
-                tbShippingAddress.Text = "";
-                tbShippingCity.Text = "";
-                tbShippingState.Text = "";
-                tbShippingZip.Text = "";
+                tbShipAddress.Text = "";
+                tbShipCity.Text = "";
+                ddlShipProvince.SelectedIndex = 0;
+                tbShipPostal.Text = "";
 
 
-                shippingAddress.Disabled = false;
+                //shipAddress.Disabled = false;
 
                 // enable every textbox in shipping address part
-                tbShippingAddress.Enabled = true;
-                tbShippingCity.Enabled = true;
-                tbShippingState.Enabled = true;
-                tbShippingZip.Enabled = true;
+                tbShipAddress.Enabled = true;
+                tbShipCity.Enabled = true;
+                ddlShipProvince.Enabled = true;
+                tbShipPostal.Enabled = true;
+
+                rfvShipAddress.Enabled = true;
+                rfvShipCity.Enabled = true;
+                rfvShipProvince.Enabled = true;
+                cvShipPostal.Enabled = true;
+
+
+                isCheckBoxClick.Value = "false";
             }
         }
 
@@ -57,6 +78,14 @@ namespace CheckoutPage
 
         protected void btCheckOut_Click(object sender, EventArgs e)
         {
+            Page.Validate();
+
+            if (!Page.IsValid)
+            {
+                summary.Visible = false;
+                return;
+            }
+
             summary.Visible = true;
 
             string email = tbEmail.Text;
@@ -77,10 +106,10 @@ namespace CheckoutPage
             string billCity = tbCity.Text;
             lblSumBillCity.Text = billCity;
 
-            string billState = tbState.Text;
+            string billState = ddlProvence.SelectedValue.ToString();
             lblSumBillState.Text = billState;
 
-            string billZip = tbZip.Text;
+            string billZip = tbPostal.Text;
             lblSumBillZip.Text = billZip;
 
             // depending on selection of checkbox
@@ -96,19 +125,22 @@ namespace CheckoutPage
                 divDiff.Visible = true;
 
 
-                string shipAddr = tbShippingAddress.Text;
+                string shipAddr = tbShipAddress.Text;
                 lblSumShipAddress.Text = shipAddr;
 
-                string shipCity = tbShippingCity.Text;
+                string shipCity = tbShipCity.Text;
                 lblSumShipCity.Text = shipCity;
 
-                string shipState = tbShippingState.Text;
+                string shipState = ddlShipProvince.SelectedValue.ToString();
                 lblSumShipState.Text = shipState;
 
-                string shipZip = tbShippingZip.Text;
+                string shipZip = tbShipPostal.Text;
                 lblSumShipZip.Text = shipZip;
 
             }
+
+            summary.Focus();
         }
+
     }
 }

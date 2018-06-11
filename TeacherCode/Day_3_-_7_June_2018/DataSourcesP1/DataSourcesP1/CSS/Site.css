@@ -1,0 +1,9 @@
+﻿body {
+}
+
+#blURLs li {
+    display: inline;
+    padding: 15px;
+    border: 1px #808080 solid;
+    background-color: #f9fbe0;
+}

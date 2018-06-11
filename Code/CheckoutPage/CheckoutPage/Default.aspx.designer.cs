@@ -22,6 +22,15 @@ namespace CheckoutPage {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// ValidationSummary1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
+        
+        /// <summary>
         /// tbEmail control.
         /// </summary>
         /// <remarks>
@@ -31,13 +40,13 @@ namespace CheckoutPage {
         protected global::System.Web.UI.WebControls.TextBox tbEmail;
         
         /// <summary>
-        /// revEmail control.
+        /// cvEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator revEmail;
+        protected global::System.Web.UI.WebControls.CustomValidator cvEmail;
         
         /// <summary>
         /// tbEmailReEntry control.
@@ -49,13 +58,13 @@ namespace CheckoutPage {
         protected global::System.Web.UI.WebControls.TextBox tbEmailReEntry;
         
         /// <summary>
-        /// cvReEmail control.
+        /// CustomValidator1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CompareValidator cvReEmail;
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator1;
         
         /// <summary>
         /// tbFirstName control.
@@ -67,6 +76,15 @@ namespace CheckoutPage {
         protected global::System.Web.UI.WebControls.TextBox tbFirstName;
         
         /// <summary>
+        /// cvFirstName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator cvFirstName;
+        
+        /// <summary>
         /// tbLastName control.
         /// </summary>
         /// <remarks>
@@ -74,6 +92,15 @@ namespace CheckoutPage {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbLastName;
+        
+        /// <summary>
+        /// cvLastName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator cvLastName;
         
         /// <summary>
         /// tbPhone control.
@@ -85,13 +112,13 @@ namespace CheckoutPage {
         protected global::System.Web.UI.WebControls.TextBox tbPhone;
         
         /// <summary>
-        /// RegularExpressionValidator1 control.
+        /// cvPhone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
+        protected global::System.Web.UI.WebControls.CustomValidator cvPhone;
         
         /// <summary>
         /// tbAddress control.
@@ -103,6 +130,15 @@ namespace CheckoutPage {
         protected global::System.Web.UI.WebControls.TextBox tbAddress;
         
         /// <summary>
+        /// rfvAddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvAddress;
+        
+        /// <summary>
         /// tbCity control.
         /// </summary>
         /// <remarks>
@@ -112,22 +148,58 @@ namespace CheckoutPage {
         protected global::System.Web.UI.WebControls.TextBox tbCity;
         
         /// <summary>
-        /// tbState control.
+        /// rfvCity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbState;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCity;
         
         /// <summary>
-        /// tbZip control.
+        /// ddlProvence control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbZip;
+        protected global::System.Web.UI.WebControls.DropDownList ddlProvence;
+        
+        /// <summary>
+        /// rfvProvence control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvProvence;
+        
+        /// <summary>
+        /// tbPostal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbPostal;
+        
+        /// <summary>
+        /// cvPostal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator cvPostal;
+        
+        /// <summary>
+        /// isCheckBoxClick control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputHidden isCheckBoxClick;
         
         /// <summary>
         /// ckbSameAddress control.
@@ -148,49 +220,76 @@ namespace CheckoutPage {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// shippingAddress control.
+        /// tbShipAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl shippingAddress;
+        protected global::System.Web.UI.WebControls.TextBox tbShipAddress;
         
         /// <summary>
-        /// tbShippingAddress control.
+        /// rfvShipAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbShippingAddress;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvShipAddress;
         
         /// <summary>
-        /// tbShippingCity control.
+        /// tbShipCity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbShippingCity;
+        protected global::System.Web.UI.WebControls.TextBox tbShipCity;
         
         /// <summary>
-        /// tbShippingState control.
+        /// rfvShipCity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbShippingState;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvShipCity;
         
         /// <summary>
-        /// tbShippingZip control.
+        /// ddlShipProvince control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbShippingZip;
+        protected global::System.Web.UI.WebControls.DropDownList ddlShipProvince;
+        
+        /// <summary>
+        /// rfvShipProvince control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvShipProvince;
+        
+        /// <summary>
+        /// tbShipPostal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbShipPostal;
+        
+        /// <summary>
+        /// cvShipPostal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator cvShipPostal;
         
         /// <summary>
         /// btCheckOut control.
