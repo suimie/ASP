@@ -29,26 +29,35 @@ namespace ADONET_Demo
                 {
                     int customerShipper = ddlCustomerShipper.SelectedIndex;
                     int id = int.Parse(txbOrderID.Text);
+                    string customerId = "";
+                    int shipperId = 1;
 
                     
                     getOrderDetail(id);
 
-                    string sqlQuery;
+
+                    for (int i = 0; i < dvDetail.Rows.Count; i++)
+                    {
+                        if (String.Equals(dvDetail.Rows[i].Cells[0].Text, "customerid", StringComparison.OrdinalIgnoreCase))
+                            customerId = dvDetail.Rows[i].Cells[1].Text;
+                        if (String.Equals(dvDetail.Rows[i].Cells[0].Text, "shipvia", StringComparison.OrdinalIgnoreCase))
+                            shipperId = int.Parse(dvDetail.Rows[i].Cells[1].Text);
+                    }
+
+                    string sqlQuery = "";
 
                     switch (customerShipper)
                     {
                         case 0:
                             lblTitle2.Text = "Customer's Detail";
-                            sqlQuery = "SELECT * FROM customers WHERE customerid=(SELECT customerId FROM orders WHERE orderid=" + id + ")";
-                            //sqlQuery = "SELECT * FROM customers WHERE customerid='" + dvDetail. + "'";
+                            //sqlQuery = "SELECT * FROM customers WHERE customerid=(SELECT customerId FROM orders WHERE orderid=" + id + ")";
+                            sqlQuery = "SELECT * FROM customers WHERE customerid='" + customerId + "'";
+                            
                             break;
                         case 1:
                             lblTitle2.Text = "Shipper's Detail";
-                            sqlQuery = "SELECT * FROM shippers WHERE shipperid=(SELECT shipvia FROM orders WHERE orderid=" + id + ")";
-                            //sqlQuery = "SELECT * FROM shippers WHERE shipperid=" + idStr;
-                            break;
-                        default:
-                            sqlQuery = "";
+                            //sqlQuery = "SELECT * FROM shippers WHERE shipperid=(SELECT shipvia FROM orders WHERE orderid=" + id + ")";
+                            sqlQuery = "SELECT * FROM shippers WHERE shipperid=" + shipperId;
                             break;
                     }
 
@@ -80,7 +89,7 @@ namespace ADONET_Demo
                 }
                 catch (Exception er)
                 {
-                    lblTitle2.Text = "ERROR";
+                    lblTitle2.Text = "ERROR : " + er.Message;
                 }
 
             }
@@ -103,11 +112,15 @@ namespace ADONET_Demo
                     dvDetail.DataSource = reader;
                     dvDetail.DataBind();
 
-                    reader.Read();
+                    /*
+                    if (reader.Read()) { 
+                        lblTitle2.Text = reader["CustomerId"] + " - " + reader["ShipVia"];
+                    }
+                    */
                 }
                 catch (Exception er)
                 {
-                    lblTitle2.Text = "ERROR";
+                    lblTitle2.Text = "ERROR : " + er.Message;
                 }
 
             }

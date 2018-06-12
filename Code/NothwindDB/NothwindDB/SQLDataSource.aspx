@@ -22,23 +22,12 @@
             <asp:DropDownList ID="ddlCountries" runat="server" AutoPostBack="True" DataSourceID="SQLdsCountries" DataTextField="Country" DataValueField="Country" AppendDataBoundItems="True">
                 <asp:ListItem Text="Please select a country" Value="" />
             </asp:DropDownList>
-            <asp:SqlDataSource ID="SQLdsCountries" runat="server" ConnectionString="<%$ ConnectionStrings:NORTHWND %>" SelectCommand="SELECT DISTINCT [Country] FROM [Customers] ORDER BY [Country]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SQLdsCountries" runat="server" ConnectionString="<%$ ConnectionStrings:NORTHWNDConnectionString %>" SelectCommand="SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.columns WHERE table_name='Customers'"></asp:SqlDataSource>
             <br />
             <br />
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="CustomerID" DataSourceID="SQLdsCustomers" AllowPaging="True" AllowSorting="True">
                 <Columns>
-                    <asp:CommandField ShowSelectButton="True" />
                     <asp:BoundField DataField="CustomerID" HeaderText="CustomerID" SortExpression="CustomerID" ReadOnly="True" />
-                    <asp:BoundField DataField="CompanyName" HeaderText="CompanyName" SortExpression="CompanyName" />
-                    <asp:BoundField DataField="ContactName" HeaderText="ContactName" SortExpression="ContactName" />
-                    <asp:BoundField DataField="ContactTitle" HeaderText="ContactTitle" SortExpression="ContactTitle" />
-                    <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
-                    <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
-                    <asp:BoundField DataField="Region" HeaderText="Region" SortExpression="Region" />
-                    <asp:BoundField DataField="PostalCode" HeaderText="PostalCode" SortExpression="PostalCode" />
-                    <asp:BoundField DataField="Country" HeaderText="Country" SortExpression="Country" />
-                    <asp:BoundField DataField="Phone" HeaderText="Phone" SortExpression="Phone" />
-                    <asp:BoundField DataField="Fax" HeaderText="Fax" SortExpression="Fax" />
                 </Columns>
                 <FooterStyle BackColor="#FFFFCC" ForeColor="#330099" />
                 <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="#FFFFCC" />
@@ -50,9 +39,9 @@
                 <SortedDescendingCellStyle BackColor="#F6F0C0" />
                 <SortedDescendingHeaderStyle BackColor="#7E0000" />
             </asp:GridView>
-            <asp:SqlDataSource ID="SQLdsCustomers" runat="server" ConnectionString="<%$ ConnectionStrings:NORTHWND %>" SelectCommand="SELECT * FROM [Customers] WHERE ([Country] = @Country) ORDER BY [ContactName]">
+            <asp:SqlDataSource ID="SQLdsCustomers" runat="server" ConnectionString="<%$ ConnectionStrings:NORTHWNDConnectionString %>" SelectCommand="SELECT [CustomerID] FROM [Customers] WHERE ([CustomerID] = @CustomerID)">
                 <SelectParameters>
-                    <asp:ControlParameter ControlID="ddlCountries" DefaultValue="null" Name="Country" PropertyName="SelectedValue" Type="String" />
+                    <asp:ControlParameter ControlID="ddlCountries" DefaultValue="null" Name="CustomerID" PropertyName="SelectedValue" Type="String" />
                 </SelectParameters>
             </asp:SqlDataSource>
             <br />
