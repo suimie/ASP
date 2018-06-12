@@ -40,12 +40,12 @@ namespace ADONET_Demo
                         case 0:
                             lblTitle2.Text = "Customer's Detail";
                             sqlQuery = "SELECT * FROM customers WHERE customerid=(SELECT customerId FROM orders WHERE orderid=" + id + ")";
-
+                            //sqlQuery = "SELECT * FROM customers WHERE customerid='" + dvDetail. + "'";
                             break;
                         case 1:
                             lblTitle2.Text = "Shipper's Detail";
                             sqlQuery = "SELECT * FROM shippers WHERE shipperid=(SELECT shipvia FROM orders WHERE orderid=" + id + ")";
-
+                            //sqlQuery = "SELECT * FROM shippers WHERE shipperid=" + idStr;
                             break;
                         default:
                             sqlQuery = "";
@@ -100,15 +100,10 @@ namespace ADONET_Demo
                     con.Open();
 
                     reader = cmd.ExecuteReader();
+                    dvDetail.DataSource = reader;
+                    dvDetail.DataBind();
 
-                    if (reader.Read()) { 
-                        dvDetail.DataSource = reader;
-                        dvDetail.DataBind();
-                    }
-                    else
-                    {
-                        dvDetail.DataSource = null;
-                    }
+                    reader.Read();
                 }
                 catch (Exception er)
                 {
