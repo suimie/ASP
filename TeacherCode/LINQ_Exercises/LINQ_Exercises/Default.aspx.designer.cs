@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Ojbect05 {
+namespace LINQ_Exercises {
     
     
-    public partial class OrderSearch {
+    public partial class Default {
         
         /// <summary>
         /// form1 control.
@@ -22,57 +22,39 @@ namespace Ojbect05 {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// CalendarOrderDate control.
+        /// ddlLists control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar CalendarOrderDate;
+        protected global::System.Web.UI.WebControls.DropDownList ddlLists;
         
         /// <summary>
-        /// lblDate control.
+        /// gvDisplay control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDate;
+        protected global::System.Web.UI.WebControls.GridView gvDisplay;
         
         /// <summary>
-        /// gvOrdersByDate control.
+        /// ListBox1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvOrdersByDate;
+        protected global::System.Web.UI.WebControls.ListBox ListBox1;
         
         /// <summary>
-        /// ODSOrders control.
+        /// result control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ObjectDataSource ODSOrders;
-        
-        /// <summary>
-        /// gvOrdersByCustomer control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvOrdersByCustomer;
-        
-        /// <summary>
-        /// ODSOrdersByCustomer control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ObjectDataSource ODSOrdersByCustomer;
+        protected global::System.Web.UI.WebControls.TextBox result;
     }
 }

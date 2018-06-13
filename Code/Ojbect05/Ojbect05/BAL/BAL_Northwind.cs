@@ -53,8 +53,8 @@ namespace Ojbect05.BAL
             }
         }
 
-        /* get orders list */
-        public List<Order> getOrders(DateTime orderDate)
+        /* get orders list by order date*/
+        public List<Order> getOrdersByDate(DateTime orderDate)
         {
             using (var context = new NorthWindDataContext())
             {
@@ -66,7 +66,17 @@ namespace Ojbect05.BAL
             }
         }
 
-        /* get order */
-        public Order getOrder(D)
+        /* get orders list by customerID */
+        public List<Order> getOrdersByCustomer(string customerID)
+        {
+            using (var context = new NorthWindDataContext())
+            {
+                List<Order> ordersList = (from data in context.Orders
+                                          where data.CustomerID == customerID
+                                          select data).ToList();
+
+                return ordersList;
+            }
+        }
     }
 }

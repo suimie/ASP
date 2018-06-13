@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Ojbect05 {
+namespace NorthwindDB {
     
     
-    public partial class OrderSearch {
+    public partial class SQLDataSource {
         
         /// <summary>
         /// form1 control.
@@ -22,57 +22,57 @@ namespace Ojbect05 {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// CalendarOrderDate control.
+        /// ddlCountries control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar CalendarOrderDate;
+        protected global::System.Web.UI.WebControls.DropDownList ddlCountries;
         
         /// <summary>
-        /// lblDate control.
+        /// SQLdsCountries control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDate;
+        protected global::System.Web.UI.WebControls.SqlDataSource SQLdsCountries;
         
         /// <summary>
-        /// gvOrdersByDate control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvOrdersByDate;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
-        /// ODSOrders control.
+        /// SQLdsCustomersByCountry control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ObjectDataSource ODSOrders;
+        protected global::System.Web.UI.WebControls.SqlDataSource SQLdsCustomersByCountry;
         
         /// <summary>
-        /// gvOrdersByCustomer control.
+        /// DetailsView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvOrdersByCustomer;
+        protected global::System.Web.UI.WebControls.DetailsView DetailsView1;
         
         /// <summary>
-        /// ODSOrdersByCustomer control.
+        /// SQLdsCustomer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ObjectDataSource ODSOrdersByCustomer;
+        protected global::System.Web.UI.WebControls.SqlDataSource SQLdsCustomer;
     }
 }

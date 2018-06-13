@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="OrderSearch.aspx.cs" Inherits="Ojbect05.OrderSearch" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="OrderSearch.aspx.cs" Inherits="ObjectDS.OrderSearch" %>
 
 <!DOCTYPE html>
 
@@ -15,23 +15,43 @@
     <form id="form1" runat="server">
         <div>
             <h1>Order Search</h1>
+            <strong>
+            <br class="auto-style1" />
+            <br class="auto-style1" />
+            </strong><span class="auto-style1"><strong>Select order date</strong></span><br />
+            <asp:Calendar ID="Calendar1" runat="server" SelectedDate="1996-07-19" VisibleDate="1996-07-19"></asp:Calendar>
             <br />
             <br />
-            <span class="auto-style1"><strong>Select Order Date</strong></span><br />
-            <asp:Calendar ID="CalendarOrderDate" runat="server" SelectedDate="1996-07-01" BackColor="White" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="190px" NextPrevFormat="FullMonth" VisibleDate="1996-01-01" Width="350px">
-                <DayHeaderStyle Font-Bold="True" Font-Size="8pt" />
-                <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" VerticalAlign="Bottom" />
-                <OtherMonthDayStyle ForeColor="#999999" />
-                <SelectedDayStyle BackColor="#333399" ForeColor="White" />
-                <TitleStyle BackColor="White" BorderColor="Black" BorderWidth="4px" Font-Bold="True" Font-Size="12pt" ForeColor="#333399" />
-                <TodayDayStyle BackColor="#CCCCCC" />
-            </asp:Calendar>
-            <br />
-            <span class="auto-style1"><strong>Orders List </strong></span>
-            <br />
-            <asp:Label ID="lblDate" runat="server" Font-Underline="True" ForeColor="#000066"></asp:Label>
-            <br />
-            <asp:GridView ID="gvOrdersByDate" runat="server" AutoGenerateColumns="False" DataSourceID="ODSOrders" DataKeyNames="OrderDate">
+            <span class="auto-style1"><strong>Orders List</strong></span><br />
+            <asp:GridView ID="gvOrderList" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataSourceID="ODSOrdersByOrderDate" DataKeyNames="CustomerID">
+                <Columns>
+                    <asp:CommandField ShowSelectButton="True" />
+                    <asp:BoundField DataField="OrderID" HeaderText="OrderID" SortExpression="OrderID" />
+                    <asp:BoundField DataField="CustomerID" HeaderText="CustomerID" SortExpression="CustomerID" />
+                    <asp:BoundField DataField="EmployeeID" HeaderText="EmployeeID" SortExpression="EmployeeID" />
+                    <asp:BoundField DataField="OrderDate" HeaderText="OrderDate" SortExpression="OrderDate" />
+                    <asp:BoundField DataField="RequiredDate" HeaderText="RequiredDate" SortExpression="RequiredDate" />
+                    <asp:BoundField DataField="ShippedDate" HeaderText="ShippedDate" SortExpression="ShippedDate" />
+                    <asp:BoundField DataField="ShipVia" HeaderText="ShipVia" SortExpression="ShipVia" />
+                    <asp:BoundField DataField="Freight" HeaderText="Freight" SortExpression="Freight" />
+                    <asp:BoundField DataField="ShipName" HeaderText="ShipName" SortExpression="ShipName" />
+                    <asp:BoundField DataField="ShipAddress" HeaderText="ShipAddress" SortExpression="ShipAddress" />
+                    <asp:BoundField DataField="ShipCity" HeaderText="ShipCity" SortExpression="ShipCity" />
+                    <asp:BoundField DataField="ShipRegion" HeaderText="ShipRegion" SortExpression="ShipRegion" />
+                    <asp:BoundField DataField="ShipPostalCode" HeaderText="ShipPostalCode" SortExpression="ShipPostalCode" />
+                    <asp:BoundField DataField="ShipCountry" HeaderText="ShipCountry" SortExpression="ShipCountry" />
+                </Columns>
+            </asp:GridView>
+            <asp:ObjectDataSource ID="ODSOrdersByOrderDate" runat="server" SelectMethod="getOrdersByOrderDate" TypeName="ObjectDS.BAL.BAL_Northwind">
+                <SelectParameters>
+                    <asp:ControlParameter ControlID="Calendar1" DefaultValue="null" Name="orderDate" PropertyName="SelectedDate" Type="DateTime" />
+                </SelectParameters>
+            </asp:ObjectDataSource>
+            <strong>
+            <br class="auto-style1" />
+            <br class="auto-style1" />
+            <span class="auto-style1">Order Details List</span></strong><br />
+            <asp:GridView ID="gvOrderDetails" runat="server" AutoGenerateColumns="False" DataSourceID="ODSOrdersByCustomerID">
                 <Columns>
                     <asp:BoundField DataField="OrderID" HeaderText="OrderID" SortExpression="OrderID" />
                     <asp:BoundField DataField="CustomerID" HeaderText="CustomerID" SortExpression="CustomerID" />
@@ -49,37 +69,16 @@
                     <asp:BoundField DataField="ShipCountry" HeaderText="ShipCountry" SortExpression="ShipCountry" />
                 </Columns>
             </asp:GridView>
-            <asp:ObjectDataSource ID="ODSOrders" runat="server" SelectMethod="getOrdersByDate" TypeName="Ojbect05.BAL.BAL_Northwind">
+            <asp:ObjectDataSource ID="ODSOrdersByCustomerID" runat="server" SelectMethod="getOrdersByCustomer" TypeName="ObjectDS.BAL.BAL_Northwind">
                 <SelectParameters>
-                    <asp:ControlParameter ControlID="CalendarOrderDate" DefaultValue="null" Name="orderDate" PropertyName="SelectedDate" Type="DateTime" />
+                    <asp:ControlParameter ControlID="gvOrderList" DefaultValue="null" Name="customerId" PropertyName="SelectedValue" Type="String" />
                 </SelectParameters>
             </asp:ObjectDataSource>
-            <br />
-            <span class="auto-style1"><strong>Products List</strong></span><br />
-            <asp:GridView ID="gvOrdersByCustomer" runat="server" AutoGenerateColumns="False" DataKeyNames="CustomerID" DataSourceID="ODSOrdersByCustomer">
-                <Columns>
-                    <asp:BoundField DataField="OrderID" HeaderText="OrderID" SortExpression="OrderID" />
-                    <asp:BoundField DataField="CustomerID" HeaderText="CustomerID" SortExpression="CustomerID" />
-                    <asp:BoundField DataField="EmployeeID" HeaderText="EmployeeID" SortExpression="EmployeeID" />
-                    <asp:BoundField DataField="OrderDate" HeaderText="OrderDate" SortExpression="OrderDate" />
-                    <asp:BoundField DataField="RequiredDate" HeaderText="RequiredDate" SortExpression="RequiredDate" />
-                    <asp:BoundField DataField="ShippedDate" HeaderText="ShippedDate" SortExpression="ShippedDate" />
-                    <asp:BoundField DataField="ShipVia" HeaderText="ShipVia" SortExpression="ShipVia" />
-                    <asp:BoundField DataField="Freight" HeaderText="Freight" SortExpression="Freight" />
-                    <asp:BoundField DataField="ShipName" HeaderText="ShipName" SortExpression="ShipName" />
-                    <asp:BoundField DataField="ShipAddress" HeaderText="ShipAddress" SortExpression="ShipAddress" />
-                    <asp:BoundField DataField="ShipCity" HeaderText="ShipCity" SortExpression="ShipCity" />
-                    <asp:BoundField DataField="ShipRegion" HeaderText="ShipRegion" SortExpression="ShipRegion" />
-                    <asp:BoundField DataField="ShipPostalCode" HeaderText="ShipPostalCode" SortExpression="ShipPostalCode" />
-                    <asp:BoundField DataField="ShipCountry" HeaderText="ShipCountry" SortExpression="ShipCountry" />
-                </Columns>
-            </asp:GridView>
-            <asp:ObjectDataSource ID="ODSOrdersByCustomer" runat="server" SelectMethod="getOrdersByCustomer" TypeName="Ojbect05.BAL.BAL_Northwind">
+            <asp:ObjectDataSource ID="ODSOrderDetails" runat="server" SelectMethod="getOrderDetailsByOrderID" TypeName="ObjectDS.BAL.BAL_Northwind">
                 <SelectParameters>
-                    <asp:ControlParameter ControlID="gvOrdersByDate" DefaultValue="null" Name="customerID" PropertyName="SelectedValue" Type="String" />
+                    <asp:ControlParameter ControlID="gvOrderList" DefaultValue="null" Name="orderid" PropertyName="SelectedValue" Type="String" />
                 </SelectParameters>
             </asp:ObjectDataSource>
-            <br />
         </div>
     </form>
 </body>
