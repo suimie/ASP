@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Ojbect05.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Northwind Application</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script src="scripts/siteScript.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <div style="float:left;width:50%;text-align:left;font-size:18pt;font-weight:bold;color:#000066;">
+        Northwind Web Application
+    </div>
+    <div style="float:right;width:47%;text-align:right;"">        
+        <asp:Label ID="lblDate" runat="server" Font-Bold="True" ForeColor="#000066"></asp:Label>        
+    </div>
+    
+    <!-- Main Body -->
+    <p>
+        <br />
+    </p>
+    <form id="form1" runat="server">
+
+        <div>
+            <asp:ContentPlaceHolder ID="mainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <!-- Footer -->
+    &copy; 2018 | Contact Info: +1(800) 888 8888
+</body>
+</html>

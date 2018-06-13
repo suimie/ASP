@@ -81,6 +81,8 @@ namespace ObjectDS.BAL
             {
                 List<Order_Detail> order_details =
                     (from data in context.Order_Details
+                     join p in context.Products
+                     on data.ProductID equals p.ProductID
                      where data.OrderID == orderidVal
                      select data).ToList();
 
