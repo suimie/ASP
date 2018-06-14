@@ -38,6 +38,8 @@ namespace WebApplicationEnvironmentalLifeCycle
         {
             Server.Transfer("~/Target.aspx");
             //Response.Redirect("~/Target.aspx");
+
+            lblResult.Text = "You have successfully input the data";
         }
 
         public string name
@@ -55,5 +57,14 @@ namespace WebApplicationEnvironmentalLifeCycle
                 return txbEmail.Text;
             }
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Server.Execute("~/Target.aspx");
+            lblResult.Text = "You have successfully input the data";
+            txbEmail.Text = "";
+            txbName.Text = "";
+        }
+
     }
 }

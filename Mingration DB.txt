@@ -1,0 +1,14 @@
+** Migration
+1. Tools -> NuGet:Package Manage Console
+2. enable-migrations
+3. Project -> Migrations Folder -> Configuration.cs : Seed
+4. Tools -> NuGet:Package Manage Console
+5. add-migration InitialMigration
+6. See Migrations folder
+7. Tools -> NuGet:Package Manage Console : update-database
+
+
+
+Modify table structure
+add-migration addRoleToEmployee
+update-database
