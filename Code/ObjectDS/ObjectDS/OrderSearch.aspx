@@ -22,7 +22,7 @@
             <br />
             <br />
             <span class="auto-style1"><strong>Orders List</strong></span><br />
-            <asp:GridView ID="gvOrderList" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataSourceID="ODSOrdersByOrderDate" DataKeyNames="OrderID">
+            <asp:GridView ID="gvOrderList" runat="server" AutoGenerateColumns="False" DataSourceID="ODSOrdersByOrderDate" DataKeyNames="OrderID">
                 <Columns>
                     <asp:CommandField ShowSelectButton="True" />
                     <asp:BoundField DataField="OrderID" HeaderText="OrderID" SortExpression="OrderID" />
@@ -50,16 +50,12 @@
             <br class="auto-style1" />
             <br class="auto-style1" />
             <span class="auto-style1">Order Details List</span></strong><br />
-            <asp:GridView ID="gvOrderDetails" runat="server" AutoGenerateColumns="False" DataSourceID="ODSOrderDetails">
+            <br />
+            <asp:GridView ID="gvOrdersByID" runat="server" DataSourceID="ODSOrdersByID">
             </asp:GridView>
-            <asp:ObjectDataSource ID="ODSOrdersByCustomerID" runat="server" SelectMethod="getOrdersByCustomer" TypeName="ObjectDS.BAL.BAL_Northwind">
+            <asp:ObjectDataSource ID="ODSOrdersByID" runat="server" SelectMethod="getOrderDetailsByOrderID" TypeName="ObjectDS.BAL.BAL_Northwind">
                 <SelectParameters>
-                    <asp:ControlParameter ControlID="gvOrderList" DefaultValue="null" Name="customerId" PropertyName="SelectedValue" Type="String" />
-                </SelectParameters>
-            </asp:ObjectDataSource>
-            <asp:ObjectDataSource ID="ODSOrderDetails" runat="server" SelectMethod="getOrderDetailsByOrderID" TypeName="ObjectDS.BAL.BAL_Northwind">
-                <SelectParameters>
-                    <asp:ControlParameter ControlID="gvOrderList" DefaultValue="null" Name="orderid" PropertyName="SelectedValue" Type="String" />
+                    <asp:ControlParameter ControlID="gvOrderList" DefaultValue="0" Name="orderID" PropertyName="SelectedValue" Type="Int32" />
                 </SelectParameters>
             </asp:ObjectDataSource>
         </div>

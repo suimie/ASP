@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -52,5 +53,39 @@ namespace ObjectDS.BAL
                 return customer;
             }
         }
+
+        /* Get all orders based on seleted date
+         */
+        public List<Order> getAllOrdersByDate(DateTime date)
+        {
+            using (var conext = new NorthwindDataContext())
+            {
+                List<Order> orders = (from data in conext.Orders
+                                     where data.OrderDate == date
+                                     select data).ToList();
+
+                return orders;
+            }
+        }
+
+        //Get all products from selected order from grid view
+        //Product ID, Product Name, Price, Quantity & Discount
+        public object GetProducts(int orderID)
+        {
+            using (var conext = new NorthwindDataContext())
+            {
+                var products = (from od in conext.Order_Details
+                                          join p in conext.Products 
+                                          on od.ProductID equals p.ProductID
+                                          where od.OrderID == orderID
+                                          select new {od.ProductID, p.ProductName, od.Quantity, od.Discount, od.UnitPrice }).ToList();
+                                      
+                
+                return products;
+            }
+        }
+
+        
+
     }
 }

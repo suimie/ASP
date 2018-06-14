@@ -73,18 +73,17 @@ namespace ObjectDS.BAL
         /*
          * get order details
          */
-        public List<Order_Detail> getOrderDetailsByOrderID(string orderid)
+        public object getOrderDetailsByOrderID(int orderID)
         {
-            int.TryParse(orderid, out int orderidVal);
 
             using (var context = new NorthWindDataContext())
             {
-                List<Order_Detail> order_details =
+                object order_details =
                     (from data in context.Order_Details
                      join p in context.Products
                      on data.ProductID equals p.ProductID
-                     where data.OrderID == orderidVal
-                     select data).ToList();
+                     where data.OrderID == orderID
+                     select new { data.OrderID, data.ProductID, p.ProductName, data.UnitPrice, data.Quantity, data.Discount}).ToList();
 
 
                 return order_details;

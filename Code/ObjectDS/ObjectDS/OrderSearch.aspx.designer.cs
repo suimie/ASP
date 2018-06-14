@@ -49,30 +49,21 @@ namespace ObjectDS {
         protected global::System.Web.UI.WebControls.ObjectDataSource ODSOrdersByOrderDate;
         
         /// <summary>
-        /// gvOrderDetails control.
+        /// gvOrdersByID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvOrderDetails;
+        protected global::System.Web.UI.WebControls.GridView gvOrdersByID;
         
         /// <summary>
-        /// ODSOrdersByCustomerID control.
+        /// ODSOrdersByID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ObjectDataSource ODSOrdersByCustomerID;
-        
-        /// <summary>
-        /// ODSOrderDetails control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ObjectDataSource ODSOrderDetails;
+        protected global::System.Web.UI.WebControls.ObjectDataSource ODSOrdersByID;
     }
 }
