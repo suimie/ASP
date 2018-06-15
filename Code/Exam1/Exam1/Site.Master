@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Exam1.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style2 {
+            width: 259px;
+            height: 194px;
+        }
+
+        table td {
+            padding-top :20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div style="height:200px;">
+        <div style="float:left;width:50%;text-align:left;font-size:18pt;font-weight:bold; color:#003399">
+            <img alt="" class="auto-style2" src="Images/northwind.png" /></div >
+        <div style="float:right;width:47%;text-align:right;margin-top:20px;padding:10px">
+            <asp:Label ID="lblDate" runat="server" Font-Bold="True" ForeColor="#003399"></asp:Label>
+        </div >
+    </div>
+    <br />
+    <!-- Main Body -->
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="mainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    
+    <!-- Footer -->
+    <div style="margin-top:70px;padding:20px;height:200px;text-align:center;">
+    &copy; 2018 | Developed by Suim Park | Contact Info: suimieya@gmail.com
+    </div>
+</body>
+</html>
