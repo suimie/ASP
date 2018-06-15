@@ -78,9 +78,10 @@
     <Content Include="4. SessionState.aspx" />
     <Content Include="8. QS.aspx" />
     <Content Include="8.1 QS_Target.aspx" />
-    <Content Include="9. Navigation.aspx" />
-    <Content Include="9.1 Navigation_Target.aspx" />
-    <Content Include="9.2 target_2.aspx" />
+    <Content Include="9.Navigation.aspx" />
+    <Content Include="9.1Navigation_Target.aspx" />
+    <Content Include="9.2target_2.aspx" />
+    <Content Include="9.3PostBack_target.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -122,19 +123,26 @@
     <Compile Include="1. HTTP Stateless.aspx.designer.cs">
       <DependentUpon>1. HTTP Stateless.aspx</DependentUpon>
     </Compile>
-    <Compile Include="9. Navigation.aspx.cs">
-      <DependentUpon>9. Navigation.aspx</DependentUpon>
+    <Compile Include="9.Navigation.aspx.cs">
+      <DependentUpon>9.Navigation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="9. Navigation.aspx.designer.cs">
-      <DependentUpon>9. Navigation.aspx</DependentUpon>
+    <Compile Include="9.Navigation.aspx.designer.cs">
+      <DependentUpon>9.Navigation.aspx</DependentUpon>
     </Compile>
-    <Compile Include="9.1 Navigation_Target.aspx.cs">
-      <DependentUpon>9.1 Navigation_Target.aspx</DependentUpon>
+    <Compile Include="9.1Navigation_Target.aspx.cs">
+      <DependentUpon>9.1Navigation_Target.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="9.1 Navigation_Target.aspx.designer.cs">
-      <DependentUpon>9.1 Navigation_Target.aspx</DependentUpon>
+    <Compile Include="9.1Navigation_Target.aspx.designer.cs">
+      <DependentUpon>9.1Navigation_Target.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="9.3PostBack_target.aspx.cs">
+      <DependentUpon>9.3PostBack_target.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="9.3PostBack_target.aspx.designer.cs">
+      <DependentUpon>9.3PostBack_target.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="2.3. ViewState.aspx.cs">
@@ -165,12 +173,12 @@
     <Compile Include="8.1 QS_Target.aspx.designer.cs">
       <DependentUpon>8.1 QS_Target.aspx</DependentUpon>
     </Compile>
-    <Compile Include="9.2 target_2.aspx.cs">
-      <DependentUpon>9.2 target_2.aspx</DependentUpon>
+    <Compile Include="9.2target_2.aspx.cs">
+      <DependentUpon>9.2target_2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="9.2 target_2.aspx.designer.cs">
-      <DependentUpon>9.2 target_2.aspx</DependentUpon>
+    <Compile Include="9.2target_2.aspx.designer.cs">
+      <DependentUpon>9.2target_2.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

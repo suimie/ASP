@@ -75,7 +75,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddShipper.aspx" />
     <Content Include="AdvancedSearch.aspx" />
+    <Content Include="AllShippers.aspx" />
     <Content Include="Controlers\Header.ascx" />
     <Content Include="Global.asax" />
     <Content Include="InvestmentCalculator.aspx" />
@@ -87,12 +89,26 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddShipper.aspx.cs">
+      <DependentUpon>AddShipper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddShipper.aspx.designer.cs">
+      <DependentUpon>AddShipper.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdvancedSearch.aspx.cs">
       <DependentUpon>AdvancedSearch.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AdvancedSearch.aspx.designer.cs">
       <DependentUpon>AdvancedSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllShippers.aspx.cs">
+      <DependentUpon>AllShippers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllShippers.aspx.designer.cs">
+      <DependentUpon>AllShippers.aspx</DependentUpon>
     </Compile>
     <Compile Include="Controlers\Header.ascx.cs">
       <DependentUpon>Header.ascx</DependentUpon>

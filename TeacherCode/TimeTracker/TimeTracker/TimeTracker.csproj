@@ -8,12 +8,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{5C5F41AD-99E4-4AE7-B729-29D23EB101BD}</ProjectGuid>
+    <ProjectGuid>{5B90E366-FA23-451E-94FE-245BF3F66491}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ObjectDS</RootNamespace>
-    <AssemblyName>ObjectDS</AssemblyName>
+    <RootNamespace>TimeTracker</RootNamespace>
+    <AssemblyName>TimeTracker</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -44,8 +44,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -69,89 +74,46 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Default.aspx" />
+    <Content Include="Employees.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="Order Search.aspx" />
-    <Content Include="OrderDetail_master.aspx" />
-    <Content Include="Scripts\demo.js" />
-    <Content Include="Scripts\SiteScript.js" />
     <Content Include="Web.config" />
-    <Content Include="WebForm_Master.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BAL\BAL_Northwind.cs" />
-    <Compile Include="Data\Northwind.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Northwind.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Employees.aspx.cs">
+      <DependentUpon>Employees.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Employees.aspx.designer.cs">
+      <DependentUpon>Employees.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Order Search.aspx.cs">
-      <DependentUpon>Order Search.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
+    <Compile Include="Migrations\201806141542296_InitialMigration.cs" />
+    <Compile Include="Migrations\201806141542296_InitialMigration.Designer.cs">
+      <DependentUpon>201806141542296_InitialMigration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Order Search.aspx.designer.cs">
-      <DependentUpon>Order Search.aspx</DependentUpon>
+    <Compile Include="Migrations\201806141702504_addRoleToEmployee.cs" />
+    <Compile Include="Migrations\201806141702504_addRoleToEmployee.Designer.cs">
+      <DependentUpon>201806141702504_addRoleToEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrderDetail_master.aspx.cs">
-      <DependentUpon>OrderDetail_master.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
+    <Compile Include="Migrations\201806141706109_addAddressToEmployee.cs" />
+    <Compile Include="Migrations\201806141706109_addAddressToEmployee.Designer.cs">
+      <DependentUpon>201806141706109_addAddressToEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrderDetail_master.aspx.designer.cs">
-      <DependentUpon>OrderDetail_master.aspx</DependentUpon>
+    <Compile Include="Migrations\201806141734477_addAnotationsEmployee.cs" />
+    <Compile Include="Migrations\201806141734477_addAnotationsEmployee.Designer.cs">
+      <DependentUpon>201806141734477_addAnotationsEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="Print.Master.cs">
-      <DependentUpon>Print.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Print.Master.designer.cs">
-      <DependentUpon>Print.Master</DependentUpon>
-    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\TimeCard.cs" />
+    <Compile Include="Models\TimeTrackerDbContext.cs" />
+    <Compile Include="Models\TimeTrackerRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="site.Master.cs">
-      <DependentUpon>site.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="site.Master.designer.cs">
-      <DependentUpon>site.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Site_Print.Master.cs">
-      <DependentUpon>Site_Print.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site_Print.Master.designer.cs">
-      <DependentUpon>Site_Print.Master</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm_Master.aspx.cs">
-      <DependentUpon>WebForm_Master.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm_Master.aspx.designer.cs">
-      <DependentUpon>WebForm_Master.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Data\Northwind.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>Northwind.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </Content>
-    <None Include="Data\Northwind.dbml.layout">
-      <DependentUpon>Northwind.dbml</DependentUpon>
-    </None>
     <None Include="packages.config" />
-    <Content Include="site.Master" />
-    <Content Include="Print.Master" />
-    <Content Include="Site_Print.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -161,10 +123,20 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <EmbeddedResource Include="Migrations\201806141542296_InitialMigration.resx">
+      <DependentUpon>201806141542296_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806141702504_addRoleToEmployee.resx">
+      <DependentUpon>201806141702504_addRoleToEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806141706109_addAddressToEmployee.resx">
+      <DependentUpon>201806141706109_addAddressToEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806141734477_addAnotationsEmployee.resx">
+      <DependentUpon>201806141734477_addAnotationsEmployee.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -179,9 +151,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>50989</DevelopmentServerPort>
+          <DevelopmentServerPort>51426</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50989/</IISUrl>
+          <IISUrl>http://localhost:51426/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
