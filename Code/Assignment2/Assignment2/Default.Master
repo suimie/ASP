@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="Assignment2.Default" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="scripts/base.js"></script>
+
+    <style>
+        h1 {
+            margin:auto;
+            color:brown;
+            font-weight:bold;
+        }
+
+        body {
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .gvStyle {
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Video Rental Store</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="Default.aspx">Home</a></li>
+            <li><a href="Customers.aspx">Customers</a></li>
+            <li><a href="RentMedia.aspx">Rent Media</a></li>
+            <li><a href="NewCustomer.aspx">New Customer</a></li>
+            <li><a href="NewMedia.aspx">New Media</a></li>
+        </ul>
+        </div>
+    </nav>
+    <!-- Main Body -->
+    <form id="form1" runat="server">
+    <div style="width:90%;max-width:1000px;margin:auto;">
+        <br /><br />
+            <asp:ContentPlaceHolder ID="mainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+    <!-- Footer -->
+</body>
+</html>
