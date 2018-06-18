@@ -120,9 +120,21 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201806181412332_VideoRentalStore.cs" />
-    <Compile Include="Migrations\201806181412332_VideoRentalStore.Designer.cs">
-      <DependentUpon>201806181412332_VideoRentalStore.cs</DependentUpon>
+    <Compile Include="Migrations\201806170222181_VideoRentalStore.cs" />
+    <Compile Include="Migrations\201806170222181_VideoRentalStore.Designer.cs">
+      <DependentUpon>201806170222181_VideoRentalStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806181404564_VideoRentalStoreFirst.cs" />
+    <Compile Include="Migrations\201806181404564_VideoRentalStoreFirst.Designer.cs">
+      <DependentUpon>201806181404564_VideoRentalStoreFirst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806181407188_VideoRentalStoreFirst1.cs" />
+    <Compile Include="Migrations\201806181407188_VideoRentalStoreFirst1.Designer.cs">
+      <DependentUpon>201806181407188_VideoRentalStoreFirst1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806181408215_VideoRentalStoreSecond.cs" />
+    <Compile Include="Migrations\201806181408215_VideoRentalStoreSecond.Designer.cs">
+      <DependentUpon>201806181408215_VideoRentalStoreSecond.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -157,8 +169,17 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201806181412332_VideoRentalStore.resx">
-      <DependentUpon>201806181412332_VideoRentalStore.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201806170222181_VideoRentalStore.resx">
+      <DependentUpon>201806170222181_VideoRentalStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806181404564_VideoRentalStoreFirst.resx">
+      <DependentUpon>201806181404564_VideoRentalStoreFirst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806181407188_VideoRentalStoreFirst1.resx">
+      <DependentUpon>201806181407188_VideoRentalStoreFirst1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806181408215_VideoRentalStoreSecond.resx">
+      <DependentUpon>201806181408215_VideoRentalStoreSecond.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

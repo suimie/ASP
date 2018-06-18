@@ -22,9 +22,9 @@ namespace Assignment2.Migrations
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
 
-            //context.Customers.RemoveRange(context.Customers);
-            //context.Medias.RemoveRange(context.Medias);
-            //context.RentalRecords.RemoveRange(context.RentalRecords);
+            context.Customers.RemoveRange(context.Customers);
+            context.Medias.RemoveRange(context.Medias);
+            context.RentalRecords.RemoveRange(context.RentalRecords);
 
             IList<Customer> customers = new List<Customer>();
 
@@ -69,8 +69,8 @@ namespace Assignment2.Migrations
                     }
                 }
             });
-            context.Customers.AddRange(customers);
-            base.Seed(context);
+            //context.Customers.AddRange(customers);
+            //base.Seed(context);
 
         }
     }
