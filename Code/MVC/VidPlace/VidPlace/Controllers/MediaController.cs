@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 
 using VidPlace.Models;
+using VidPlace.ViewModels;
 
 namespace VidPlace.Controllers
 {
@@ -17,6 +18,7 @@ namespace VidPlace.Controllers
         }*/
 
         //       [Route("media/index/{PageIndex:range(1,1000)}/{sortby:maxlength(4)}")]
+        /*
         [Route("media/index/{PageIndex?}/{sortby?}")]
         public ActionResult Index(int? PageIndex, string sortby)
         {
@@ -26,7 +28,26 @@ namespace VidPlace.Controllers
                 sortby = "name";
 
             return Content("Page # " + PageIndex + " | Sort By: " + sortby);
+        }*/
+
+        // GET: Media/Index
+        public ActionResult Index()
+        {
+            
+            return View(getMedias());
         }
+
+        public IEnumerable<Media> getMedias()
+        {
+            var medias = new List<Media>
+            {
+                new Media() {  ID=1, Name="Avengers" },
+                new Media() {  ID=2, Name="ABC" }
+            };
+
+            return medias;
+        }
+
 
         public ActionResult random()
         {
@@ -50,5 +71,25 @@ namespace VidPlace.Controllers
         {
             return Content("Released in Year = " + year + ", Month = " + month);
         }
+
+        public ActionResult rentals()
+        {
+            var media = new Media() { Name="Avengers"};
+            var customer = new List<Customer>
+            {
+                //new Customer() { Name = "Thomas Edison" },
+                //new Customer() { Name = "Alex ABC" },
+                //new Customer() { Name = "Sue Smith" }
+            };
+
+            var viewModels = new RentalsMediaViewModel()
+            {
+                Media = media,
+                Customers = customer
+            };
+
+            return View(viewModels);
+        }
+
     }
 }

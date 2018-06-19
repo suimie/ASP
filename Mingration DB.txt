@@ -1,14 +1,24 @@
 ** Migration
 1. Tools -> NuGet:Package Manage Console
 2. enable-migrations
-3. Project -> Migrations Folder -> Configuration.cs : Seed
+3. Project -> Migrations Folder -> Configuration.cs : Seed | 
+   Project -> Models/IdentityModels.cs ->         
+				public DbSet<Customer> Customers { get; set; }
+
 4. Tools -> NuGet:Package Manage Console
-5. add-migration InitialMigration
+5. add-migration InitialMigration [-force]
 6. See Migrations folder
+	-> See Project -> Migrations/date_InitialMigration.cs
 7. Tools -> NuGet:Package Manage Console : update-database
+	-> Open App_Data/mdf file
 
 
 
 Modify table structure
-add-migration addRoleToEmployee
-update-database
+1.Change class model(DB structure)
+2.add-migration addRoleToEmployee -> See migration folder
+3.update-database
+
+1. add-maigraion name  -> without change before(dummy)
+-> Migration/file -> Add Sql ...
+2. update-database

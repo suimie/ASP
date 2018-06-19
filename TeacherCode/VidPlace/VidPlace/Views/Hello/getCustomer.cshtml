@@ -1,0 +1,20 @@
+﻿@using VidPlace.Models
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>getCustomer</title>
+</head>
+<body>
+    <div>
+        <!--(((Customer) ViewData["customer"]).Name) -->
+        <h2>@(((Customer)ViewBag.customer).Name)</h2>
+        
+    </div>
+</body>
+</html>

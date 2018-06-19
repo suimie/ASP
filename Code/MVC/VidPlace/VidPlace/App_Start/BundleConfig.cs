@@ -24,7 +24,7 @@ namespace VidPlace
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap_flaty.css",
+                      "~/Content/bootstrap-flatly.css",
                       "~/Content/site.css"));
         }
     }
