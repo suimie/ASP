@@ -6,35 +6,28 @@ using System.Web.Mvc;
 
 using VidPlace.Models;
 using VidPlace.ViewModels;
+using System.Data.Entity;
+
 
 namespace VidPlace.Controllers
 {
     public class MediaController : Controller
     {
-        // GET: Media
-        /*public ActionResult Index()
-        {
-            return View();
-        }*/
+        private ApplicationDbContext _context;
 
-        //       [Route("media/index/{PageIndex:range(1,1000)}/{sortby:maxlength(4)}")]
-        /*
-        [Route("media/index/{PageIndex?}/{sortby?}")]
-        public ActionResult Index(int? PageIndex, string sortby)
+        public MediaController()
         {
-            if (!PageIndex.HasValue)
-                PageIndex = 1;
-            if (string.IsNullOrWhiteSpace(sortby))
-                sortby = "name";
-
-            return Content("Page # " + PageIndex + " | Sort By: " + sortby);
-        }*/
+            _context = new ApplicationDbContext();
+        }
 
         // GET: Media/Index
         public ActionResult Index()
         {
-            
-            return View(getMedias());
+            var medias = _context.Medias
+                .Include(c => c.Genre)
+                .Include(c => c.MediaType)
+                .ToList();
+            return View(medias);
         }
 
         public IEnumerable<Media> getMedias()
@@ -48,6 +41,17 @@ namespace VidPlace.Controllers
             return medias;
         }
 
+        public ActionResult Details(int id)
+        {
+            var medias = _context.Medias
+                .Include(c => c.MediaType)
+                .Include(c => c.Genre)
+                .SingleOrDefault(c => c.ID == id);
+            if (medias == null)
+                return HttpNotFound();
+            else
+                return View(medias);
+        }
 
         public ActionResult random()
         {

@@ -218,15 +218,62 @@
     <Compile Include="Migrations\201806191737231_ApplyAnnotationsToCustomerClass.Designer.cs">
       <DependentUpon>201806191737231_ApplyAnnotationsToCustomerClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806201314319_AddNameToMembership.cs" />
+    <Compile Include="Migrations\201806201314319_AddNameToMembership.Designer.cs">
+      <DependentUpon>201806201314319_AddNameToMembership.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806201316448_UpdateMembership.cs" />
+    <Compile Include="Migrations\201806201316448_UpdateMembership.Designer.cs">
+      <DependentUpon>201806201316448_UpdateMembership.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806201346176_AddBirthdayToCustomer.cs" />
+    <Compile Include="Migrations\201806201346176_AddBirthdayToCustomer.Designer.cs">
+      <DependentUpon>201806201346176_AddBirthdayToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806201347585_PopulateBirthdayToCustomer.cs" />
+    <Compile Include="Migrations\201806201347585_PopulateBirthdayToCustomer.Designer.cs">
+      <DependentUpon>201806201347585_PopulateBirthdayToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806201410187_CreateMediaTable.cs" />
+    <Compile Include="Migrations\201806201410187_CreateMediaTable.Designer.cs">
+      <DependentUpon>201806201410187_CreateMediaTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806201415316_PopulateMedia.cs" />
+    <Compile Include="Migrations\201806201415316_PopulateMedia.Designer.cs">
+      <DependentUpon>201806201415316_PopulateMedia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806201455566_PopulateMediaTypeGenreToMedia.cs" />
+    <Compile Include="Migrations\201806201455566_PopulateMediaTypeGenreToMedia.Designer.cs">
+      <DependentUpon>201806201455566_PopulateMediaTypeGenreToMedia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806201456334_PopulateMediaTypeGenreToMedia1.cs" />
+    <Compile Include="Migrations\201806201456334_PopulateMediaTypeGenreToMedia1.Designer.cs">
+      <DependentUpon>201806201456334_PopulateMediaTypeGenreToMedia1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806201517280_AddOtherInfoToMedia.cs" />
+    <Compile Include="Migrations\201806201517280_AddOtherInfoToMedia.Designer.cs">
+      <DependentUpon>201806201517280_AddOtherInfoToMedia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806201551068_PopulateDateInfoToMedia.cs" />
+    <Compile Include="Migrations\201806201551068_PopulateDateInfoToMedia.Designer.cs">
+      <DependentUpon>201806201551068_PopulateDateInfoToMedia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806201728328_AddAddressToCustomer.cs" />
+    <Compile Include="Migrations\201806201728328_AddAddressToCustomer.Designer.cs">
+      <DependentUpon>201806201728328_AddAddressToCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Media.cs" />
+    <Compile Include="Models\MediaType.cs" />
     <Compile Include="Models\Membership.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\CustomerFormViewModel.cs" />
     <Compile Include="ViewModels\RentalsMediaViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -303,9 +350,12 @@
     <Content Include="Views\Customer\Index.cshtml" />
     <Content Include="Views\Customer\Details.cshtml" />
     <Content Include="Views\Media\Index.cshtml" />
+    <Content Include="Views\Media\Details.cshtml" />
+    <Content Include="Views\Customer\CustomerForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\CustomerFormViewModel\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -335,6 +385,39 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806191737231_ApplyAnnotationsToCustomerClass.resx">
       <DependentUpon>201806191737231_ApplyAnnotationsToCustomerClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806201314319_AddNameToMembership.resx">
+      <DependentUpon>201806201314319_AddNameToMembership.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806201316448_UpdateMembership.resx">
+      <DependentUpon>201806201316448_UpdateMembership.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806201346176_AddBirthdayToCustomer.resx">
+      <DependentUpon>201806201346176_AddBirthdayToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806201347585_PopulateBirthdayToCustomer.resx">
+      <DependentUpon>201806201347585_PopulateBirthdayToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806201410187_CreateMediaTable.resx">
+      <DependentUpon>201806201410187_CreateMediaTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806201415316_PopulateMedia.resx">
+      <DependentUpon>201806201415316_PopulateMedia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806201455566_PopulateMediaTypeGenreToMedia.resx">
+      <DependentUpon>201806201455566_PopulateMediaTypeGenreToMedia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806201456334_PopulateMediaTypeGenreToMedia1.resx">
+      <DependentUpon>201806201456334_PopulateMediaTypeGenreToMedia1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806201517280_AddOtherInfoToMedia.resx">
+      <DependentUpon>201806201517280_AddOtherInfoToMedia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806201551068_PopulateDateInfoToMedia.resx">
+      <DependentUpon>201806201551068_PopulateDateInfoToMedia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806201728328_AddAddressToCustomer.resx">
+      <DependentUpon>201806201728328_AddAddressToCustomer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

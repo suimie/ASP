@@ -1,0 +1,32 @@
+﻿@model VidPlace.ViewModels.CustomerFormViewModel
+
+@{
+    ViewBag.Title = "CustomerForm";
+}
+
+<h2>CustomerForm</h2>
+
+@using (Html.BeginForm("Save", "Customer"))
+{
+    <div>
+        @Html.LabelFor(m => m.Customer.Name)
+        @Html.TextBoxFor(m => m.Customer.Name, new { @class = "form-control" })
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Customer.Address)
+        @Html.TextBoxFor(m => m.Customer.Address, new { @class = "form-control" })
+    </div>
+    <div class="checkbox">
+        <label>
+            @Html.CheckBoxFor(m => m.Customer.IsSubscribedToNewsLetter) Subscribed to News Letter
+        </label>
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Customer.MembershipId) 
+        @Html.DropDownListFor(m => m.Customer.MembershipId, 
+                            new SelectList(Model.Memberships, "Id", "Name"), 
+                            "Please select a membership", 
+                            new {  @class = "form-control"})
+    </div>
+
+}

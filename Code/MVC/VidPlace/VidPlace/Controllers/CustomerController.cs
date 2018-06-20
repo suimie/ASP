@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 using VidPlace.Models;
 using VidPlace.ViewModels;
+using System.Data.Entity;
 
 namespace VidPlace.Controllers
 {
@@ -25,7 +26,7 @@ namespace VidPlace.Controllers
         {
             //var customers = getCustomers();
 
-            var customers = _context.Customers.ToList();
+            var customers = _context.Customers.Include(c =>c.Membership).ToList();
 
             return View(customers);
         }
@@ -34,15 +35,25 @@ namespace VidPlace.Controllers
         public ActionResult Details(int id)
         {
             //var customer = getCustomers().SingleOrDefault(c => c.ID == id);
-            var customer = _context.Customers.SingleOrDefault(c => c.ID == id);
+            var customer = _context.Customers.Include(c => c.Membership).SingleOrDefault(c => c.ID == id);
             if (customer == null)
                 return HttpNotFound();
             else
                 return View(customer);
         }
 
+        public ActionResult New()
+        {
+            //var customer = new Customer();
 
+            var viewModel = new CustomerFormViewModel()
+            {
+                Memberships = _context.Memberships.ToList(),
+            };
+            return View("CustomerForm", viewModel);  // CustomerForm is the file name in View folder
+        }
 
+        /*
         public IEnumerable<Customer> getCustomers()
         {
             var customers = new List<Customer>
@@ -54,6 +65,6 @@ namespace VidPlace.Controllers
 
             return customers;
         }
-
+        */
     }
 }

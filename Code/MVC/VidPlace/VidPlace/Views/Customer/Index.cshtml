@@ -14,7 +14,11 @@
 
 <table class="table table-bordered table-hover">
     <thead>
-        <th>Customer's Name</th>
+        <tr>
+            <th>Customer's Name</th>
+            <th>Membership Type</th>
+            <th>Discount Rate</th>
+        </tr>
     </thead>
     @if (!Model.Any())
     {
@@ -26,6 +30,8 @@
         {
             <tr>
                 <td>@Html.ActionLink(@customer.Name, "Details", "Customer", new { id = customer.ID }, null)</td>
+                <td>@customer.Membership.Name</td>
+                <td>@customer.Membership.DiscountRate%</td>
             </tr>
         }
     </tbody>

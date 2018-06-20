@@ -9,13 +9,17 @@
 
 <table class="table table-bordered table-hover">
     <thead>
-        <tr><th>Media</th></tr>
+        <tr>
+            <th>Media</th>
+            <th>Genre</th>
+        </tr>
     </thead>
     <tbody>
         @foreach (var media in Model)
         {
             <tr>
-                <td>@media.Name</td>
+                <td>@Html.ActionLink(@media.Name, "Details", "Media", new { id = media.ID }, null)</td>
+                <td>@media.Genre.Name</td>
             </tr>
         }
     </tbody>
