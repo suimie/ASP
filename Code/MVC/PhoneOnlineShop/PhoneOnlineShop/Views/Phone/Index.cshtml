@@ -1,0 +1,31 @@
+﻿@model IEnumerable<PhoneOnlineShop.Models.Phone>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Available Phones</h2>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Phone Name</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+    @if (!Model.Any())
+    {
+        <p>There are no phones available.</p>
+    }
+    else
+    {
+        <tbody>
+            @foreach (var phone in Model)
+            {
+                <tr>
+                    <td>@phone.PhoneName</td>
+                    <td>@Html.ActionLink("Details", "Details", "Phone", new { id = phone.ID }, null)</td>
+                </tr>
+            }
+        </tbody>
+    }
+</table>
+
