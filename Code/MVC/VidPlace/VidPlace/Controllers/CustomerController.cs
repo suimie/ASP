@@ -48,9 +48,74 @@ namespace VidPlace.Controllers
 
             var viewModel = new CustomerFormViewModel()
             {
-                Memberships = _context.Memberships.ToList(),
+                Customer = new Customer(),
+                Memberships = _context.Memberships.ToList()
             };
             return View("CustomerForm", viewModel);  // CustomerForm is the file name in View folder
+        }
+
+        //public ActionResult Save(CustomerFormViewModel viewMode)
+        // Saveing action into DB
+        // Post action
+        [HttpPost]      // to make access from the from not typing url
+        [ValidateAntiForgeryToken]
+        public ActionResult Save(Customer customer)   // It takes just customer class from the form
+        {
+            // Server side validation
+            if (!ModelState.IsValid)
+            {
+                // The form is not valid --> return same form to the user
+
+                var viewModel = new CustomerFormViewModel()
+                {
+                    Customer = customer,
+                    Memberships = _context.Memberships.ToList()
+                };
+
+                return View("CustomerForm", viewModel);
+            }
+
+            // *********** Come here if form is valid
+            if (customer.ID == 0)
+            {
+                _context.Customers.Add(customer);
+            }
+            else
+            {
+                var customerInDB = _context.Customers.Single(c => c.ID == customer.ID);
+
+                /*
+                 * This method has a security flow.
+                TryUpdateModel(customerInDB);
+                */
+
+                // Manually update the fields I want.
+                customerInDB.Name = customer.Name;
+                customerInDB.Address = customer.Address;
+                customerInDB.Birthday = customer.Birthday;
+                customerInDB.IsSubscribedToNewsLetter = customer.IsSubscribedToNewsLetter;
+                customerInDB.MembershipId = customer.MembershipId;
+            }
+
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Customer");
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var customerInDB = _context.Customers.SingleOrDefault(c => c.ID == id);
+
+            if (customerInDB == null)
+                return HttpNotFound();
+
+            var viewModel = new CustomerFormViewModel()
+            {
+                Customer = customerInDB,
+                Memberships = _context.Memberships.ToList()
+            };
+
+            return View("CustomerForm", viewModel);  
         }
 
         /*

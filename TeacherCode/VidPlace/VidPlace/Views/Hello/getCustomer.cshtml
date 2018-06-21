@@ -11,10 +11,11 @@
     <title>getCustomer</title>
 </head>
 <body>
+    @Html.Partial("_NavBar")
     <div>
         <!--(((Customer) ViewData["customer"]).Name) -->
         <h2>@(((Customer)ViewBag.customer).Name)</h2>
-        
+
     </div>
 </body>
 </html>

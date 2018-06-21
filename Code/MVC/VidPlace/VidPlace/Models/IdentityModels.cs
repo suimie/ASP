@@ -25,6 +25,9 @@ namespace VidPlace.Models
         public DbSet<Media> Medias { get; set; }
         public DbSet<Membership> Memberships { get; set; }
 
+        public DbSet<Genre> Genres { get; set; }
+        public DbSet<MediaType> MediaTypes { get; set; }
+
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

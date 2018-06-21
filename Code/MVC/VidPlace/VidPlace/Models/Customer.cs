@@ -13,9 +13,12 @@ namespace VidPlace.Models
 
         [Display(Name = "Address")]
         public string Address { get; set; }
+
+        [Display(Name = "Date of birth")]
+        [Min18YearsIfMember]
         public DateTime? Birthday { get; set; } = null;
 
-        [Required]
+        [Required(ErrorMessage = "Please enter the cutomer's name")]
         [StringLength(255)]
         public string Name { get; set; }
         public bool IsSubscribedToNewsLetter { get; set; }// = false;

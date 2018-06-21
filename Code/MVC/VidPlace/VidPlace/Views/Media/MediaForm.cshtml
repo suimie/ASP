@@ -1,0 +1,54 @@
+﻿@model VidPlace.ViewModels.MediaFormViewModel
+@{
+    ViewBag.Title = "MediaForm";
+}
+
+@if (Model.Media.ID == 0)
+{
+    <h2>New Media</h2>
+}
+else
+{
+    <h2>Edit Media</h2>
+}
+
+@using (Html.BeginForm("Save", "Media"))
+{
+    <div>
+        @Html.LabelFor(m => m.Media.Name)
+        @Html.TextBoxFor(m => m.Media.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Media.Name)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Media.ReleaseDate)
+        @Html.TextBoxFor(m => m.Media.ReleaseDate, "{0:d MMM yyyy}", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Media.ReleaseDate)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Media.DateAdded)
+        @Html.TextBoxFor(m => m.Media.DateAdded, "{0:d MMM yyyy}", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Media.DateAdded)
+    </div>
+   <div>
+        @Html.LabelFor(m => m.Media.MediaTypeId)
+        @Html.DropDownListFor(m => m.Media.MediaTypeId,     
+                            new SelectList(Model.MediaTypes, "Id", "Name"),
+                            "Please select a media type",
+                            new { @class = "form-control" })
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Media.GenreId)
+        @Html.DropDownListFor(m => m.Media.GenreId,
+                            new SelectList(Model.Grenres, "Id", "Name"),
+                            "Please select a genre",
+                            new { @class = "form-control" })
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Media.NuInStock)
+        @Html.TextBoxFor(m => m.Media.NuInStock, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Media.NuInStock)
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Save</button>
+
+}

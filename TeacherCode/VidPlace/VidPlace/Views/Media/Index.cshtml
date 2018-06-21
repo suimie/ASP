@@ -1,0 +1,26 @@
+﻿@model IEnumerable<VidPlace.Models.Media>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2></h2>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Media</th>
+            <th>Genre</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var media in Model)
+        {
+        <tr>
+            <td>@Html.ActionLink(media.Name, "Details", "Media", new { id = media.ID }, null) </td>
+            <td>@media.Genre.Name</td>
+
+        </tr>
+        }
+    </tbody>
+</table>
+

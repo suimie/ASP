@@ -30,6 +30,38 @@ namespace VidPlace.Controllers
             return View(medias);
         }
 
+        public ActionResult New()
+        {
+            var viewModel = new MediaFormViewModel()
+            {
+                Media = new Media(),
+                Grenres = _context.Genres.ToList(),
+                MediaTypes = _context.MediaTypes.ToList()
+            };
+            return View("MediaForm", viewModel);  
+        }
+
+        public ActionResult Save(Media media)
+        {
+            /*
+            var mediaInDB = _context.Medias.Single(m => m.ID == media.ID);
+
+
+            // Manually update the fields I want.
+            mediaInDB.Name = media.Name;
+            mediaInDB.ReleaseDate = media.ReleaseDate;
+            mediaInDB.MediaTypeId = media.MediaTypeId;
+            mediaInDB.GenreId = media.GenreId;
+            mediaInDB.NuInStock = media.NuInStock;
+            */
+
+            _context.Medias.Add(media);
+
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Media");
+        }
+
         public IEnumerable<Media> getMedias()
         {
             var medias = new List<Media>

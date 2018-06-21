@@ -196,6 +196,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HelloController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -203,18 +204,96 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806191632251_IntialMigration.cs" />
+    <Compile Include="Migrations\201806191632251_IntialMigration.Designer.cs">
+      <DependentUpon>201806191632251_IntialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806191646217_AddIsSubsribedToNewLettertoCustomer.cs" />
+    <Compile Include="Migrations\201806191646217_AddIsSubsribedToNewLettertoCustomer.Designer.cs">
+      <DependentUpon>201806191646217_AddIsSubsribedToNewLettertoCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806191657014_AddMemeberShip.cs" />
+    <Compile Include="Migrations\201806191657014_AddMemeberShip.Designer.cs">
+      <DependentUpon>201806191657014_AddMemeberShip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806191708332_PopulateMembershipTypes.cs" />
+    <Compile Include="Migrations\201806191708332_PopulateMembershipTypes.Designer.cs">
+      <DependentUpon>201806191708332_PopulateMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806191736149_ApplyAnnotationsToCustomerClass.cs" />
+    <Compile Include="Migrations\201806191736149_ApplyAnnotationsToCustomerClass.Designer.cs">
+      <DependentUpon>201806191736149_ApplyAnnotationsToCustomerClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806201329420_addNametoMembership.cs" />
+    <Compile Include="Migrations\201806201329420_addNametoMembership.Designer.cs">
+      <DependentUpon>201806201329420_addNametoMembership.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806201330437_populateNameinMembership.cs" />
+    <Compile Include="Migrations\201806201330437_populateNameinMembership.Designer.cs">
+      <DependentUpon>201806201330437_populateNameinMembership.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806201356030_addBirthdateToCustomer.cs" />
+    <Compile Include="Migrations\201806201356030_addBirthdateToCustomer.Designer.cs">
+      <DependentUpon>201806201356030_addBirthdateToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806201433446_addMediaTable.cs" />
+    <Compile Include="Migrations\201806201433446_addMediaTable.Designer.cs">
+      <DependentUpon>201806201433446_addMediaTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806201507545_addMediaTypeGenra.cs" />
+    <Compile Include="Migrations\201806201507545_addMediaTypeGenra.Designer.cs">
+      <DependentUpon>201806201507545_addMediaTypeGenra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806201540154_addReleaseDate.cs" />
+    <Compile Include="Migrations\201806201540154_addReleaseDate.Designer.cs">
+      <DependentUpon>201806201540154_addReleaseDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806201543159_addGenretoMedia.cs" />
+    <Compile Include="Migrations\201806201543159_addGenretoMedia.Designer.cs">
+      <DependentUpon>201806201543159_addGenretoMedia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806201547086_addMediaTypetoMedia.cs" />
+    <Compile Include="Migrations\201806201547086_addMediaTypetoMedia.Designer.cs">
+      <DependentUpon>201806201547086_addMediaTypetoMedia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806201548509_populateGenraMedia.cs" />
+    <Compile Include="Migrations\201806201548509_populateGenraMedia.Designer.cs">
+      <DependentUpon>201806201548509_populateGenraMedia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806201557180_populateMediaTypes.cs" />
+    <Compile Include="Migrations\201806201557180_populateMediaTypes.Designer.cs">
+      <DependentUpon>201806201557180_populateMediaTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806201641230_updateMediaTable.cs" />
+    <Compile Include="Migrations\201806201641230_updateMediaTable.Designer.cs">
+      <DependentUpon>201806201641230_updateMediaTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806201727350_updateCustomerAddress.cs" />
+    <Compile Include="Migrations\201806201727350_updateCustomerAddress.Designer.cs">
+      <DependentUpon>201806201727350_updateCustomerAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Media.cs" />
+    <Compile Include="Models\MediaType.cs" />
+    <Compile Include="Models\Membership.cs" />
+    <Compile Include="Models\Min18YearsIfMember.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\CustomerFormViewModel.cs" />
+    <Compile Include="ViewModels\RentalsMediaViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-flatly.css" />
+    <Content Include="Content\bootstrap-simplex.css" />
+    <Content Include="Content\bootstrap-Spacelab.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap-Yeti.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -275,6 +354,13 @@
     <Content Include="Views\Hello\HelloWorld.cshtml" />
     <Content Include="Views\Media\random.cshtml" />
     <Content Include="Views\Hello\getCustomer.cshtml" />
+    <Content Include="Views\Media\rentals.cshtml" />
+    <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Media\Index.cshtml" />
+    <Content Include="Views\Media\Details.cshtml" />
+    <Content Include="Views\Customers\CustomerForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -291,6 +377,59 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201806191632251_IntialMigration.resx">
+      <DependentUpon>201806191632251_IntialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806191646217_AddIsSubsribedToNewLettertoCustomer.resx">
+      <DependentUpon>201806191646217_AddIsSubsribedToNewLettertoCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806191657014_AddMemeberShip.resx">
+      <DependentUpon>201806191657014_AddMemeberShip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806191708332_PopulateMembershipTypes.resx">
+      <DependentUpon>201806191708332_PopulateMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806191736149_ApplyAnnotationsToCustomerClass.resx">
+      <DependentUpon>201806191736149_ApplyAnnotationsToCustomerClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806201329420_addNametoMembership.resx">
+      <DependentUpon>201806201329420_addNametoMembership.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806201330437_populateNameinMembership.resx">
+      <DependentUpon>201806201330437_populateNameinMembership.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806201356030_addBirthdateToCustomer.resx">
+      <DependentUpon>201806201356030_addBirthdateToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806201433446_addMediaTable.resx">
+      <DependentUpon>201806201433446_addMediaTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806201507545_addMediaTypeGenra.resx">
+      <DependentUpon>201806201507545_addMediaTypeGenra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806201540154_addReleaseDate.resx">
+      <DependentUpon>201806201540154_addReleaseDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806201543159_addGenretoMedia.resx">
+      <DependentUpon>201806201543159_addGenretoMedia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806201547086_addMediaTypetoMedia.resx">
+      <DependentUpon>201806201547086_addMediaTypetoMedia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806201548509_populateGenraMedia.resx">
+      <DependentUpon>201806201548509_populateGenraMedia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806201557180_populateMediaTypes.resx">
+      <DependentUpon>201806201557180_populateMediaTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806201641230_updateMediaTable.resx">
+      <DependentUpon>201806201641230_updateMediaTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806201727350_updateCustomerAddress.resx">
+      <DependentUpon>201806201727350_updateCustomerAddress.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

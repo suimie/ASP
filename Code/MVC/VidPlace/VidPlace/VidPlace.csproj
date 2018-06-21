@@ -262,6 +262,10 @@
     <Compile Include="Migrations\201806201728328_AddAddressToCustomer.Designer.cs">
       <DependentUpon>201806201728328_AddAddressToCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806211741523_addGenreNMediaTypeDBContext.cs" />
+    <Compile Include="Migrations\201806211741523_addGenreNMediaTypeDBContext.Designer.cs">
+      <DependentUpon>201806211741523_addGenreNMediaTypeDBContext.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -271,9 +275,11 @@
     <Compile Include="Models\Media.cs" />
     <Compile Include="Models\MediaType.cs" />
     <Compile Include="Models\Membership.cs" />
+    <Compile Include="Models\Min18YearsIfMember.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\CustomerFormViewModel.cs" />
+    <Compile Include="ViewModels\MediaFormViewModel.cs" />
     <Compile Include="ViewModels\RentalsMediaViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -352,6 +358,7 @@
     <Content Include="Views\Media\Index.cshtml" />
     <Content Include="Views\Media\Details.cshtml" />
     <Content Include="Views\Customer\CustomerForm.cshtml" />
+    <Content Include="Views\Media\MediaForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -418,6 +425,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806201728328_AddAddressToCustomer.resx">
       <DependentUpon>201806201728328_AddAddressToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806211741523_addGenreNMediaTypeDBContext.resx">
+      <DependentUpon>201806211741523_addGenreNMediaTypeDBContext.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
