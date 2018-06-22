@@ -4,19 +4,21 @@
 }
 
 <h2>Available Phones</h2>
-<table class="table table-bordered table-hover">
-    <thead>
-        <tr>
-            <th>Phone Name</th>
-            <th>Details</th>
-        </tr>
-    </thead>
-    @if (!Model.Any())
-    {
-        <p>There are no phones available.</p>
-    }
-    else
-    {
+@Html.ActionLink("New Mobile Device", "New", "Phone", null, new { @class = "btn btn-primary", style = "margin-bottom:20px" })
+
+@if (!Model.Any())
+{
+    <p>There are no phones available.</p>
+}
+else
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Phone Name</th>
+                <th>Details</th>
+            </tr>
+        </thead>
         <tbody>
             @foreach (var phone in Model)
             {
@@ -26,6 +28,6 @@
                 </tr>
             }
         </tbody>
-    }
-</table>
+    </table>
+}
 

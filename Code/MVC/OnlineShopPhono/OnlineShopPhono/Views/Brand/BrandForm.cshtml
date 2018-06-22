@@ -1,0 +1,32 @@
+﻿@model OnlineShopPhono.Models.Brand
+@{
+    ViewBag.Title = "BrandForm";
+}
+
+@if (Model.ID == 0)
+{
+    <h2>New Brand</h2>
+}
+else
+{
+    <h2>Update Brand</h2>
+}
+
+@using (Html.BeginForm("Save", "Brand"))
+{
+    @Html.ValidationSummary(true, "Please fix the form")
+    <div>
+        @Html.LabelFor(b => b.BrandName)
+        @Html.TextBoxFor(b => b.BrandName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(b => b.BrandName)
+    </div>
+    <div>
+        @Html.LabelFor(b => b.CountryOfOrigin)
+        @Html.TextBoxFor(b => b.CountryOfOrigin, new { @class = "form-control" })
+    </div>
+    @Html.HiddenFor(b => b.ID)
+    <br />
+    @Html.AntiForgeryToken()
+    <button type="submit" class="btn btn-primary">Save</button>
+}
+

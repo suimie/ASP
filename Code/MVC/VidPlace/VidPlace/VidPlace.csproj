@@ -198,73 +198,21 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201806191632268_InitialMigration.cs" />
-    <Compile Include="Migrations\201806191632268_InitialMigration.Designer.cs">
-      <DependentUpon>201806191632268_InitialMigration.cs</DependentUpon>
+    <Compile Include="Migrations\201806212130006_initialMigration.cs" />
+    <Compile Include="Migrations\201806212130006_initialMigration.Designer.cs">
+      <DependentUpon>201806212130006_initialMigration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201806191646317_AddIsSubscribedToNewsLetter.cs" />
-    <Compile Include="Migrations\201806191646317_AddIsSubscribedToNewsLetter.Designer.cs">
-      <DependentUpon>201806191646317_AddIsSubscribedToNewsLetter.cs</DependentUpon>
+    <Compile Include="Migrations\201806212132044_populateMemberships.cs" />
+    <Compile Include="Migrations\201806212132044_populateMemberships.Designer.cs">
+      <DependentUpon>201806212132044_populateMemberships.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201806191657043_AddMembership.cs" />
-    <Compile Include="Migrations\201806191657043_AddMembership.Designer.cs">
-      <DependentUpon>201806191657043_AddMembership.cs</DependentUpon>
+    <Compile Include="Migrations\201806212136049_populateMediaType.cs" />
+    <Compile Include="Migrations\201806212136049_populateMediaType.Designer.cs">
+      <DependentUpon>201806212136049_populateMediaType.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201806191709048_PopulateMembershipTypes.cs" />
-    <Compile Include="Migrations\201806191709048_PopulateMembershipTypes.Designer.cs">
-      <DependentUpon>201806191709048_PopulateMembershipTypes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806191737231_ApplyAnnotationsToCustomerClass.cs" />
-    <Compile Include="Migrations\201806191737231_ApplyAnnotationsToCustomerClass.Designer.cs">
-      <DependentUpon>201806191737231_ApplyAnnotationsToCustomerClass.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806201314319_AddNameToMembership.cs" />
-    <Compile Include="Migrations\201806201314319_AddNameToMembership.Designer.cs">
-      <DependentUpon>201806201314319_AddNameToMembership.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806201316448_UpdateMembership.cs" />
-    <Compile Include="Migrations\201806201316448_UpdateMembership.Designer.cs">
-      <DependentUpon>201806201316448_UpdateMembership.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806201346176_AddBirthdayToCustomer.cs" />
-    <Compile Include="Migrations\201806201346176_AddBirthdayToCustomer.Designer.cs">
-      <DependentUpon>201806201346176_AddBirthdayToCustomer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806201347585_PopulateBirthdayToCustomer.cs" />
-    <Compile Include="Migrations\201806201347585_PopulateBirthdayToCustomer.Designer.cs">
-      <DependentUpon>201806201347585_PopulateBirthdayToCustomer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806201410187_CreateMediaTable.cs" />
-    <Compile Include="Migrations\201806201410187_CreateMediaTable.Designer.cs">
-      <DependentUpon>201806201410187_CreateMediaTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806201415316_PopulateMedia.cs" />
-    <Compile Include="Migrations\201806201415316_PopulateMedia.Designer.cs">
-      <DependentUpon>201806201415316_PopulateMedia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806201455566_PopulateMediaTypeGenreToMedia.cs" />
-    <Compile Include="Migrations\201806201455566_PopulateMediaTypeGenreToMedia.Designer.cs">
-      <DependentUpon>201806201455566_PopulateMediaTypeGenreToMedia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806201456334_PopulateMediaTypeGenreToMedia1.cs" />
-    <Compile Include="Migrations\201806201456334_PopulateMediaTypeGenreToMedia1.Designer.cs">
-      <DependentUpon>201806201456334_PopulateMediaTypeGenreToMedia1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806201517280_AddOtherInfoToMedia.cs" />
-    <Compile Include="Migrations\201806201517280_AddOtherInfoToMedia.Designer.cs">
-      <DependentUpon>201806201517280_AddOtherInfoToMedia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806201551068_PopulateDateInfoToMedia.cs" />
-    <Compile Include="Migrations\201806201551068_PopulateDateInfoToMedia.Designer.cs">
-      <DependentUpon>201806201551068_PopulateDateInfoToMedia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806201728328_AddAddressToCustomer.cs" />
-    <Compile Include="Migrations\201806201728328_AddAddressToCustomer.Designer.cs">
-      <DependentUpon>201806201728328_AddAddressToCustomer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806211741523_addGenreNMediaTypeDBContext.cs" />
-    <Compile Include="Migrations\201806211741523_addGenreNMediaTypeDBContext.Designer.cs">
-      <DependentUpon>201806211741523_addGenreNMediaTypeDBContext.cs</DependentUpon>
+    <Compile Include="Migrations\201806212138165_populateGenre.cs" />
+    <Compile Include="Migrations\201806212138165_populateGenre.Designer.cs">
+      <DependentUpon>201806212138165_populateGenre.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -378,56 +326,17 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201806191632268_InitialMigration.resx">
-      <DependentUpon>201806191632268_InitialMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201806212130006_initialMigration.resx">
+      <DependentUpon>201806212130006_initialMigration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806191646317_AddIsSubscribedToNewsLetter.resx">
-      <DependentUpon>201806191646317_AddIsSubscribedToNewsLetter.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201806212132044_populateMemberships.resx">
+      <DependentUpon>201806212132044_populateMemberships.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806191657043_AddMembership.resx">
-      <DependentUpon>201806191657043_AddMembership.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201806212136049_populateMediaType.resx">
+      <DependentUpon>201806212136049_populateMediaType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806191709048_PopulateMembershipTypes.resx">
-      <DependentUpon>201806191709048_PopulateMembershipTypes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806191737231_ApplyAnnotationsToCustomerClass.resx">
-      <DependentUpon>201806191737231_ApplyAnnotationsToCustomerClass.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806201314319_AddNameToMembership.resx">
-      <DependentUpon>201806201314319_AddNameToMembership.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806201316448_UpdateMembership.resx">
-      <DependentUpon>201806201316448_UpdateMembership.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806201346176_AddBirthdayToCustomer.resx">
-      <DependentUpon>201806201346176_AddBirthdayToCustomer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806201347585_PopulateBirthdayToCustomer.resx">
-      <DependentUpon>201806201347585_PopulateBirthdayToCustomer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806201410187_CreateMediaTable.resx">
-      <DependentUpon>201806201410187_CreateMediaTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806201415316_PopulateMedia.resx">
-      <DependentUpon>201806201415316_PopulateMedia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806201455566_PopulateMediaTypeGenreToMedia.resx">
-      <DependentUpon>201806201455566_PopulateMediaTypeGenreToMedia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806201456334_PopulateMediaTypeGenreToMedia1.resx">
-      <DependentUpon>201806201456334_PopulateMediaTypeGenreToMedia1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806201517280_AddOtherInfoToMedia.resx">
-      <DependentUpon>201806201517280_AddOtherInfoToMedia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806201551068_PopulateDateInfoToMedia.resx">
-      <DependentUpon>201806201551068_PopulateDateInfoToMedia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806201728328_AddAddressToCustomer.resx">
-      <DependentUpon>201806201728328_AddAddressToCustomer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806211741523_addGenreNMediaTypeDBContext.resx">
-      <DependentUpon>201806211741523_addGenreNMediaTypeDBContext.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201806212138165_populateGenre.resx">
+      <DependentUpon>201806212138165_populateGenre.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

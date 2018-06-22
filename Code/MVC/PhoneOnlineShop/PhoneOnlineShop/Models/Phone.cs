@@ -24,6 +24,7 @@ namespace PhoneOnlineShop.Models
         public DateTime DateRelease { get; set; }
 
         [Required]
+        [Range(2, 7, ErrorMessage ="The range of screen size is 2 - 7")]
         public decimal ScreenSize { get; set; }
 
         [Required]

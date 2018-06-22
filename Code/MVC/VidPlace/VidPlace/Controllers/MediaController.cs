@@ -38,24 +38,63 @@ namespace VidPlace.Controllers
                 Grenres = _context.Genres.ToList(),
                 MediaTypes = _context.MediaTypes.ToList()
             };
+
+            viewModel.Media.DateAdded = DateTime.Now;
+            viewModel.Media.ReleaseDate = DateTime.Now;
+
             return View("MediaForm", viewModel);  
         }
 
+        public ActionResult Edit(int id)
+        {
+            var mediaInDB = _context.Medias.Single(m => m.ID == id);
+
+            if (mediaInDB == null)
+                return HttpNotFound();
+
+            var viewModel = new MediaFormViewModel()
+            {
+                Media = mediaInDB,
+                Grenres = _context.Genres.ToList(),
+                MediaTypes = _context.MediaTypes.ToList()
+            };
+            
+            return View("MediaForm", viewModel);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Media media)
         {
-            /*
-            var mediaInDB = _context.Medias.Single(m => m.ID == media.ID);
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new MediaFormViewModel()
+                {
+                    Media = media,
+                    MediaTypes = _context.MediaTypes.ToList(),
+                    Grenres = _context.Genres.ToList()
+                };
 
+                return View("MediaForm", viewModel);
+            }
 
-            // Manually update the fields I want.
-            mediaInDB.Name = media.Name;
-            mediaInDB.ReleaseDate = media.ReleaseDate;
-            mediaInDB.MediaTypeId = media.MediaTypeId;
-            mediaInDB.GenreId = media.GenreId;
-            mediaInDB.NuInStock = media.NuInStock;
-            */
+            if(media.ID == 0)
+            {
+                _context.Medias.Add(media);
+            }
+            else
+            {
+                var mediaInDB = _context.Medias.Single(m => m.ID == media.ID);
 
-            _context.Medias.Add(media);
+                // Manually update the fields I want.
+                mediaInDB.Name = media.Name;
+                mediaInDB.ReleaseDate = media.ReleaseDate;
+                mediaInDB.DateAdded = media.DateAdded;
+                mediaInDB.MediaTypeId = media.MediaTypeId;
+                mediaInDB.GenreId = media.GenreId;
+                mediaInDB.NuInStock = media.NuInStock;
+            }
+
 
             _context.SaveChanges();
 
@@ -94,13 +133,13 @@ namespace VidPlace.Controllers
 
             return View(media);
         }
-
+        /*
         public ActionResult edit(int ID)
         {
             // http://localhost:62632/media/edit?id=123
             // http://localhost:62632/media/edit/123
             return Content("Provided ID = " + ID);
-        }
+        }*/
 
         [Route("media/released/{year:range(2017,2018)}/{month:range(1,12)}")]
         public ActionResult released(int year, int month)

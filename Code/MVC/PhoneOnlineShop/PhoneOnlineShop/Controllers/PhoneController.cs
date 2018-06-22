@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 
 using System.Data.Entity;
+using PhoneOnlineShop.ViewModel;
 
 namespace PhoneOnlineShop.Controllers
 {
@@ -35,6 +36,18 @@ namespace PhoneOnlineShop.Controllers
                 .SingleOrDefault(c => c.ID == id);
 
             return View(phone);
+        }
+
+        public ActionResult New()
+        {
+            var viewModel = new PhoneFormViewModel()
+            {
+                Phone = new Phone(),
+                Brands = _context.Brands.ToList(),
+                PhoneTypes = _context.PhoneTypes.ToList()
+            };
+
+            return View("PhoneForm", viewModel);
         }
 
     }

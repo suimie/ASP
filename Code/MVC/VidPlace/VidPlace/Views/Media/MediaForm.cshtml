@@ -14,6 +14,7 @@ else
 
 @using (Html.BeginForm("Save", "Media"))
 {
+    @Html.ValidationSummary(true, "Please fix the form")
     <div>
         @Html.LabelFor(m => m.Media.Name)
         @Html.TextBoxFor(m => m.Media.Name, new { @class = "form-control" })
@@ -29,26 +30,29 @@ else
         @Html.TextBoxFor(m => m.Media.DateAdded, "{0:d MMM yyyy}", new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.Media.DateAdded)
     </div>
-   <div>
+    <div>
         @Html.LabelFor(m => m.Media.MediaTypeId)
-        @Html.DropDownListFor(m => m.Media.MediaTypeId,     
-                            new SelectList(Model.MediaTypes, "Id", "Name"),
-                            "Please select a media type",
-                            new { @class = "form-control" })
+        @Html.DropDownListFor(m => m.Media.MediaTypeId,
+                                 new SelectList(Model.MediaTypes, "Id", "Name"),
+                                 "Please select a media type",
+                                 new { @class = "form-control" })
     </div>
     <div>
         @Html.LabelFor(m => m.Media.GenreId)
         @Html.DropDownListFor(m => m.Media.GenreId,
-                            new SelectList(Model.Grenres, "Id", "Name"),
-                            "Please select a genre",
-                            new { @class = "form-control" })
+                                 new SelectList(Model.Grenres, "Id", "Name"),
+                                 "Please select a genre",
+                                 new { @class = "form-control" })
     </div>
     <div>
         @Html.LabelFor(m => m.Media.NuInStock)
         @Html.TextBoxFor(m => m.Media.NuInStock, new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.Media.NuInStock)
     </div>
+    @Html.HiddenFor(m => m.Media.ID)
     <br />
+    @Html.AntiForgeryToken()
     <button type="submit" class="btn btn-primary">Save</button>
 
 }
+

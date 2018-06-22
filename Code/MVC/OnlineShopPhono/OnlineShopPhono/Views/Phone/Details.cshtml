@@ -1,0 +1,15 @@
+﻿@model OnlineShopPhono.Models.Phone
+
+@{
+    ViewBag.Title = "Phone Details";
+}
+
+<h2>@Model.PhoneName</h2>
+<ul>
+    <li>Brand : @Model.Brand.BrandName</li>
+    <li>Date Released : @Model.DateRelease.ToShortDateString()</li>
+    <li>Screen Size : @Model.ScreenSize inches</li>
+    <li>Phone Type : @Model.PhoneType.Type</li>
+    <li>OS : @Model.PhoneType.OS</li>
+</ul>
+

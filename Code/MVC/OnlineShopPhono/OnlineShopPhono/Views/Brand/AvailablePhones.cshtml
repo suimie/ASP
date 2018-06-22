@@ -1,0 +1,44 @@
+﻿@model IEnumerable<OnlineShopPhono.Models.Phone>
+@{
+    ViewBag.Title = "AvailablePhones";
+}
+
+@if (Model == null || Model.Count() == 0)
+{
+    <h2>Phone List</h2>
+    <p>There are no phones available.</p>
+}
+else
+{
+    <h2>Phones List from @Model.First().Brand.BrandName (@Model.First().Brand.CountryOfOrigin)</h2>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Phone Name</th>
+                <th>Date Realease</th>
+                <th>Screen Size</th>
+                <th>Phone Type</th>
+                <th>OS</th>
+            </tr>
+        </thead>
+        @if (!Model.Any())
+        {
+            <p>There are no phone available.</p>
+        }
+        else
+        {
+            <tbody>
+                @foreach (var phone in Model)
+                {
+                    <tr>
+                        <td>@phone.PhoneName</td>
+                        <td>@phone.DateRelease.ToShortDateString()</td>
+                        <td>@phone.ScreenSize inches</td>
+                        <td>@phone.PhoneType.Type</td>
+                        <td>@phone.PhoneType.OS</td>
+                    </tr>
+                }
+            </tbody>
+        }
+    </table>
+}

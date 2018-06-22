@@ -7,8 +7,8 @@
 
 <h2>Medias List</h2>
 
-@Html.ActionLink("New Media", "New", "Media", null, new { @class = "btn btn-primary" })
-<br />
+@Html.ActionLink("New Media", "New", "Media", null, new { @class = "btn btn-primary", style="margin-bottom:20px" })
+
 <table class="table table-bordered table-hover">
     <thead>
         <tr>
@@ -20,7 +20,7 @@
         @foreach (var media in Model)
         {
             <tr>
-                <td>@Html.ActionLink(@media.Name, "Details", "Media", new { id = media.ID }, null)</td>
+                <td>@Html.ActionLink(@media.Name, "Edit", "Media", new { id = media.ID }, null)</td>
                 <td>@media.Genre.Name</td>
             </tr>
         }

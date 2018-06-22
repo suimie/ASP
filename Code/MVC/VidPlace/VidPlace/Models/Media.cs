@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 
 namespace VidPlace.Models
 {
@@ -10,15 +11,15 @@ namespace VidPlace.Models
     {
         public int ID { get; set; }
 
-        [Required]
+        [Required(ErrorMessage ="Please enter the media name")]
         public string Name { get; set; }
 
         public MediaType MediaType { get; set; }
-        [Required]
+        [Required(ErrorMessage ="Please select a media type")]
         public int MediaTypeId { get; set; }
 
         public Genre Genre { get; set; }
-        [Required]
+        [Required(ErrorMessage ="Please select a genre")]
         public int GenreId { get; set; }
 
         [Required]

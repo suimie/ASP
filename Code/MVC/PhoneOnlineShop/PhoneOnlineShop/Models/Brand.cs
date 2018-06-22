@@ -15,8 +15,6 @@ namespace PhoneOnlineShop.Models
         [MaxLength(255)]
         public String BrandName { get; set; }
 
-        [Required]
-        [MaxLength(50)]
         public String CountryOfOrigin { get; set; }
     }
 }
