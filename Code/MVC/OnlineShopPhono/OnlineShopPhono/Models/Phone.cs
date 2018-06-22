@@ -8,7 +8,6 @@ namespace OnlineShopPhono.Models
 {
     public class Phone
     {
-        [Required]
         public int ID { get; set; }
 
         [Required]

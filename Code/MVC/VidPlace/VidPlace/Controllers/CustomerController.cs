@@ -22,16 +22,50 @@ namespace VidPlace.Controllers
         }
 
         // GET: Customer/Index
-        public ActionResult Index()
+        public ActionResult Index(string SearchString, string sort)
         {
+            // Check for user
+            string view = "ReadonlyList";
+            if (User.IsInRole(RoleNames.CanManageMedia))
+                view = "List";
+
             //var customers = getCustomers();
 
-            var customers = _context.Customers.Include(c =>c.Membership).ToList();
+            var customers = _context.Customers.Include(c =>c.Membership);
 
-            return View(customers);
+            ViewBag.SortByName = string.IsNullOrEmpty(sort) ? "name_desc" : "";
+            ViewBag.SortByMembership = (sort == "membership") ? "membership_desc" : "membership";
+
+            if (!string.IsNullOrWhiteSpace(SearchString))
+            {
+                // in LINQ
+                //customers = (from c in customers where c.Name.Contains(SearchString) select c);
+                customers = customers.Where(c => c.Name.Contains(SearchString));
+
+                ViewBag.search = SearchString;
+            }
+
+            switch (sort)
+            {
+                case "name_desc":
+                    customers = customers.OrderByDescending(c => c.Name);
+                    break;
+                case "membership_desc":
+                    customers = customers.OrderByDescending(c => c.MembershipId);
+                    break;
+                case "membership":
+                    customers = customers.OrderBy(c => c.MembershipId);
+                    break;
+                default:
+                    customers = customers.OrderBy(c => c.Name);
+                    break;
+            }
+
+            return View(view, customers.ToList());
         }
 
         // GET: Customer/Details
+        [Authorize]
         public ActionResult Details(int id)
         {
             //var customer = getCustomers().SingleOrDefault(c => c.ID == id);
@@ -42,6 +76,7 @@ namespace VidPlace.Controllers
                 return View(customer);
         }
 
+        [Authorize(Roles = RoleNames.CanManageMedia)]
         public ActionResult New()
         {
             //var customer = new Customer();
@@ -102,6 +137,7 @@ namespace VidPlace.Controllers
             return RedirectToAction("Index", "Customer");
         }
 
+        [Authorize(Roles = RoleNames.CanManageMedia)]
         public ActionResult Edit(int id)
         {
             var customerInDB = _context.Customers.SingleOrDefault(c => c.ID == id);
@@ -116,6 +152,30 @@ namespace VidPlace.Controllers
             };
 
             return View("CustomerForm", viewModel);  
+        }
+
+        [Authorize(Roles = RoleNames.CanManageMedia)]
+        public ActionResult Delete(int? id)
+        {
+            var customer = _context.Customers
+                .Include(m => m.Membership)
+                .SingleOrDefault(c => c.ID == id); 
+
+            if (customer == null)
+                return HttpNotFound();
+
+            return View(customer);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(int id)
+        {
+            var customerInDB = _context.Customers.Find(id); // search with primary key
+
+            _context.Customers.Remove(customerInDB);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index");
         }
 
         /*

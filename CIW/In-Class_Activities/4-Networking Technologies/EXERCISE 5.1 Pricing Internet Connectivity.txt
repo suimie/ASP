@@ -1,0 +1,18 @@
+﻿Networking Technologies and Wireless Routers
+===================
+EXERCISE 5.1 
+
+Pricing Internet Connectivity
+
+1. Visit the website for a telephone provider in your area, and see what offers are available for DSL. What is the most basic package that you can get, and what does it cost? What is the fastest package you can get, and what does it cost?
+Telephone provider : True Speed
+The most basic package : 6Mbps download speed, 0.80Mbps upload speed, 200GB monthly usage, $25.95/Month
+The fastest package : 6Gbps download speed, 0.80Mbps upload speed, unlimited monthly usage, $35.95/Month 
+2. Visit the website for a cable television provider in your area, and see what offers are available for cable Internet. What is the most basic package that you can get, and what does it cost? What is the fastest package you can get, and what does it cost?
+Cable telephone provider : Bell
+The most basic package : 3Mbps download speed, 0.68Mbps upload speed, 20GB monthly usage, $39.95/Month
+The fastest package : 1Gbps download speed, 100Mbps upload speed, unlimited monthly usage, $139.95/Month 
+3. Visit the website for a satellite Internet provider. If you’re not familiar with one, www.hughesnet.com is a popular provider. What’s the fastest package you can get, and what does it cost?
+The fastest package :50GM, U$99.99
+4. (Optional) Can you find a dial up ISP in your area? How much does it cost? 
+56K Donload, 56K Upload $8.99/month

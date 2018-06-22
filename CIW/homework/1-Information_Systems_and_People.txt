@@ -1,0 +1,122 @@
+﻿Lab Exercise 1
+Suim Park
+
+1- Information Systems and People
+==================================
+1-1. 	What are the six major roles of information systems in organizations? How are information systems used in each context?
+
+	1. Managing operations : Information systems are crucial for tracking employee payroll, taxes, benefits, and timesheets. Accounting information systems are essential to track accounts receivable, to process transactions, to procure goods and services, and to pay suppliers. Organizations also must manage their assets and inventories.
+	
+	2. Customer interactions : Interactions with customers, clients, students, patients, taxpayers, citizens, and others that come to your organization desiring a product or service are fundamental to success. Customer relationship management (CRM) systems build and maintain relationships and support all the processes that underlie them.
+	Brick-and-mortar retail stores need a sales system that identifies each product in the shopper’s basket, tallies the total, feeds the data to the inventory system, and accepts various kinds of payment. Web-based front offices and online self-service applications transform an organization’s relationships with its customers, freeing them from most routine types of direct contact. The information system processes often mimic the brick-and-mortar versions, with “shopping carts” and “checkouts” clearly labeled.
+	For example, Amazon.com includes recommendations based on previous purchases, encouragements to “review this book” or “rate this item,” special discounts and coupons, storage space for your wish lists and gift ideas, and many other innovative features to map out your preferences and build a stronger relationship. All of this data contributes to Amazon’s customer relationship management excellence, generating an enormous capacity to understand each person, make recommendations, and predict behavior.
+	
+	3. Making decisions : Information systems support data-driven decision making, which draws on the billions of pieces of data that can be aggregated to reveal important trends and patterns. Business intelligence, which collectively refers to all the information managers use to make decisions, can come from many sources beyond the organization’s own operational systems. 
+	
+	4. Collaborating on teams : Collaboration and teamwork have considerable support from innovative information systems that allow people to work together at any time and from any place. Geographically dispersed participants can hold online meetings, sharing documents and applications, and interacting using microphones, video cameras, and whiteboards. Social networking sites support online communities of people who create profiles for themselves, form ties with others with whom they share interests, and make new connections based on those ties. The huge success of social networks has prompted many corporations to adopt them.
+	Developing information systems to support collaborative human activities takes considerable ingenuity and attention to the ways in which people really work together.
+	
+	5. Strategic objectives : Information systems potentially play their most valuable role when they are integrated closely with strategy and tied to the major initiatives that will help achieve strategic objectives.
+	Competitive advantage, which is anything that gives a firm a lead over its rivals, can be gained through the development and application of innovative information systems. Increasingly, these systems are a core feature of a company’s strategic vision. Indeed, that vision must be shaped to some extent by what information systems can achieve today and what is possible for the future.
+	Strategy is equally important to nonprofit organizations and government agencies, and their information systems break considerable new ground by offering new services to the public, increasing access for all citizens, streamlining operations, reducing costs, and improving decision making.
+	
+	6. Individual productivity :Tools to help people improve their own productivity on the job and in life abound, from the smartphones that combine voice calls with web browsing, contact databases, e-mail, music, and games, to the many software applications that eliminate tedious work. Word processing has transformed work in every organization, and offers numerous tools and add-ons that can further improve individual productivity.
+	To improve productivity at work, people can choose from a variety of computer software and electronic devices. It is best to select carefully based on the functions you need most, integration with your favorite applications, ease of use, and short learning curves.
+
+
+
+1-2.	How is data different from information? How is information different from knowledge? What are examples of each?
+
+	Data is unprocessed facts and figures without any added interpretation or Analysis. For example, the Price of crude oil is $80 per barrels.
+	
+	
+
+Information is data that has been interpreted so that it has meaning for the user.  For example, the Price of crude oil has risen from $70 to $80 per barrel. It gives meaning to the data and so is said to be information to someone who tracks oil prices.
+
+
+
+	Knowledge is a combination of information, experience and insight that May benefit the individual or the organisation.  For example, when crude oil prices go up by $10 per barrel, it’s likely that petrol prices Will rise by 2p per liter. It is knowledge.
+
+
+
+1-3.	What are the three characteristics that make information valuable? Why is each a critical attribute of information?
+
+	1. Timeliness : Decisions should be made at the right time to achieve effectiveness. Timely information refers to providing information at the right time. For example, if you can get to know today’s weather forecast before you leave home, you can decide whether to Bring an umbrella or not.
+
+
+	2. Accuracy : Accurate information is error free. Errors could be occurred due to different reasons.  If there is some Problem in the knowledge required for the process, output(information) May have Errors. At the same time, if input(data) contains some Errors, the output Will not be accurate. This is known as garage in garage out(GIGO). Inaccurate information is not error free.
+
+
+	3. Completeness : Complete information contains all the important facts to make clear decisions. For example, an investment report May present all possible benefits and profits without details of cost that Will be required.
+
+
+
+1-4.	What are the four components of an information system? Describe each component. What are the five functions that these components provide? 
+	
+	1. People : The design, development, launch, and maintenance of any information system involves teams of people. The human element plays a crucial role in the success or failure of most information systems.
+	Leaders may be first to conceive the strategic objective the system will achieve, and weigh the pros, cons, costs, and benefits. Managers and staff from many departments in the organization participate on teams with technologists to design the details of a system, or evaluate commercial systems that might be purchased. The information technology team works closely with staff in other functional areas to launch user-friendly, people-oriented systems.
+	Many systems draw from a much wider pool of people, involving users as contributors and developers, not just customers or clients. User-generated content (UGC) makes up most of the information in systems such as eBay, Craigslist, YouTube, Facebook, Twitter, Wikipedia and many others. Some corporations, such as Intuit who makes TurboTax software, also involve users in online forums related to the product. 
+
+	2. Technology : Information Technology includes hardware, software, and telecommunications. The servers in Google’s windowless data centers are examples of hardware, along with all the desktop computers, laptops, netbooks, cell phones, navigation devices, digital cameras, camcorders, personal digital assistants, and barcode scanners.
+	Software ranges widely, from the code needed to boot up a computer to very sophisticated programs with artificial intelligence and their own learning capabilities. The Internet and the World Wide Web unleashed an explosion of software creativity, transforming businesses around the globe. Organizations can create applications that their partners, suppliers, and customers can access wherever they are, eliminating boundaries that once existed.
+	The main role of telecommunications is to move electronic signals from one place to another, properly route traffic, and provide various services to improve transmission speeds, eliminate noise, increase security, or analyze traffic patterns. Various kinds of wires appear in much of the infrastructure, including orange fiber optic cables, the coaxial cables used by cable TV companies, and the slender copper telephone wiring common in homes.  Wireless transmission is increasingly favored because of its flexibility and reduced cost, though speed still lags.
+
+	3. Processes : A business process is a set of activities designed to achieve a task., and organizations implement information systems to support, streamline, and sometimes eliminate business processes.
+	The nuances of processes and their steps are affected by thousands of decisions people make, and these are influenced by human motivations and the way people look at process improvements. Some organizations try to design systems that just reproduce what employees were doing, thereby reducing labor. However, a closer look at the process might lead to far more radical changes.
+	Business process management (BPM) is the field that focuses on designing, optimizing, and streamlining processes, taking into account the human element. Analysts look at processes from many different angles to weigh input from all stakeholders, suggest innovative approaches that leverage the power of information systems, and propose tweaks at every step.
+	Efforts to manage business processes also consider the overall organizational culture, and its approach to information systems. Business processes and organizational policies must be reviewed frequently because circumstances change quickly
+	* Process is a set of logically related tasks performed to achieve a defined outcome.
+
+	4. Data : Data are the grist for every information system, and these raw facts can present themselves in an enormous variety of shapes and forms. Regardless of its initial form, incoming data is converted into digital format, which allows it to be integrated in information systems, read by computer programs, and shared across systems.
+
+
+
+1-5.	How are information systems important to managers in a variety of functional business units? What are examples of ways that information systems are important to the success of a marketing department, a human resources department, and a small business owner?
+	
+	Information systems are important to business managers because they support the company’s business activities throughout every functional department. 
+	Information systems are used to streamline processes, reduce costs, increase revenue, or support a strategic initiative. 
+	A marketing department uses information systems to develop data-driven marketing strategies, analyze ROI for marketing campaigns, and leverage social networking trends to create interest in the company’s products. 
+	A human resources department uses information systems to deliver online learning programs to reach more employees. 
+	A small business owner can take advantage of the decline in cost for many information systems, such as inexpensive intelligent dialing software that enables call center staff to more efficiently reach mobile phone customers.
+
+
+1-6.	What are the functional areas that are common to most information technology departments?
+
+	Common functional areas in an information systems department include end-user support and help desk, systems administration, data center operations, enterprise systems, and telecommunications and network services.
+
+
+1-7.	What is the role of the chief information officer?
+
+	The CIO heads the department responsible for managing and maintaining information systems, and ensuring they support the organization’s strategic goals.
+
+
+
+1-8.	How do information systems offer promises to organizations? What are some of the perils of information systems? What are some of the ethical questions associated with the use of information systems?
+
+	Information systems offer promises to organizations by telling them that their system will do what it is intended to do, and that it will do it reliably
+
+Some of the perils of information systems include being able to be hacked or information to be leaked incidentally.
+
+1. Who is responsible for damage caused by accidental leaks of private information?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

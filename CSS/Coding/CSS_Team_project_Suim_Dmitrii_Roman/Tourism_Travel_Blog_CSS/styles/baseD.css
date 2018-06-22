@@ -1,0 +1,254 @@
+﻿@charset "utf-8";
+/*CSS document for the header of Tourism Travel Blog Web Site*/
+/*Developed by Roman Shaiko, Suim Park, Dmitrii Kudrik*/
+/*Script date: October 13, 2017*/
+
+#main {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+}
+img{
+    width: 100%;
+}
+#stories{
+    margin-top: 20px; 
+    padding: 1px 10px; 
+    text-align: center;
+    border-bottom: 5px solid grey;
+}
+
+h2{
+    color: brown;
+    text-shadow: 2px 2px 1px #e5e060;
+}
+#left_col{
+    padding: 10px 10px ; 
+    float:left; 
+   
+    
+    margin:0 0 0 30px; 
+}
+
+
+h3, h4{
+    text-align: center;
+}
+caption{color:brown;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 17px 0;
+    width: 100%;
+    text-shadow: 1px 1px 1px lightgreen;
+    border-bottom: 5px solid grey;
+}
+h4{
+    text-shadow: 2px 2px 1px green;
+}
+h3 a, p a {
+    text-decoration: none;
+    color: black;
+}
+#right_col{
+    padding: 10px 10px; 
+    float:right;
+     
+    
+    margin:0 30px 0 0;
+}
+
+
+p span{
+    font-weight: bold;
+}
+#container1{
+    clear:both; 
+    padding:20px 0 0 0;
+}
+/*Styling "Top stories about continents"*/
+.topstories{
+    padding: 1px 10px; 
+    
+    width: 100%;
+    border-spacing: 10px;
+}
+
+
+.topstories tr td{
+    padding: 5px;
+    width: 30%;
+    margin-top: 0;
+}
+
+.verticalAlign td {
+    vertical-align: top;
+}
+.topstories1{
+    padding: 20px 10px; 
+    margin: auto;
+    width: 90%;
+    border-spacing: 10px;
+   
+}
+
+#cube{
+    width: 60%;
+    padding-left: 10%;
+    padding-top:30px;
+}
+
+.topstories1 tr td{
+    padding: 10px;
+    width: 25%;
+    
+}
+.topstories1 tr td a img{
+    border-radius: 8px;
+    
+}
+
+#left_col a img:hover, #right_col a img:hover{
+    box-shadow: 2px 2px 2px grey;
+}
+.scale td a img:hover{
+   /* -ms-transform: scale(); 
+    -webkit-transform: scale(); */
+    transform: scale(2.5, 2.5);
+}
+.scale1 td a img:hover{
+   /* -ms-transform: scale(); 
+    -webkit-transform: scale(); */
+    transform: scale(1.05, 1.05);
+}
+.topstories tr td a img{border: 1px solid #ddd; 
+    border-radius: 4px; 
+    padding: 5px;}
+
+.topstories tr td a img:hover{
+    border-radius: 20px;
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+/*Cube*/
+
+#container2{
+    width:300px;
+    height:300px;
+    margin:100px 40px;
+    perspective:1100px;
+    perspective-origin:-50% -50%;
+    float:left;
+}
+
+.cube {
+    transform-style: preserve-3d;
+    position: relative;
+    left: 15%;
+    margin: 0;
+    transition: 1s;
+    transform: translateZ(-150px);
+    width: 300px;
+    height: 300px;
+}
+.cube div{
+    width:298px;
+    height:188px;
+    position:absolute;
+    border:1px solid #fff;
+    text-align:center;
+    padding-top:110px;
+    color:#fff;
+    font:3em 'Times New Roman', Times, Serif;
+}
+.front {
+    transform: translateZ(150px);
+    background-color: rgba(25,173,173,0.5);
+}
+.left {
+    transform: rotateY(-90deg)translateZ(150px);
+    background-color: rgba(25,173,173,0.5);
+}
+.right {
+    transform: rotateY(90deg) translateZ(150px);
+    background-color: rgba(25,173,173,0.5);
+}
+.top {
+    transform: rotateX(90deg) translateZ(150px);
+    background-color: rgba(25,173,173,0.5);
+}
+.bottom {
+    transform: rotateX(-90deg) translateZ(150px);
+    background-color: rgba(25,173,173,0.5);
+}
+.back {
+    transform: translateZ(-150px) rotateY(180deg);
+    background-color: rgba(25,173,173,0.5);
+}
+/*Styling all Labels*/
+label {
+    cursor:pointer;
+    background-color:#acadaf;
+    border-radius:10px;
+    padding:10px;
+    float:left;
+    text-align:center;
+    margin-right:5px;
+}
+label:hover{
+    background-color:#ffe27a;
+    color:#fff;
+}
+input:checked+label{
+    color:orange;
+    font-weight:bold;
+}
+input[value="Canada"]:checked ~ #container2 .cube{
+    transform:translateZ(-150px) rotateY(0);
+}
+input[value="Korea"]:checked ~ #container2 .cube {
+    transform: translateZ(-150px) rotateY(90deg);
+}
+input[value="Ukraine"]:checked ~ #container2 .cube {
+    transform: translateZ(-150px) rotateY(-90deg);
+}
+input[value="Germany"]:checked ~ #container2 .cube {
+    transform: translateZ(-150px) rotateX(-90deg);
+}
+input[value="Belarus"]:checked ~ #container2 .cube {
+    transform: translateZ(-150px) rotateX(90deg);
+}
+input[value="India"]:checked ~ #container2 .cube {
+    transform: translateZ(-150px) rotateY(180deg);
+}
+#cube form input{
+    display: none;
+}
+img[alt^="Canadian"], img[alt^="Korean"],img[alt^="Ukranian"], 
+img[alt^="German"], img[alt^="Belarus"], img[alt^="Indian"]
+{
+    width: 115px;
+    height: 85px;
+}
+
+.move_page {
+    clear: both;
+    margin:auto auto;
+    width:90%;
+}
+
+.move_page table {
+    width:100%;
+    margin:auto auto;
+}
+
+.next_page {
+    text-align:right;
+}
+
+.move_page img {
+    width: 30px;
+    margin-top: 30px;
+}
+
+

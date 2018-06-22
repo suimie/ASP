@@ -1,0 +1,17 @@
+﻿Networking Technologies and Wireless Routers
+===================
+EXERCISE 5.2
+
+The Cost of Networking
+
+1. Visit the website for an electronics store. If you’re unfamiliar with any, try
+www.bestbuy.com or www.frys.com.
+2. Find an 802.11ac wireless router. How much is it?
+www.frys.com - $59, www.bestbuy.com - $43.15
+3. Find an older standard. See if you can find an 802.11b one. If not, go for 802.11g. How
+much is it?
+$96.95
+4. Now price out wired network cards. Find a fiber‐optic card, and price that versus
+an Ethernet card that offers similar speeds. Also look at the price of a 25m Cat‐6 (or
+Cat‐5) cable versus a 5m fiber‐optic cable. How much difference is there?
+Fiber-optic card - 8Gbps, $1,230

@@ -1,0 +1,28 @@
+﻿@charset "utf-8";
+
+/*mq.css*/
+/*CSS document for CSS Media Queries Web PAge*/
+/*Script Date: October 13, 2017*/
+/*Developed by Dmitrii Kudrik*/
+
+/*default (base) style*/
+@import url("baseD.css");
+@import url("footer-base.css");
+@import url("header-base.css");
+
+
+/*phone style*/
+@import url("phoneD.css") only screen and (max-width:580px);
+@import url("footer-phone.css") only screen and (max-width:580px);
+@import url("header-phone.css") only screen and (max-width:580px);
+
+/*tablet style*/
+@import url("tabletD.css") only screen and (min-width:581px) and (max-width:980px);
+@import url("footer-tablet.css") only screen and (min-width:581px) and (max-width:980px);
+@import url("header-tablet.css") only screen and (min-width:581px) and (max-width:980px);
+
+/*desktop style*/
+@import url("desktopD.css") only screen and (min-width:981px);
+@import url("footer-desktop.css") only screen and (min-width:981px);
+@import url("header-desktop.css") only screen and (min-width:981px);
+

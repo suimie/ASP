@@ -1,0 +1,123 @@
+﻿@charset "utf-8";
+
+/* CSS document for The 3D-Cube */
+/* Script Date: Octorber 11, 2017 */
+/* Developed by : Suim Park */
+
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body > form {
+    width:550px;
+    margin:50px auto;
+}
+
+#container {
+    width:300px;
+    height:300px;
+    margin:100px auto;
+    perspective:1100px;
+    perspective-origin:-50% -50%;   /* x y */
+    float:left;
+}
+
+.cube {
+    /* Vendor specific prefixes */
+    transform-style: preserve-3d;
+    position: relative;
+    left: 15%;
+    margin: 0;
+    transition: 1s;
+    transform: translateZ(-150px);
+    width: 300px;
+    height: 300px;
+}
+
+.cube div {
+    width:298px;
+    height:188px;
+    background-color:rgba(0, 0, 0, 0.8); 
+    position:absolute;
+    border:1px solid white;
+    text-align:center;
+    padding-top:110px;
+    color:white;
+    font:3em 'Times New Roman',Times, Serif;
+}
+
+.front {
+    transform: translateZ(150px);
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(150px);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(150px);
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(150px);
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(150px);
+}
+
+.back {
+    transform: translateZ(-150px) rotateY(180deg);
+}
+
+/* styling all labels */
+label {
+    cursor:pointer;
+    background-color:#f4f4f4;
+    border-radius:10px;
+    padding:10px;
+    float:left;
+    text-align:center;
+    margin-right:5px;
+}
+
+label:hover {
+    background-color:black;
+    color:white;
+}
+
+input:checked + label {
+    color:orange;
+    font-weight:bold;
+}
+
+input[value="front"]:checked ~ #container .cube {
+    transform: translateZ(-150px) rotateY(0);
+}
+
+input[value="left"]:checked ~ #container .cube {
+    transform: translateZ(-150px) rotateY(90deg);
+}
+
+input[value="right"]:checked ~ #container .cube {
+    transform: translateZ(-150px) rotateY(-90deg);
+}
+
+input[value="top"]:checked ~ #container .cube {
+    transform: translateZ(-150px) rotateX(-90deg);
+}
+
+input[value="bottom"]:checked ~ #container .cube {
+    transform:  translateZ(-150px) rotateX(90deg);
+}
+
+input[value="back"]:checked ~ #container .cube {
+    transform: translateZ(-150px) rotateY(180deg);
+}
+
+input {
+    position:absolute;
+    left:-9999px;
+    /*
+    visibility:hidden;*/
+}

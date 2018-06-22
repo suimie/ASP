@@ -1,0 +1,40 @@
+Identifying Motherboard Components
+==================================
+1. Miscellaneous connectors and jumpers. Connectors are available to connect to a speaker, to fans, and to the front of the case for power and displays. They can be located in different places on the motherboard.
+
+2. Expansion slots. Expansion slots allow you to add additional cards to a motherboard for additional capabilities. Several different types of expansion slots are available, including Peripheral Component Interconnect (PCI), Accelerated Graphics Port (AGP), and more.
+
+3. Rear connectors. Several connectors are attached to the motherboard and are accessible via the rear of the computer. These include connectors for audio and video Universal Serial Bus (USB) devices and more. 
+
+4. CPU 12-V power. A 4-pin plug from the power supply plugs into here to provide power to the Central Processing Unit (CPU). On systems with multiple CPUs, this can be two 4-pin plugs or an 8-pin plug.	
+
+5. CP U Fan. CPUs generate a lot of heat, so it’s common to attach a fan on top of them. A connection on the motherboard provides power for the fan. CPU fans are often variable speed so that they can spin faster when the CPU gets hotter.
+
+
+6. Chipset. This consists of one or more integrated circuits (ICs) that connect the CPU with other components and devices on the system. Chipsets are designed to work with specific CPUs and are soldered into the motherboard. They can get hot and often have heat sinks on top of them designed to dissipate heat. 
+
+7. CPU. The majority of work done by a computer occurs within the processor. The motherboard includes a CPU socket into which a CPU is plugged, and the CPU is normally covered with a heat sink and a cooling fan. 
+
+8. SATA connectors. Most computers support Serial Advanced Technology Attachment (SATA) drives. SATA connectors have a distinctive L shape. SATA connectors come in different versions, and these different versions are identified with different colors. However, there isn’t a standard with the colors between motherboard manufacturers.
+
+9. Battery. The battery provides power to the Basic Input/Output System (BIOS) so that certain settings are retained. The battery is often circular but can have a barrel shape.
+
+10. BIOS jumper. There is often a jumper close to the battery. Shorting the two pins on this jumper will reset the BIOS password or return the BIOS settings to the factory defaults.
+
+11. RAM. Motherboards usually have at least two RAM slots, and many have four or six. RAM slots are very specific and will accept only certain types of RAM based on the specifications of the motherboard.
+
+12. IDE connectors. Extended Integrated Drive Electronics (EIDE) connectors are used for EIDE devices such as hard drives and optical drives. Many systems have replaced EIDE drives with SATA drives, but you still might see the connectors. When the board includes them, you’ll see two connectors labeled IDE1 and IDE2, or sometimes IDE0 and IDE1.
+
+13. P1 power connector. The primary power connection from the power supply is either a 20-pin connector or a 24-pin connector.
+
+14. Floppy drive connector. This is for 3.5-inch floppy drives. They are rare today, but if the system has a floppy connector, it is usually by the IDE connectors.
+
+
+
+
+
+
+
+
+
+

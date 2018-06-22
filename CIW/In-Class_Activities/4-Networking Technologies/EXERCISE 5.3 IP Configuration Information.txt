@@ -1,0 +1,15 @@
+Networking Technologies and Wireless Routers
+===================
+EXERCISE 5.3
+
+Finding Your IP Configuration Information in Windows
+
+1. Click Start, and in the box type cmd and press Enter. This will open a command prompt.
+
+2. At the prompt, type ipconfig and press Enter. This will display IP configuration information for your computer. Can you find your IP address, subnet mask, and (optional) default gateway?
+
+The link-local address shown is an IPv6 address, which is written in hexadecimal.
+
+3. At the prompt, type ipconfig /all and press Enter. This will show you much more information, including the address of your DHCP and DNS servers, if you have them.
+
+4. Type exit and press Enter to close the command prompt.

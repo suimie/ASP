@@ -1,0 +1,134 @@
+﻿@charset "utf-8";
+
+/* CSS document for The Ziller Financial Group Journal */
+/* Script Date: Octorber 10, 2017 */
+/* Developed by : Suim Park */
+
+
+#container {
+    width: 1080px;
+    background: #f7f3dc;
+    font-family:Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: 1px solid black;
+    font-size: 110%;
+    margin: 0 auto;
+}
+
+header {
+    background: url("../images/blacktexture.jpg");
+    text-align: center;
+    color: white;
+    height: 50px;
+    padding:5px;
+    font-size:180%;
+}
+
+nav {
+    background: #808080;
+    color: white;
+    text-align: center;
+    height: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+}
+
+nav a {
+    padding-left: 3px;
+}
+
+table {
+    margin:auto auto;
+    padding:10px;
+}
+
+table td {
+    background: black;
+    background-size:cover;
+    border: 1px solid #808080;
+}
+
+a:link {
+    color:white;
+}
+
+
+#first_section, #second_section, #third_section {
+    width: 339px;
+    height: 790px;
+    margin: 0 0 10px 0;
+    padding-left: 8px;
+    padding-right: 8px;
+    background: #f7f3dc;
+}
+
+#first_section, #second_section {
+    float: left;
+}
+
+#third_section {
+    float: right;
+}
+
+hr {
+    width: 1px;
+    height: 800px;
+    float: left;
+    padding: 0;
+    margin: 0 0;
+    border-left: 2px solid #08ae66;
+}
+
+#second_section + hr {
+	height: 765px;
+}
+
+#second_section hr:last-child {
+    height: 525px;
+}
+
+h2 {
+    background:#0e0e7c;
+    color:white;
+    padding:10px;
+    margin:7px 0;
+    text-align:center;
+}
+
+.rightside {
+    float:right;
+}
+
+.startPara {
+    text-indent:20px;
+}
+
+#first_section img {
+    width: 200px;
+    height: 150px;
+    float: left;
+}
+
+.subTitle {
+    font-size:110%;
+}
+
+footer {
+    clear: both;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #808080;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    width: 1074px;
+    height: 80px;
+    padding: 3px;
+    margin: 0 0;
+}
+
+    footer a {
+        font-weight: normal;
+        background: black;
+        padding:3px;
+    }
+
+    

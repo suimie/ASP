@@ -1,0 +1,70 @@
+﻿@charset "utf-8";
+/*CSS document for Tourism Travel Blog, Layout #3*/
+/*Developed by Roman Shaiko, Suim Park, Dmitrii Kudrik*/
+/*Script date: October 13, 2017*/
+body {
+    margin:0;
+    padding:0;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/*Classes*/
+img.fig1 {
+    margin-left: 10px;
+    float:right;
+    width:50%;
+}
+img.fig2 {
+    margin-right: 10px;
+    float:left;
+    width:50%;
+}
+/*Continents styles*/
+.AfricaBC {
+    background-color: #ffebcc;
+}
+.AsiaBC {
+    background-color: #ffebe6;
+}
+.EuropeBC {
+    background-color: #e6ffff;
+}
+.NABC {
+    background-color: #f2f2f2;
+}
+.SABC {
+    background-color: #f5f5f0;
+}
+
+#container {
+    width:100%;
+    margin:0;
+    padding:0;
+    font-size:15px;
+}
+#main {
+    width:980px;
+    margin:0 auto;
+}
+#article {
+margin:0 0 10px 0; 
+padding: 0 10px; 
+height:auto; 
+width:59%; 
+border:0px solid #0094ff; 
+float:left; 
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+#article img {
+    border-radius:15px;
+}
+#source {
+    text-align:right;
+}
+aside img {
+    border-radius: 15px;
+}
+#comment_form fieldset {
+    border-radius: 15px;
+    background-color:#eee;
+    color:darkblue;
+}

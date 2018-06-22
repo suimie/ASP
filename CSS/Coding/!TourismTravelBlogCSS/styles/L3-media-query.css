@@ -1,0 +1,39 @@
+﻿@charset "utf-8";
+/*CSS document for Tourism Travel Blog, Layout #3*/
+/*Developed by Roman Shaiko, Suim Park, Dmitrii Kudrik*/
+/*Script date: October 13, 2017*/
+
+/* default (base) style */
+/*General classes*/
+@import url("general-definitions.css");
+/*Header*/
+/*default Layout #3 style*/
+@import url("L3-base.css");
+/*Footer*/
+@import url("footer-base.css");
+@import url("header-base.css");
+
+/* desktop style */
+@import url("footer-desktop.css") only screen and (min-width:981px);
+@import url("header-desktop.css") only screen and (min-width:981px);
+@import url("L3-desktop.css") only screen and (min-width:981px);
+
+/* tablet tyle */
+@import url("footer-tablet.css") only screen and (min-width:481px) and (max-width:980px);
+@import url("header-tablet.css") only screen and (min-width:581px) and (max-width:980px);
+@import url("L3-tablet.css") only screen and (min-width:581px) and (max-width:980px);
+
+
+/* phone style*/
+@import url("footer-phone.css") only screen and (max-width:480px);
+@import url("L3-phone.css") only screen and (max-width:580px);
+@import url("header-phone.css") only screen and (max-width:580px);
+
+/*take header styles from here
+
+@import url("header-base.css");
+@import url("header-desktop.css") only screen and (min-width:981px);
+@import url("header-tablet.css") only screen and (min-width:581px) and (max-width:980px);
+@import url("header-phone.css") only screen and (max-width:580px);
+
+*/

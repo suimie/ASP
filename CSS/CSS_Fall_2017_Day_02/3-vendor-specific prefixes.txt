@@ -1,0 +1,61 @@
+vendor-specific prefixes
+
+Pseudo-classes:
+LoVeHAte - link | visited | hover | active
+
+Much of the discussion about HTML5 has focused on the new semantic elements, such as <section>, <header>, <footer>, and <nav>.
+
+Supporting HTML5 Semantic Tags
+Dealing with browsers that offer only partial support for HTML5 semantic tags is easy. All that’s needed is to add the following rule to your style sheet:
+article, aside, hgroup, header, footer, figure, figcaption, nav, section {
+   display: block;
+}
+
+Web Hypertext Application Technology Working Group (WHATWG), composed of individuals from Apple, the Mozilla Foundation (which creates the Firefox browser), and Opera Software
+. 
+
+
+Using vendor-specific prefixes for CSS
+You can also use many CSS3 properties with vendor-specific prefixes that ensure they won’t affect other browsers if their implementation is buggy. To create rounded corners with the border-radius property, you need to use three
+style declarations like this:
+-moz-border-radius: 8px;
+-webkit-border-radius: 8px;
+-ms-border-radius: 8px;
+-o-border-radius: 8px;
+border-radius: 8px;
+
+The -moz- and -webkit- prefixes indicate properties that will be used only by Mozilla (Firefox) or WebKit (Safari and Google Chrome) browsers. By placing the version without a prefix last, the normal rules of the cascade ensure that browsers will implement the standard property as soon as the bugs are ironed out.
+
+
+adding shadow to text
+x-offset:length in pixels
+y-offset:
+blur radius:
+color:rgba(255, 0, 0, 0.25) value 1 is opaque
+
+Vendor specific prefixes for CSS3
+-moz for Mozilla
+-webkit for Safari and Google Chrome
+-ms  for Microsoft
+-o for Opera
+
+
+Creating rounded corners and drop shadows
+The border-radius, box-shadow, and text-shadow properties are among the first CSS3 properties with widespread
+support in modern browsers, answering designers’ prayers for a way to create rounded corners and drop shadows
+without the need for images. 
+
+Using embedded fonts
+For years, web designers have been frustrated by the narrow range of “web safe” fonts at their disposal, because
+browsers use the fonts installed on the visitor’s computer.
+@font-face now has widespread browser support and is part of CSS3.
+
+
+@font-face {
+	font-family:"font-name";
+	src=url(url);
+}
+
+
+
+

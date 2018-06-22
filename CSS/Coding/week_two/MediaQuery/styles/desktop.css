@@ -1,0 +1,11 @@
+﻿@charset "utf-8";
+
+/* desktop.css */
+/* CSS document for CSS Media Queries Web page */
+/* Script Date: Octorber 13, 2017 */
+/* Developed by : Suim Park */
+
+#container {
+    background-image: url("../../images/nature_desktop.jpg");
+    background-size:contain;
+}

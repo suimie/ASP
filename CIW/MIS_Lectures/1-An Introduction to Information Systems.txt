@@ -1,0 +1,326 @@
+﻿An Introduction to Information Systems
+=======================================
+
+Objectives
+==========
+
+• Role of IS in organizations.
+• Three characteristics of valuable information.
+• Four components of IS.
+• MIS research areas.
+• Examples.
+• Ethical questions.
+
+
+On entering the world of information systems, you may ask what you need to know about that world, and what is important for your success. Most of you are already very connected, with computers, cell phones, software, and Internet access, so you have a head start on understanding how systems like these are critical for every organization. However, you may not know what is behind the scenes—not the electronics or program code, but the real story of how information systems spring to life, how we can leverage them, and where we can take them in the future.
+
+Our first class highlights information systems in action, the nature of information itself, and the four components of every information system. You will see how the IS discipline is evolving and why a solid understanding of this subject will give you a special edge, regardless of your major or career path.
+
+
+The material in this unit will enable you to:
+
+1. Describe the main roles that information systems play in organizations.
+
+2. Compare the terms data, information, and knowledge and describe three characteristics that make information valuable.
+
+3. Describe the four main components of an information system and the role that each plays.
+
+4. Identify several research areas that are studied in the discipline of management information systems (MIS). 
+
+5. Provide examples of how managers in business, nonprofit organizations, government, and the IT department depend on knowledge of information systems. 
+
+6. Explain how information systems present both promises and perils, and pose ethical questions. 
+
+
+
+IS in Action
+============
+Information, whether or not Google makes it accessible, is an organization’s most important asset. Creating, capturing, organizing, storing, retrieving, analyzing, and acting on information are fundamental activities in every organization. The skill with which you carry out those tasks will be the deciding factor, not just for your company’s success, but for your own. Like the information they manage, information systems cover a very broad scope and contribute to many different activities in an organization. For example:
+
+• American Idol launched a smash hit by engaging over 100 million television viewers around the world in an unusual kind of decision making. Hopeful singers compete each week, and audience members cast a vote for their favorite by phoning or sending text messages to the hotline. An information system tallies the results.
+
+• Hurricane Sandy coincided with the November 2012 elections in the US, and many people could not make it to the polls. New Jersey allowed email voting, but officials were overwhelmed with the volume. Information systems are playing a more important role every year as glitches and security concerns are resolved.
+
+• Walmart, one of the world’s biggest companies, pioneered the globe’s most efficient information system to track shipments as they move from supplier factories to warehouses to retail stores. Tags attached to pallets transmit information wirelessly, so Walmart execs know exactly where merchandise is in the supply chain.
+
+
+Organization and IS
+===================
+Multinational firms, small businesses, nonprofits, governments, volunteer organizations, self-employed entrepreneurs, universities, and every other type of organization relies on information systems for a host of reasons, and they continue to adapt, expand, and interconnect them to achieve their strategic objectives. These systems play critical roles in several contexts:
+
+1. Operations management
+2. Customer interactions
+3. Decision making
+4. Collaboration on teams
+5. Strategic initiatives
+6. Individual productivity
+
+
+1. Managing operations
+=======================
+Every successful organization must excel at operations management, which involves the design, operation, and improvement of systems the organization needs to deliver its goods and services. Some of these deal with several very basic functions that are part of every business. Information systems are crucial for tracking employee payroll, taxes, benefits, and timesheets. Accounting information systems are essential to track accounts receivable, to process transactions, to procure goods and services, and to pay suppliers. Organizations also must manage their assets and inventories.
+
+Information systems designed to handle the processes involved in these functions must also meet compliance standards set by governments and other regulatory agencies, which may change from time to time, and also vary by country or state. Reports must be filed, audits must be passed, and changing regulations must be followed.
+
+Depending on their missions, organizations also need information systems to manage industry specific operations.
+
+Achieving excellence in operations can provide enormous cost savings and competitive advantage, as companies strive to shave every extra cost out of their processes without sacrificing quality. 
+
+
+2. Customer interactions
+==========================
+Interactions with customers, clients, students, patients, taxpayers, citizens, and others that come to your organization desiring a product or service are fundamental to success. Customer relationship management (CRM) systems build and maintain relationships and support all the processes that underlie them.
+
+Brick-and-mortar retail stores need a sales system that identifies each product in the shopper’s basket, tallies the total, feeds the data to the inventory system, and accepts various kinds of payment. Web-based front offices and online self-service applications transform an organization’s relationships with its customers, freeing them from most routine types of direct contact. The information system processes often mimic the brick-and-mortar versions, with “shopping carts” and “checkouts” clearly labeled.
+
+For example, Amazon.com includes recommendations based on previous purchases, encouragements to “review this book” or “rate this item,” special discounts and coupons, storage space for your wish lists and gift ideas, and many other innovative features to map out your preferences and build a stronger relationship. All of this data contributes to Amazon’s customer relationship management excellence, generating an enormous capacity to understand each person, make recommendations, and predict behavior.
+
+
+
+3. Decision making
+===================
+Information systems support data-driven decision making, which draws on the billions of pieces of data that can be aggregated to reveal important trends and patterns. Business intelligence, which collectively refers to all the information managers use to make decisions, can come from many sources beyond the organization’s own operational systems. 
+
+
+
+4. Collaboration on teams
+==========================
+Collaboration and teamwork have considerable support from innovative information systems that allow people to work together at any time and from any place. Geographically dispersed participants can hold online meetings, sharing documents and applications, and interacting using microphones, video cameras, and whiteboards. Social networking sites support online communities of people who create profiles for themselves, form ties with others with whom they share interests, and make new connections based on those ties. The huge success of social networks has prompted many corporations to adopt them.
+
+Developing information systems to support collaborative human activities takes considerable ingenuity and attention to the ways in which people really work together. 
+
+
+
+5. Strategic initiatives
+========================
+Information systems potentially play their most valuable role when they are integrated closely with strategy and tied to the major initiatives that will help achieve strategic objectives.
+
+Competitive advantage, which is anything that gives a firm a lead over its rivals, can be gained through the development and application of innovative information systems. Increasingly, these systems are a core feature of a company’s strategic vision. Indeed, that vision must be shaped to some extent by what information systems can achieve today and what is possible for the future.
+
+Strategy is equally important to nonprofit organizations and government agencies, and their information systems break considerable new ground by offering new services to the public, increasing access for all citizens, streamlining operations, reducing costs, and improving decision making.
+
+
+
+6. Individual productivity
+==========================
+Tools to help people improve their own productivity on the job and in life abound, from the smartphones that combine voice calls with web browsing, contact databases, e-mail, music, and games, to the many software applications that eliminate tedious work. Word processing has transformed work in every organization, and offers numerous tools and add-ons that can further improve individual productivity.
+
+To improve productivity at work, people can choose from a variety of computer software and electronic devices. It is best to select carefully based on the functions you need most, integration with your favorite applications, ease of use, and short learning curves.
+
+
+
+
+
+Nature of information
+======================
+Data refers to individual facts or pieces of information, and information refers to data or facts that are assembled and analyzed to add meaning and usefulness.
+
+For example, a single high-temperature reading of an incoming patient at Patient First, a 24-hour walk-in clinic, is one piece of data. But entered into the patient records information system, and combined with patient’s other symptoms and previous medical records, it becomes far more valuable as a diagnostic tool. Even more value can be obtained from this one temperature reading by aggregating it with the data from other patients entering the clinic that week. Tables and charts constructed from these data, analyzed by geographic region, may indicate a flu epidemic, or the first signs of a pandemic emergency. As information from many clinics, emergency rooms, and doctors’ offices pour in, and public health staff at the Center for Disease Control analyze maps, patient diagnoses, and many other facts, a pattern may emerge that leads to swift action.
+
+Information can be further refined, analyzed, and combined to make it even more useful and valuable as actionable knowledge.
+
+♦ Data consists of raw facts, such as an employee number, total hours worked in a week, inventory part numbers, or sales orders.
+
+♦ Information is a collection of facts organized so that they have additional value beyond the value of the individual facts. When facts are arranged in a meaningful manner, they become information.
+
+Information value
+==================
+Three characteristics stand out, however, that contribute to making some information very valuable:
+
+• Timeliness matters a great deal in some settings, and real-time information often costs more. For example, people pay monthly fees to financial service companies to get up-to-the minute stock prices, rather than delayed price reports shown on free stock tickers.
+
+• Accuracy may seem like an obvious attribute for valuable information, but there actually are degrees of accuracy. The more accurate you want the information to be, the longer it may take to get it, making extreme accuracy a tradeoff to timeliness.
+
+• Completeness also adds value. However, striving for complete information may introduce delays that affect timeliness.
+
+
+
+IS components
+=============
+An information system brings together four critical components to collect, process, manage, analyze, and distribute information:
+
+1. People
+2. Technology
+3. Processes
+4. Data
+
+We will now discuss each of these components.
+
+
+1. People
+==========
+The design, development, launch, and maintenance of any information system involves teams of people. The human element plays a crucial role in the success or failure of most information systems.
+
+Leaders may be first to conceive the strategic objective the system will achieve, and weigh the pros, cons, costs, and benefits. Managers and staff from many departments in the organization participate on teams with technologists to design the details of a system, or evaluate commercial systems that might be purchased. The information technology team works closely with staff in other functional areas to launch user-friendly, people-oriented systems.
+
+Many systems draw from a much wider pool of people, involving users as contributors and developers, not just customers or clients. User-generated content (UGC) makes up most of the information in systems such as eBay, Craigslist, YouTube, Facebook, Twitter, Wikipedia and many others. Some corporations, such as Intuit who makes TurboTax software, also involve users in online forums related to the product. 
+
+
+2. Technology
+=============
+Information technology (IT), covered in the next units, includes hardware, software, and telecommunications.
+
+The servers in Google’s windowless data centers are examples of hardware, along with all the desktop computers, laptops, netbooks, cell phones, navigation devices, digital cameras, camcorders, personal digital assistants, and barcode scanners.
+
+Software ranges widely, from the code needed to boot up a computer to very sophisticated programs with artificial intelligence and their own learning capabilities. The Internet and the World Wide Web unleashed an explosion of software creativity, transforming businesses around the globe. Organizations can create applications that their partners, suppliers, and customers can access wherever they are, eliminating boundaries that once existed.
+
+The main role of telecommunications is to move electronic signals from one place to another, properly route traffic, and provide various services to improve transmission speeds, eliminate noise, increase security, or analyze traffic patterns. Various kinds of wires appear in much of the infrastructure, including orange fiber optic cables, the coaxial cables used by cable TV companies, and the slender copper telephone wiring common in homes.  Wireless transmission is increasingly favored because of its flexibility and reduced cost, though speed still lags.
+
+
+3. Processes
+============
+A business process is a set of activities designed to achieve a task, and organizations implement information systems to support, streamline, and sometimes eliminate business processes.
+
+The nuances of processes and their steps are affected by thousands of decisions people make, and these are influenced by human motivations and the way people look at process improvements. Some organizations try to design systems that just reproduce what employees were doing, thereby reducing labor. However, a closer look at the process might lead to far more radical changes.
+
+Business process management (BPM) is the field that focuses on designing, optimizing, and streamlining processes, taking into account the human element. Analysts look at processes from many different angles to weigh input from all stakeholders, suggest innovative approaches that leverage the power of information systems, and propose tweaks at every step.
+
+Efforts to manage business processes also consider the overall organizational culture, and its approach to information systems. Business processes and organizational policies must be reviewed frequently because circumstances change quickly
+
+♦ Process is a set of logically related tasks performed to achieve a defined outcome.
+
+
+4. Data
+=======
+Data is the raw ingredient for every information system, and these raw facts can present themselves in an enormous variety of shapes and forms. Regardless of its initial form, incoming data is converted into digital format, which allows it to be integrated in information systems, read by computer programs, and shared across systems.
+
+
+
+
+IS discipline
+==============
+The study of information systems—how people, technology, processes, and data work together—is a lively discipline involving university faculty, private-sector analysts, and government agencies. The five areas that attract much of the interest include:
+
+• Development of information systems
+• IT in organizations
+• IT and individuals
+• IT and groups
+• IT and markets
+
+It is a young discipline—barely 25 years old—and is changing rapidly. Research on group collaboration, especially when team members are dispersed around the world, is far more important now because of virtual teams and globalization. The “people” component of information systems is clearly growing in importance, and this course stresses that element.
+
+
+IS in business
+==============
+Information systems underlie most of the business activities and processes that thread their way through every functional business unit. Strategic initiatives involving information systems come from all parts of the organization to streamline processes, reduce costs, and increase revenue.
+
+Whether your chosen career is marketing, finance, management, human resources, research, sales, law, medicine, manufacturing or as an entrepreneur, information systems will be fundamental to your success.
+
+
+
+IS in nonprofitsand government
+===============================
+If your career leads you to a job in government, teaching, law enforcement, charities, or other nonprofit areas, information systems will also be critical. Information systems can make an enormous contribution to nonprofit organizations, such as analyzing the preferences and motivations of potential donors, distributing video messages worldwide through the net or to supporters’ cell phones, or creating “micro-volunteering” opportunities for people who can spend just a few minutes of their time helping with various causes through their cell phones.
+
+
+
+IT department
+==============
+The functional business unit responsible for planning, managing, and supporting information systems is often named Information Technology. Heading the department is the chief information officer (CIO). The CIO might report directly to the CEO, or to another vice president—often the one responsible for finance and administration. As a senior executive, the CIO’s job is not just to oversee the department, but to help shape the organization’s strategic goals and ensure the information systems contribute to them.
+
+
+Collaborating on IS
+====================
+To improve communications between business managers and the IT department, the IT department will need to:
+
+• Focus on business goals
+• Avoid jargon
+• Communicate the value of IT
+• Emphasize return on investment
+• Be proactive
+• Embrace customer service
+• Be grounded in business
+
+Business managers will need to:
+
+• Describe your end goal, not the means to get there
+• Learn how to contact IT for different purposes
+• Be familiar with how information systems are already supporting the organization 
+• Network
+• Do their homework
+• Be an active partner
+
+
+
+Productivity
+============
+Microsoft surveyed 38,000 people in 200 countries to learn more about their productivity at work, and the role that technology played. Although people reported working an average of 45 hours a week, they considered 17 of those hours to be unproductive. People spend about 5.6 hours a week in meetings, but over two-thirds think meetings are not productive. Many respondents attributed their productivity to the technology they used, and their hours of unproductive time to their inability to use software that could help them schedule their time, organize their tasks, communicate effectively, and prioritize their work. 
+
+Information technology is the catalyst for building innovative information systems and achieving stunning gains in productivity for companies. It can also help you achieve a great deal more for yourself—in college, at work, and in your career. Mastering certain kinds of IT for your personal productivity is essential. Used wisely, these skills will also help you distinguish yourself in college and in the workplace. They will also make it easier to maintain a healthy work–life balance, giving you more time for family, friends, and leisure.
+
+
+Ethical issues
+===============
+Information systems are so powerful, and the data they contain so vast and personal, that everyone must appreciate the ethical issues involved in their development and use. Privacy breaches present major risks. For example, in the United Kingdom two computer discs were misplaced by government workers. The tiny platters contained personal data on 25 million residents, and their black market value was estimated at US$2.5 billion.
+
+Reputations are also far more vulnerable, given the power individuals have to spread damaging information at lightning speed. Few corporations are equipped to respond to such blitzes—accurate or not—that are distributed through channels such as YouTube. Every organization’s crisis management team, responsible for identifying, assessing, and addressing threats from unforeseen circumstances, must be on high alert for signs of any online firestorms. The teams have very little time to take action.
+
+The way modern information systems amplify any communication may put your own reputation and livelihood at risk as well. Any e-mail you send or photo you upload can be forwarded or posted online for millions to view, and for attorneys to collect as evidence. Text, photos and videos uploaded to your social networking site can easily be distributed to a far wider audience beyond your own network. It is also absurdly easy to make your own blunders, by sending e-mail to many more people than you intended.
+
+
+
+Summary
+=========
+1. Organizations rely on information systems for operations management, customer interactions, decision making, collaboration and teamwork, strategic initiatives, and individual productivity.
+
+2. Data, information, and knowledge are terms along a continuum that reflect how raw facts can be combined, assembled, and analyzed to add meaning and value. Characteristics of information that add to its value are timeliness, accuracy, and completeness.
+
+3. The four components of any information system are (1) people, (2) technology, (3) processes, and (4) data.
+
+4. Interest in subjects such as the role of IT in markets and in group work has increased considerably.
+
+5. Information systems contribute to success in every functional department, and in all different types of organizations.
+
+6. Although information systems hold extraordinary promise, they also present risks and ethical concerns, especially because of amplification effects.
+
+
+♦ knowledge - The awareness and understanding of a set of information and ways that information can be made useful to support a specific task or reach a 
+decision.
+
+
+
+
+Nasdaq OMX case
+===============
+With annual net sales of over $3 billion, the world’s largest “floorless” exchange handles hundreds of millions of trades every day. Buys and sells happen so fast that each trade has to be time-stamped to the nanosecond. First launched in 2000, Nasdaq OMX is above all a technology company, and it successfully competes against the New York Stock Exchange on its breathtaking trading speed.
+
+As in other businesses, improved information systems and technology drive prices down. In the early 2000s, NYSE and Nasdaq OMX shared 90% of the market, but competition pushed that figure down to 45%. Anna Ewing, the Nasdaq OMX CIO, stresses the need to find other revenue sources, and relies on her IT department to support new business strategies. She led the drive to sell Nasdaq’s technology to other countries so they could start their own “floorless” exchanges.
+
+Nasdaq’s focus on technology and high-speed trading were reasons, Zuckerberg chose to use that exchange to take Facebook public in 2012. During the first trading day, however, technical glitches at Nasdaq caused many delays and chaos, and the exchange had to switch to a secondary system. After the first few days of trading, Facebook’s share price dropped, and those who invested suffered huge losses. Critics blamed poor decision making at Nasdaq for the costly mess. Nasdaq agreed to pay $62M to compensate losses.  Another looming problem for Nasdaq OMX and other exchanges is computer trading based on algorithms, or “algo-trading.” While Nasdaq OMX and other exchanges compete for the growing number of algo-traders, analysts worry that the sheer technological speed introduces serious risks. When markets dropped a gut-wrenching 9% on one afternoon in 2010, some suspected a clumsy algo-trader who accidentally triggered the event.
+
+
+
+Twitter case
+============
+Twitter, the micro-blogging service best known for trivial updates on everyday events, has a growing role in emergency response. The service empowers people with the ability to gather and disseminate information about emergencies and disasters, and this information can be timelier than anything government authorities or disaster response organizations can provide.
+
+After the 2010 Haiti earthquake, a graduate student at the University of Colorado launched a project to improve Twitter’s usefulness, called “Tweak the Tweet.” The unstructured tweets about victims who needed help were repurposed into more structured messages with “hash tags”—keywords preceded by a pound sign (#). Computer programs can read these tags to categorize who is involved, what is needed, where the problem is, and what else might be happening. With this syntax, the tweets can be fed into disaster response systems that can aggregate information from many sources, mapping areas of need, location of victims, and sources of supplies.
+
+Disaster response organizations recognize that people are relying more heavily on social media such as Twitter for support during emergencies. Social media are so prevalent that in one survey, more than a quarter of the respondents said they would send a direct Twitter message to emergency responders, not realizing that aid organizations are not well prepared to monitor Twitter and other services. They also have few means to assess the value of information received via social media.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

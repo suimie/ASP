@@ -1,0 +1,63 @@
+
+
+CSS3 Multiple Columns: The CSS3 multi-column layout allows easy definition of multiple columns of text - just like in newspapers. 
+
+multi-column properties:
+========================
+column-count
+column-gap
+column-rule-style
+column-rule-width
+column-rule-color
+column-rule
+column-span
+column-width
+
+div {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+}
+
+
+CSS3 Column Rules
+The column-rule-style property specifies the style of the rule between columns:
+
+Example
+div {
+    -webkit-column-rule-style: solid; /* Chrome, Safari, Opera */
+    -moz-column-rule-style: solid; /* Firefox */
+    column-rule-style: solid;
+}
+
+
+
+Flexbox
+=======
+Flexbox properties:
+JJ display: flex; — possible values are flex and inline-flex
+JJ flex-flow: row wrap; — m ost common values are row, row wrap,
+column and column wrap
+Note: flex-flow is a shorthand property for:
+flex-wrap possible values — no-wrap, wrap, wrap-reverse
+flex-direction possible values — row, row-reverse, column, column-reverse
+
+Grids
+======
+Grid properties:
+display: grid; | grid-columns: 30rem 40rem 30rem; | grid-rows: 1fr 1fr 1fr 1fr;
+| grid-column: 1; | grid-column-span: 2; | grid-row: 1; | grid-row-span: 2;
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+﻿@charset "utf-8";
+
+/* mq.css */
+/* CSS document for CSS Media Queries Web page */
+/* Script Date: Octorber 13, 2017 */
+/* Developed by : Suim Park */
+
+/* default (base) style */
+@import url("base.css");
+
+/* phone style*/
+@import url("phone.css") only screen and (max-width:400px);
+
+/* tablet tyle */
+@import url("tablet.css") only screen and (min-width:401px) and (max-width:768px);
+
+/* desktop style */
+@import url("desktop.css") only screen and (min-width:769px);

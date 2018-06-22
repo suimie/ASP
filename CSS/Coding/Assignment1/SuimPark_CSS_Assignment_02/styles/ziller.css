@@ -1,0 +1,75 @@
+﻿@charset "utf-8";
+
+/* CSS document for The Ziller Financial Group Journal */
+/* Script Date: Octorber 10, 2017 */
+/* Developed by : Suim Park */
+
+
+#container {
+    width:1024px;
+    background-color:#fcf5e8;
+    font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+}
+
+header {
+    background: url("../images/blacktexture.jpg");
+    font-size:35px;
+    text-align:center;
+    padding:10px;
+}
+
+nav {
+    background-color:gray;
+    margin-top:10px;
+    padding:10px;
+}
+
+nav table {
+    margin:auto;
+}
+
+    nav table td {
+        background-color: black;
+        border: 2px solid gray;
+        padding:5px;
+    }
+
+    nav table td a {
+        color:white;
+        font-weight:bold;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+
+#main {
+    column-count:3;
+    column-rule:solid;
+    column-rule-color:green;
+}
+
+    #main h2 {
+        background-color:blue;
+        color:white;
+        padding:5px;
+        margin:10px;
+    }
+
+    #main img {
+        float:left;
+    }
+    
+footer {
+    background-color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+    footer a {
+        background-color:black;
+        color: white;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        padding:5px;
+    }

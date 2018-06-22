@@ -1,0 +1,56 @@
+﻿@charset "utf-8";
+
+/* CSS document for Filters and Transition */
+/* Script Date: Octorber 12, 2017 */
+/* Developed by : Suim Park */
+
+body {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:1em;
+}
+
+div {
+    width:15em;
+    height:1em;
+    display:inline-block;
+    margin:0.5em;
+    border:2px solid #2e8b57;
+    background-color:rgb(155, 187, 89);
+    text-align:center;
+    padding:0.5em;
+}
+
+.colors {
+    position: relative;
+    width: 17em;
+    height: 17em;
+}
+
+    .colors > div {
+        position: absolute;
+        display: inline-block;
+        border-radius: 50%;
+        border: none;
+        width: 10em;
+        height: 10em;
+        text-align: center;
+    }
+
+.rgbaRed {
+    top: 0;
+    left: 2.5em;
+    background-color:rgba(255, 0, 0, 0.5);
+}
+
+.rgbaGreen {
+    top: 5em;
+    left: 5em;
+    background-color: rgba(0, 255, 0, 0.5);
+}
+
+.rgbaBlue {
+    top: 5em;
+    left: 0em;
+    background-color: rgba(0, 0, 255, 0.5);
+}
+

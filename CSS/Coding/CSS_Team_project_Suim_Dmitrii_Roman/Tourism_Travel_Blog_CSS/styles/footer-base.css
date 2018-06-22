@@ -1,0 +1,48 @@
+﻿@charset "utf-8";
+
+/* CSS document for Tourism Travel Blog */
+/* Script Date: Octorber 12, 2017 */
+/*Developed by Roman Shaiko, Suim Park, Dmitrii Kudrik*/
+
+footer {
+    background-color: #eee;
+    margin: 0 auto;
+    clear: both;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+.footer-last-edited {
+    font-style: italic;
+    margin:0 10px auto auto;
+}
+
+.footer-hr {
+    margin: 0 auto;
+    border: 0.5px solid #777;
+    width:95%;
+}
+
+footer table {
+    margin:10px auto;
+}
+footer td a {
+    color: #333;
+    text-decoration: none;
+    font-size: small;
+}
+
+
+footer td a:hover {
+    text-decoration: underline;
+}
+
+footer table tr td {
+    padding:5px;
+}
+footer table tr td:first-child {
+    text-align:right;
+    border-right:1px solid #ccc;
+}
+

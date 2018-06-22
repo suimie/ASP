@@ -1,0 +1,97 @@
+﻿BIOS
+====
+The Basic Input/Output System (BIOS) includes software code that provides a computer with basic instructions so that it can start. When a computer is turned on, it runs the program within BIOS to do some basic system checks, locate the operating system on a disk, and start.
+
+For example, most computers have the operating system on a hard disk, and BIOS provides the initial instructions on how to locate the hard disk and start the operating system. The programming provided by BIOS is referred to as the bootstrap programming, and starting a computer is commonly called booting a computer. The BIOS allows the computer to start without any user intervention other than turning it on.
+
+The program within BIOS is stored in a chip on the computer that can be rewritten. Older computers used an electrically erasable programmable read-only memory chip (EEPROM) for the BIOS. Read-only memory (ROM) has gone through several iterations over the years, from programmable read-only memory (PROM), to erasable read-only memory (EPROM), and then to EEPROM. New computers use a type of flash memory similar to what is used with USB thumb drives.
+
+BIOS vs. CMOS
+==============
+Complementary metal oxide semiconductor (CMOS). When referring to BIOS and CMOS, there are differences.
+
+■ BIOS. This is the firmware. It stores the instructions for starting the computer and includes a program that can be used to change some settings. The firmware can be updated in a procedure referred to as flashing the BIOS.
+
+■ CMOS. This holds only the user-configurable BIOS settings, such as the current time. Users can change these settings by accessing the BIOS application. CMOS is volatile, meaning that the data is lost if the system is turned off. Motherboards include a CMOS battery to retain the CMOS data even if the system is turned off.
+
+BIOS is the application, CMOS is the data, and a CMOS battery keeps CMOS powered to retain the settings. 
+
+The BIOS chip stores the BIOS program that starts up the PC, checks its hardware with the POST routine, and locates and loads the operating system. Any errors during POST are reported through beep codes or through numbered POST error messages. The PC’s hardware configuration settings are stored in its CMOS settings. The BIOS setup program, accessed during startup through BIOS-specific startup keys, allows you to access and configure these settings. 
+
+The BIOS chip is typically a Flash memory chip that you upgrade with flashing software. A faulty flashing procedure will make a computer unbootable. Most major motherboard manufacturers provide security features, such as a backup BIOS, boot block, or security jumpers, to safeguard against accidental or faulty flashing. 
+
+The BIOS programs are stored on a special ROM (read-only memory) chip; because these embedded programs are so closely tied to the hardware, they are called firmware.
+
+Accessing the BIOS Application
+===============================
+When you first turn on a computer, you’ll see one or more screens flash onto the screen, providing bits of information. One of these screens gives you a message to press a specific key to access the setup options or the setup utility.
+
+When the computer is not receiving power, the firmware chip is powered by a battery nearby so it does not lose the data it holds in the memory on the chip, which is called CMOS RAM. CMOS RAM holds the motherboard configuration or settings and includes the computer date and time, power-on passwords, and which devices to look to when the BIOS is searching for an operating system (OS) to launch.
+
+
+The motherboard BIOS serves three purposes:
+• System BIOS manages essential devices (such as the keyboard, mouse, hard drive, and monitor) before the OS is launched.
+• Startup BIOS is used to start the computer.
+• BIOS setup or CMOS setup is used to change the motherboard configuration or settings.
+
+
+BIOS Vendors
+==============
+Just as you can purchase software developed by different vendors, motherboard manufacturers can use BIOS developed by different vendors. Two of the most popular BIOS vendors are American Megatrends (AMI) and Phoenix Technologies. Each vendor develops different versions of BIOS to meet the needs of different motherboard manufacturers. The motherboard vendor chooses the BIOS to include with the motherboard, so you don’t have to worry about which one to use. However, there are differences between versions, so it’s important to realize that one system will look different from another.
+
+BIOS Component Information
+============================
+You can use the BIOS to verify the different components that are installed on a system. This can be useful to ensure that the system is recognizing newly installed hardware. For example, if you install new RAM but it’s not recognized, the BIOS can sometimes give you insight into the problem.
+
+BIOS Configuration
+===================
+There are a few configuration settings that are important to understand. Changes you make in the configuration will remain in the system even after the system has been powered off.
+
+Time and Date
+==============
+A very basic setting for the BIOS is the time and date. You’ll often see these settings on the very first page of BIOS, which is sometimes called the Main page or the Standard CMOS Features page. 
+
+The computer keeps time with a real-time clock, and the CMOS battery keeps the clock ticking even when the system is turned off. You rarely need to change this except when the CMOS battery is failing. If the battery is failing, the real-time clock is slow and needs to be reset often.
+
+Boot Sequence
+=============
+One of the most important BIOS settings for a PC technician to understand is the boot sequence. The boot sequence setting tells the computer the device from which it should try to boot first.
+
+Enabling and Disabling Devices
+=================================
+You can often enable and disable devices in BIOS. If you want to disable any of the devices, you can select Disabled.
+
+Different types of BIOS allow you to enable and disable devices from different menus. Other devices that can sometimes be enabled or disabled from a BIOS menu include the following:
+■ USB controller. Disabling this prevents USB devices from working.
+■ Onboard 1394 (Firewire) controller. Disabling this prevents Firewire devices from working.
+■ Onboard graphics. This disables graphics capabilities from the chipset. You would disable this on systems that have a dedicated graphics card.
+■ Onboard audio. This disables audio capabilities from the chipset. You would disable this on systems that have audio cards installed in an expansion slot.
+■ Onboard network card. This disables network capabilities from the chipset. You would disable this on systems that have a network interface card installed in an expansion slot.
+
+
+POST
+====
+The POST (power-on self test) is a series of tests performed by the startup BIOS when you first turn on a computer. These tests determine if startup BIOS can communicate correctly with essential hardware components required for a successful boot. If you have a problem that prevents the PC from booting that you suspect is related to hardware, you can install the POST card in an expansion slot on the motherboard and then attempt to boot. The card monitors the boot process and reports errors, usually as coded numbers on a small LED panel on the card. You then look up the number online or in the documentation that accompanies the card to get more information about the error and its source.
+
+When a computer boots, it will run some basic tests commonly known as power-on self test (POST). POST performs only rudimentary checks on a few core devices. It ensures that the CPU and system timer are both running, that the RAM and graphics are accessible, that the keyboard is working, and that BIOS is not corrupt.
+
+If the computer passes these tests, it will continue to boot. If it fails one of these tests, it stops and gives you an indication of the failure. You’ll usually see an error on the display, but POST can’t rely on the display, so it uses different types of beep codes.
+
+The POST routine is in the BIOS, and as you now know, there are many different types of BIOS. Similarly, there are just about as many versions of beep codes. The BIOS manufacturer or the motherboard manufacturer has documentation on each of their beep codes, but it is not feasible to list what every POST beep code means. The following are a few examples of what you might hear:
+
+■ No beep. This often indicates that a system has no power or has a problem with the power supply. However, some systems do not beep at all, and this is normal.
+■ One short beep. This usually indicates that the system has passed the POST. In some systems, it indicates that the RAM might have a problem.
+■ Continuous beep or repeating beeps. This often indicates a problem with the power supply, the motherboard, or the keyboard.
+■ Buzz or quickly repeating beeps. This often indicates a problem with RAM.
+
+
+
+
+
+
+
+
+
+
+
+

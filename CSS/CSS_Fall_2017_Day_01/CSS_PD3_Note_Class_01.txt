@@ -1,0 +1,182 @@
+8:47 AM 10/5/2017
+=================
+Cascading Style Sheets categories
+CSS1 - 1996
+
+1. Fonts (font name, style, size)
+2. Text (text alignment, or text spacing)
+3. Color - background and foreground colors
+4. backgrounds - color, image, attachement, repeat, position
+5. Block-level elements
+
+CSS2 - 1998
+6. Positioning (left, right, top, bottom)
+7. Visual formatting (clipping or hidding elements)
+8. media types
+9. Interfaces
+
+CSS2.1
+
+CSS3
+10. User Interfaces - adding dynamic features
+11. Accessibility (refer to WCAG 2.0 or 3.0)
+12. International features
+13. Columnar layout
+14. Mobile Devices (PDA and smart phones)
+15. Scalable Vector Graphic
+
+3 ways to create CSS
+1. inline using style attribute
+2. internal using style element
+3. external (create a css file and link it to the html file)
+
+Syntax of a CSS rule 
+
+selector { style declaration }
+selector {property_name: value;}
+
+combining selector (when style declarations are the same)
+h1 {color:blue;}
+p {color: blue;}
+	h1, p {color:blue;}
+combining style declarations (when selectors are the same)
+p { color: red;}
+p {background-color:white;}  
+	p { color:red; 
+	    background-color:white;}
+
+1) Use classes to style several elements
+2) Different between dependent and independent classes
+	.class_name {style declaration}
+	selector.class_name { style declaration }
+	p.intro {font-size:20px;}
+3) Use ID selector 
+	#Id_name {style declarations}
+	selector# Id_name {style declarations}
+	<p id="warning" class="intro intro2">
+=====================================
+	
+1. Fonts Category: serif, sans-serif, monospace, cursive, and fantasy
+a)	font-family: Arial, Helvetica, sans-serif
+
+	body {
+		font-family: Arial, Helvetica, sans-serif;
+		font-style:bold;
+		font-size:
+	}
+
+	h1,h2,h3 {
+		font-family: Helvetica;
+	}
+b) font-size:length
+ where length: i) absolute ii) relative, or iii) percentage
+	i) Absolute unit of measurments: mm (millimeter), cm, in (inch), pt (point), pc (pica 1/6 in)
+	ii)Relative: px (pixel), em (width of a capital letter M), ex (height of the lower case x) 
+	font-size:2em; | font-size:2ex; font-size:0.7em;
+	
+	iii) percentage: font-size:150%
+
+Controlling spacing and indentation
+Kerning - space between letters => H  e  l  l  o
+	letter-spacing:value
+Tracking - space between words 
+	word-spacing:value => Hello		World!
+Leading - space between lines
+	line-height: value
+
+Setting the style, weight, and decorative features
+font-style: type
+where type: normal, italic, oblique
+
+font-weight: bold, bolder, normal, lighter, and a value between 400 to 900 
+
+text-decoration: type
+where type: none, underline, overline, line-through, blink
+
+<p><a href="msn.com><strong>msn</strong></a></p>
+
+in css
+a:link {
+      font-weight: bold;
+	text-decoration: underline;
+}
+
+text-transform: type
+where type: none, lowercase, uppercase, capitalize
+
+font-variant - displays text in uppercase and small font
+font-variant: normal, small-caps
+========================
+2. Text (text alignment, or text spacing)
+Horizontal alignment
+	text-align:  left, right, center, justify
+Vertical alignment
+	vertical-align: bottom, middle, top, text-top, text-bottom
+
+<p align="center" valign="top"> Deprecated attributes
+<p style="text-align:center; vertical-align:top">
+
+font properties
+============
+body {
+	font-family: "Times New Roman", Times, Serif;
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	font-variant: small-caps;
+}
+Shorthand style
+ font:  "Times New Roman", Times, Serif 12px italic
+Shorthand
+=======
+body {
+	font: 14px italic  
+}
+
+Font Size in HTML and CSS
+
+HTML Headings	Point Size	CSS Keyword
+============	=======		===========
+n/a		36pt		xx-large
+h1		24pt		x-large
+h2		18pt		large
+h3		14pt		medium
+h4		12pt		small
+h5		10pt		x-small
+h6		8pt			xx-small
+
+
+Colors:
+a) Safe web colors: aqua, white, blue, red, yellow, black 
+b) Triplet RGB colors rgb( red, green, blue)
+	value 0 - 255
+c) rgba (a is alpha) rgba(red, green, blue, alpha
+d) Hexadecimal - #RedRedGreenGreenBlueBlue
+	value 0 - 9 and A - F
+	#FF0000 -> shorthand #F00
+e)CMYK - Cyan, Magenta, Yellow, and Black
+
+	
+Contextual (Descendent) selector 
+parent_selector child_selector { style declaration}
+
+
+<header>
+	<h1>
+	<h2>
+</header>
+	
+	<div>
+		<p>
+		<p>
+		<p>
+	</div>
+	
+
+
+
+	background-image:url("filename.jpg")
+	background-color:
+	background-repeat:repeat(default) | no-repeat | repeat-x (horizontally) | repeat-y(vertically)
+	background-attachment:scroll | fixed
+	backgrund-position:horizontal-position vertical-position

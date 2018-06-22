@@ -1,0 +1,31 @@
+﻿@charset "utf-8";
+
+/* footer-phone.css*/
+/* CSS document for Tourism Travel Blog */
+/* Script Date: Octorber 12, 2017 */
+/*Developed by Roman Shaiko, Suim Park, Dmitrii Kudrik*/
+
+footer {
+    padding: 5px;
+    padding-top: 10px;
+}
+
+.footer-last-edited {
+    font-size: 0.7em; /*xx-small;*/
+    width: 440px;
+    margin-right: 10px;
+}
+
+
+.LogoPic {
+    display: none;
+}
+
+.go-top {
+    width: 30px;
+    margin: auto 30px auto auto;
+}
+
+    .go-top img {
+        width: 30px;
+    }

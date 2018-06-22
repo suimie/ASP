@@ -1,0 +1,154 @@
+﻿@charset "utf-8";
+/*CSS document for the header of Tourism Travel Blog Web Site*/
+/*Developed by Roman Shaiko, Suim Park, Dmitrii Kudrik*/
+/*Script date: October 13, 2017*/
+body {
+    margin: 0;
+    padding: 0;
+    overflow:scroll;
+}
+#container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    border-bottom: 1px solid #aaa;
+    background-color: #eeeeee;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:15px;
+    font-kerning:normal;
+}
+
+#hcontainer {
+    margin: 0 auto;
+    width: 980px;
+    color:darkblue;
+}
+
+#slogan {
+    margin: 0;
+    padding:10px 0;
+    font-size:1.1em;
+    font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    font-style: italic;
+}
+#slogan p {
+    margin:0 10px;
+}
+#search {
+    margin: 0 15px;
+    padding:10px 0 0 0;
+    float:right;
+}
+    #search button {
+        font-size: 0.9em;
+        color: darkblue;
+        border: none;
+        background-color: #eee;
+    }
+    #search input {
+        text-align: center;
+        color: darkblue;
+        border: none
+    }
+#logo {
+    margin: 10px auto 0;
+    padding: 0 5px;
+    width: 980px;
+    height: auto;
+}
+#logo img {
+    width:99%;
+}
+
+#nav {
+    margin: 0 0 12px 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+}
+
+#nav ul {
+    display:block;
+    padding:0 15px;
+    width:100%;
+    
+}
+
+    #nav ul li:not([class="activeButton"]) {
+        list-style-type: none;
+        margin: 0 3px;
+        display: inline-block;
+        border-radius: 8px;
+        text-align: center;
+        line-height: 38px;
+        background: linear-gradient(#A5BFF4, #CFE2F7, wheat, rgb(248, 201, 115), #9EECA9);
+        box-shadow:4px 4px 4px rgb(180,180,180);
+        font-weight: 600;
+        border: 1px solid #888;
+        text-shadow: 5px 3px 3px #ccc;
+        text-decoration: none;
+    }
+.activeButton {
+    list-style-type: none;
+    margin: 0 3px;
+    display: inline-block;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 38px;
+    background: linear-gradient(#bfdaf7, wheat,#F1B36C);
+    box-shadow: 0 16px 2px #bbb;
+    font-weight: 900;
+    border: 1px solid darkblue;
+    text-shadow: 5px 3px 3px #ccc;
+    font-size: 1.1em;
+    text-decoration: underline;
+}
+
+#nav img {
+    position:absolute;
+    left:-9999px;
+}
+    /*styling the nav using pseudo-classefile:///E:/!OneDrive/OneDrive%20-%20John%20Abbott%20College/Team%20Projects/!TourismTravelBlogCSS/Africa/AfricaList.htmls link, visited, active and hover*/
+    #nav ul li a:link {
+        color: darkblue;
+        text-decoration: none;
+    }
+
+    #nav ul li a:visited {
+        color: darkblue;
+        text-decoration: none;
+    }
+        #nav ul li:hover {
+            color: darkblue;
+            border: 1px solid darkblue;
+            background: linear-gradient(#bfdaf7, wheat,#F1B36C);
+            text-decoration: underline;
+        }
+        
+    #nav ul li a:active {
+        color:darkblue;
+        text-decoration: none;
+        font-size:1.1em;
+    }
+
+
+/*setting the width of the buttons*/
+#nav ul li:nth-child(-n+4) {
+    width: 75px;
+}
+#nav ul li:nth-child(-n+6):nth-child(n+5){
+    width:120px;
+}
+
+#nav ul li:nth-last-child(-n+2){
+    transform:translateX(134px);
+    width:75px;
+}
+
+

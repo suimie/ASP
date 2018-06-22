@@ -1,0 +1,103 @@
+﻿@charset "utf-8";
+/*CSS document for the header of Tourism Travel Blog Web Site*/
+/*Developed by Roman Shaiko, Suim Park, Dmitrii Kudrik*/
+/*Script date: October 13, 2017*/
+
+#header {
+    width: 100%;
+    font-size: 15px;
+}
+#hcontainer {
+width:980px;
+
+}
+
+#contactM {
+    margin:0;
+    padding:0;
+    display: none;
+}
+
+#slogan p {
+    margin: 0 10px;
+    float:left;
+}
+
+#search {
+    margin: 0 15px;
+    padding: 10px 0 0 0;
+    float: right;
+}
+#logoTablet {
+    display:none;
+}
+#logoPhone {
+    display:none;
+}
+#logo {
+    margin: 10px auto 0;
+    padding: 0 5px;
+    width: 980px;
+    height: auto;
+}
+
+    #logo img {
+        width: 99%;
+    }
+.sub-list {
+    position: absolute;
+    left: -9999px;
+}
+#menuPhone, #smallLogo {
+display:none;
+}
+
+#nav {
+    margin: 0 0 12px 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+}
+    #nav ul {
+        padding: 0 15px;
+    }
+        #nav ul li:not([class="activeButton"]) {
+            margin: 0 3px;
+            border-radius: 8px;
+            line-height: 38px;
+            box-shadow: 4px 4px 4px rgb(180,180,180);
+            font-weight: 400;
+            text-shadow: 5px 3px 3px #ccc;
+            font-size:15px;
+        }
+.activeButton {
+    margin: 0 3px;
+    border-radius: 8px;
+    line-height: 38px;
+    box-shadow: 0 16px 2px #bbb;
+    font-weight: 900;
+    text-shadow: 5px 3px 3px #ccc;
+    font-size: 15px;
+}
+#nav ul li a:active {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/*setting the width of the buttons*/
+#nav ul li:nth-child(-n+4) {
+    width: 75px;
+}
+
+#nav ul li:nth-child(-n+6):nth-child(n+5) {
+    width: 120px;
+}
+
+#nav ul li:nth-child(7) {
+    visibility: hidden;
+    width: 128px;
+}
+
+#nav ul li:nth-last-child(-n+2) {
+    width: 75px;
+}

@@ -1,0 +1,237 @@
+6-The Web and e-Commerce
+==========================
+Every enterprise needs a well-thought-out web strategy, one that features its website as its front door. In this chapter, you will learn how organizations develop a web strategy, and how they build and market the site.
+
+
+Learning objectives
+===================
+The material in this unit will enable you to:
+
+1. Identify and provide examples of four goals an organization might choose as it develops its web strategy, and explain how websites are named.
+Primary Goal 				Example 
+Inform or entertain the audience 	Consumer Reports 
+Influence the audience 			Nonprofit organizations 
+Sell products or services 		iTunes 
+Facilitate offline relationships 	India’s Taj Mahal Hotel
+
+2. Provide examples of different website information architectures, explain the importance of usability and accessibility, and describe how websites are created with various software tools.
+
+3. Explain how e-commerce works, and why security and trust are critical ingredients.
+
+4. Define m-commerce, and explain how mobile payments work
+
+5. Explain how organizations market their websites using search engine optimization and web advertising, and describe some of the challenges of online marketing. 
+
+6. Explain how Web 2.0 attributes such as crowdsourcing, expanded data sources, and machine learning capabilities are changing the nature of the web.
+
+
+
+Web strategy (1:2)
+==================
+An effective website requires a clear vision of the site’s goals. The primary web goals of most organizations fall into four broad categories:
+
+1. Inform or entertain the audience. Organizations that aim to inform or entertain an audience offer content that drives traffic to the site. To earn revenue, many sell advertising, or offer premium access to specialized content for fee-paying members. Online magazines, newspapers, and video sites usually adopt this goal.
+
+Infomediaries focus on informing visitors and empowering them with aggregated information about products from different suppliers. Many infomediaries are also e-marketplaces that facilitate transactions by bringing together buyers and sellers from all over the world. E-marketplaces are often classified based on the buyers and sellers they serve, whether it is business to consumer (B2C), business to business (B2B), consumer to consumer (C2C), or consumer to business (C2B).
+
+2. Influence the audience. Companies that are not actually selling directly to the public online hope to influence through their website in subtle ways. They might want to increase brand awareness, or persuade visitors to connect with a distributor.
+
+
+3. Sell products or services. Selling is the primary goal of organizations whose websites facilitate e-commerce transactions. websites such as Amazon include many features to help visitors find what they are looking for, read product information or reviews, compile wish lists, and buy online. The checkout process on these sites is critical to customer satisfaction. It must include several payment options, easy shipping solutions, package tracking, and simple returns. 
+
+4. Facilitate offline relationships. Websites with the goal to facilitate and extend offline relationships should build customer awareness of the brand and encourage stronger and broader offline connections. Retail stores might offer online buying with in-store pickup, and restaurants provide directions and discount coupons. Websites for colleges and universities typically create engaging tours for prospective students and portals for current students, faculty, alumni, and staff. 
+
+The goal an organization emphasizes for its website will help drive choices about its design, navigation, features, and effectiveness metrics. 
+
+
+
+Naming the website
+==================
+Selecting a name for the website is a critical first step. The uniform resource locator (URL) is the unique global address for a web page or other resource on the Internet. Every device connected to the net has a unique, numerical IP address. These IP addresses are not human-friendly, though, so the Internet’s designers added the Domain Name System (DNS)—the hierarchical naming system that maps a more memorable URL to the actual IP address. 
+
+The URL is a string of letters, numbers, and special characters, and each component has a specific meaning. The letters followed by the colon and forward slashes indicate the transmission protocol used to connect to the resource. The most common is Hypertext Transfer Protocol (http://), which specifies that the resource is a web page containing code the browser can interpret and display. Another is File Transfer Protocol (ftp://) which indicates that the resource is a file to be transferred.
+
+The actual name of the site follows the protocol as in alumni.umd.edu or whitehouse.gov. The last string is the top-level domain, which can indicate the type of organization or country code. The top-level domains “.gov” and “.mil” refer only to U.S. government agencies and military. There are also domain names for all two letter country codes from the Ascension Islands (.ac) to Zimbabwe (.zw). Alternatives to the overcrowded “.com” domain include “.biz” and “.info.” 
+
+
+
+Managing domain names
+=====================
+• Although there are many top-level domains, there is fierce competition to grab the “best” names, those that visitors will most easily remember. 
+
+• The Internet Corporation for Assigned Names and Numbers (ICANN), is the nonprofit organization charged with overseeing the net’s naming system. ICANN works out contracts with organizations that manage URL assignments within each of the top-level domains, accredits the registrars who sell domain names, resolves disputes, and establishes policies. 
+
+• Domain name disputes can be contentious, and complaints escalate every year. Legal battles are common, and companies take quick action if a name is registered with even a slight trademark infringement.
+
+A related offense is cybersquatting, in which someone registers a domain name that is a company’s trademark, hoping to resell it to the company at an exorbitant profit. Although laws have been enacted to prohibit such activity, variations on the practice can still confuse web surfers. For example, typosquatting is registering a replica site with a misspelling in the trademark name that users might easily mistake for the real thing and enter personal information and passwords for the squatter’s fraudulent use.
+
+
+
+Website design
+===============
+The best-designed website is the one that achieves its goals, and many different approaches work. Designers must find ways to organize the information, provide navigational tools, and ensure visitors don’t struggle to find what they are looking for and complete a transaction. Designers consider the home page as the conceptual gateway and entrance point and build out the information architecture from there. 
+
+For a very small site, a flat architecture serves well, with a home page linking to four or five additional pages. For larger sites, a common design is the hierarchical architecture, in which the top-level home page contains links to second-level pages, which then link to further relevant pages. Many organizations start out with a hierarchical design, following their own organizational charts or product lines. 
+
+The multi-dimensional architecture recognizes that information can be categorized in many ways, and that visitors need multiple paths through the site. A sequential architecture is useful in some settings, particularly when designers want the visitor to proceed step by step through a transaction, survey, or learning module. Search functionality that confines the search to the website rather than the whole web dramatically improves the visitor’s ability to find relevant material, particularly on very large websites.
+
+
+
+
+User interface design
+=====================
+Usability refers to the ease with which a person can accomplish a goal using some tool such as a website. Usability relies on clear information architecture and user interface design. Designers use color to manage the user’s attention. For example, bright red attracts the eye especially against a darker background. 
+
+A good way to assess a site’s usability is to ask visitors to perform a sequence of tasks and observe the problems they encounter. Even when designers put much thought into the website’s information architecture and user interface, results from usability tests generate important insights. Usability tests are critical to helping designers improve the site for users.
+
+Web accessibility refers to how easily people with disabilities can access and use web resources. Impaired vision, hearing loss, limited motor skills, and other kinds of disabilities can hinder or even block people from using the web. The Web Accessibility Initiative (WAI) develops guidelines for web accessibility that are widely regarded as international standards. 
+
+For using the web, assistive technologies such as mouse foot pedals, screen readers, Braille displays, head-mounted pointers, joysticks, and speech-to-text translators for the deaf can all improve access. Designers should address accessibility issues in the site’s information architecture, with design elements that meet the needs of a wider range of users and work well with assistive technologies. 
+
+
+
+Software development strategies
+===============================
+Creating the website can be as simple as typing into a word processor and uploading some files, or as complicated as writing thousands of lines of code from scratch. The goal is to create pages that a visitor can access with a web browser—the software application that retrieves, interprets, and displays web resources.
+
+The original language used to create web pages is called hypertext markup language (HTML), which specifies the web page’s format and helps put it into reader-friendly output. The language uses tags in angle brackets that browsers can interpret, such as <p> to indicate the start of a new paragraph. Variations and improvements on HTML are released periodically, particularly to extend the language’s capabilities and integrate it more closely with XML, the language used for defining data on the web.
+
+
+
+Interactive websites
+====================
+Many approaches are used to bring media-rich, interactive experiences to the web. For example, Javascript is a popular language used to add interactivity to web pages written in HTML. Pop-up alert boxes, lively images that appear when your mouse rolls over the page, and validation for your input on forms, are all examples of Javascript.
+
+AJAX is a mix of technologies that builds on Javascript and enlivens the web even more—adding instant intelligence drawn from live data to interactive displays. Many interactive maps and charts that show updated data as you move the mouse over different regions use AJAX, drawing the data from a database.
+
+The Flash development platform from Adobe Systems offers web designers another way to add rich media, animations, and interactivity to websites. The animated ads that appear on websites are often developed in Flash, and an ecosystem of related tools help people make Flash files to put on their websites with no programming needed. 
+
+Several major web development environments, such as PHP and .NET, have emerged to add interactivity and database interfaces. The World Wide Web Consortium (W3C) establishes and publishes standards for programming languages used to create software for the web.
+
+
+
+Content management systems
+==========================
+As websites grow in size and incorporate audio, video, text, graphics, and other kinds of unstructured content, organizations need better ways to manage the content, tasks and people required to maintain the site. Content management systems are software products that help manage digital content in collaborative environments.
+
+The website’s overall look and feel, including the navigation bars that should appear on each page, are created as templates with consistent fonts, colors, and layout. The templates include cascading style sheets (CSS) that control the fonts and colors to appear when an editor identifies some text as a page heading, a paragraph title, or some other style.
+
+Website editors can create new pages using a software environment similar to word processing, and their content is converted to HTML so it will appear nicely formatted on the website, inside the appropriate template. The content management system and its CSS can enforce a consistent look and feel throughout the site.
+
+
+
+E-Commerce
+==========
+E-commerce refers to the buying and selling of goods and services over the Internet, encompassing financial transactions between businesses, consumers, governments, or nonprofits. Analysts project worldwide e-commerce sales will reach almost $1 trillion by 2013, with average yearly increases of almost 20%.
+
+Websites whose main goal is selling need e-commerce capabilities. E-commerce systems typically include shopping cart software that tracks purchases as customers navigate the site and click “add to cart” as they go. When the customer is ready to check out, the software tallies up the purchase, calculates taxes based on the customer’s location, computes shipping costs, and also posts a discount if the customer enters a valid promotional code.
+
+An e-commerce transaction must be secure from end to end, despite including several steps on different servers that can be geographically quite distant. The credit or debit card information is transmitted to the payment gateway, which facilitates all the online interconnections to the merchant’s bank, the bank or other entity that issued the card, and then back to the original website. If the transaction is approved, a confirmation is returned to the seller’s site.
+
+Building trust requires close attention to consumers’ motivations and buying behavior. Businesses can apply for a “seal of approval” from independent organizations that audit websites to verify their compliance with minimum trust requirements. For example, TRUSTe gives its approval to U.S. websites that follow strict privacy standards.
+
+
+
+Mobile devices and m-commerce
+==============================
+Much of the web’s development occurred before mobile devices with high speed Internet access spread so widely.  What makes these devices different – so appealing?  Three features stand out:
+
+• Small size and light weight
+
+• Mobile with wireless connectivity
+
+• Versatility
+
+
+The lively websites designed for desktop computers and larger screens fall short on tiny smartphones.  Mobile Apps VS. Mobile Websites:  Companies can choose to build separate mobile apps for each of the major mobile operating systems.  These are separate applications that customers download from the company website or an online app store and then install on their own devices.  Mobile-Friendly Design: The biggest difference between mobile devices and desktops with large screens is size, so mobile developers must make the best possible use of screen real estate.  They must decide what information mobile users might be interested in, display it with fonts large enough to read without zooming, and do so without any scrolling.
+
+Mobile commerce refers to the use of wireless, mobile devices to conduct e-commerce.  M-commerce has been going on for quite some time, as customers use their wireless devices to connect to the Internet for banking, shopping, and bill paying.  Another type of m-commerce gaining speed is the use of mobile devices as digital ‘wallets’ that actually pay bills on the spot, eliminating the need to carry cash.
+
+How does a mobile phone pay a bill?  The most common approach relies on near field communications (NFC), which ids a set of standards for technology that supports communication between mobile devices when the two are very near one another.
+
+
+
+Marketing the website (1:2)
+===========================
+Organizations use various approaches to attract users to their websites:
+
+1. Search engine optimization. Search engine optimization (SEO) uses strategies to increase the quantity and quality of traffic from search engines, often by improving the site’s position in result lists. Research shows that 62% of search engine users don’t look beyond the first page of results, and the sites at or near the top get the most hits.
+
+2. For users, search terms are key. Developers must guess what people who would be interested in their site might type as a search term, and then make sure their site gets a high relevance rating for that term. Choosing the most effective key words for the descriptors on your pages is critical.
+
+3. Search engines rely partly on popularity to determine relevance, and the rules they use to rate popularity take into account the number and quality of external links to the site from other websites. Google’s PageRank system, for example, named for cofounder Larry Page, interprets a link from Site A to Site B as a vote, thereby increasing B’s relevance rank. The ranking system also considers the page that casts the vote, weighing votes more heavily if they come from pages that are themselves highly ranked. Web marketers launch link-building campaigns to improve their search results, contacting sites that might add a link and making deals to do reciprocal linking.
+
+The drive to improve search results gets so heated that some unscrupulous developers launch devious strategies to outwit the engine’s ranking system. For example, one technique to build valuable external links is to look for guest books on authoritative sites whose votes would be particularly valuable, such as those in the .gov or .edu domains, and then include a link to the scammer’s site in the comments section. A more insidious approach is to get a competitor’s site banned, or at least move its site lower in the results.
+
+
+
+Web advertising (1:2)
+=====================
+Pop-up ads, floating images, music, and flashy animations crowd most websites, and overall spending for online ad campaigns worldwide is higher than for television. Prices vary depending on factors such the site’s popularity, or how likely the company thinks people who see the ad will click on it and perhaps buy a product. The click-through rate (CTR) is an important metric for such ads, computed as the number of visitors who click on the ad divided by the number of impressions. Typical click-through rates for banner ads are not high, typically less than 1%.
+
+A cookie is a small text file that the website’s server leaves on your computer when you visit, and then retrieves when you visit again to personalize the site for you. The cookie file contains a unique ID and information such as date and time, or the page you visited. E-commerce sites rely on cookies to keep track of the products a customer places in a shopping cart. As you collect items, the web server retrieves your unique ID and stores it with the item number in its own database. If you leave the site and return later, the software can retrieve your ID and refill your shopping cart. The site can also deliver targeted ads and recommendations, without asking you to log in, by retrieving your cookie and checking to see what that ID has viewed or bought in the past.
+ 
+Ad networks facilitate even better targeting, by delivering banners and other ads to their clients’ websites and also depositing their own cookies whenever someone visits one of the client sites. These third-party cookies let the ad network track you as you visit any client site and then serve you targeted ads at other sites.
+
+
+
+Web advertising (2:2)
+=====================
+Google pioneered a simple marketing approach that relies on your search terms rather than on cookies. On the theory that the terms you enter reveal your current motivations, Google developed the Adwords program, which serves small ads related to your search in a list of sponsored links. Whether the ad actually appears to someone entering the key word the organization has chosen depends partly on how much the company is willing to spend each day. Unlike buyers of most banner-type ads, these advertisers pay only when someone actually clicks on the ad, not each time it appears.
+
+The ads are text only and quite short, so they are far less intrusive than flashy banner ads or pop-up windows. They are also extremely well targeted and effective. Income from this source accounts for the vast majority of Google’s annual revenue of over $20 billion. Because search engine marketing can be so effective and lucrative, the companies compete fiercely to attract users.
+
+Although online marketing offers tremendous promise, it also poses new challenges. Fraud is one challenge, and unfortunate or embarrassing product placements are another. Also, third-party cookies are controversial from a privacy standpoint. Although web surfing may seem anonymous, digital tracks are much deeper than most people realize. 
+
+
+
+Web 2.0
+========
+The emphasis of Web 2.0 is on interaction, conversation, participation, collaboration, and endless sources and streams of data. Although new technologies continually emerge that support these activities, Web 2.0 is less about the technologies than about the ways in which people and organizations are using the web.
+ 
+One significant trend for Web 2.0 is that the web serves as a platform not just for delivering software as a service or for presenting useful applications online, but for harnessing the collective intelligence of its users. Crowdsourcing describes how tasks can be delegated to large diffuse groups or communities, who often volunteer their contributions. Crowdsourcing depends on engaging people in tasks they find interesting or rewarding, or collecting data about what people are doing anyway as they go about their daily work. For example, Google relies on everyone who clicks on links or embeds links in their websites to continually improve its ranking system.
+
+Another important trend for Web 2.0 is the exponential growth of data and innovations in the way organizations collect, use, and value it. For example, eBay succeeds largely because of its critical mass and control over data—contributed by users—about items for sale and sellers’ reputations. 
+
+The massive and ever-growing mounds of data are valuable not just in their own right, as revenue sources for companies or as features to attract more users. They also provide resources for machine learning, making the web and its applications ever smarter. 
+
+
+Summary
+==========
+1. The four major goals that organization’s adopt for their websites include (1) inform or entertain the audience; (2) influence the audience; (3) sell to the audience; and (4) facilitate or extend offline relationships.
+
+2. Building a website requires attention to the site’s information architecture, which might adopt a hierarchical, multi-dimensional, flat, or sequential structure. Usability should be assessed early, and the user interface should follow design principles that will make it easier for visitors to accomplish their goals on the site. The website should also support accessibility for people with disabilities.
+
+3. E-commerce is the buying and selling of goods and services on the Internet. Trust is a critical element in e-commerce.
+
+4. M-commerce is e-commerce on wireless, mobile devices which are growing rapidly, and they offer small size and light weight, mobility with wireless connectivity, and versatility.
+
+5. Marketing strategies on the web include search engine optimization (SEO), strategies designed to improve a website’s position on result lists returned by search engines. Search engine marketing, in which text ads are served alongside results for the user’s query, are most effective.
+
+6. Web 2.0 represents the next generation of web capabilities, which rely on crowdsourcing, expanded data, and machine learning. As the web matures, the massive amount of data is greatly enhancing its power and potential, opening new opportunities for innovation. 
+
+
+
+NTT Docomo case
+================
+Japan’s NTT Docomo led a major drive into mobile e-commerce, or m-commerce. The mobile phone carrier pioneered the use of “near-field communications" (NFC) chips inside its cell phones, enabling them to exchange data wirelessly over a few centimeters. Over 54 million people subscribe to Docomo’s wireless voice network, and they can pay for their purchases at participating stores by tapping their cell phone against a special terminal or just waving it nearby. 
+
+When a customer taps the cell phone to pay, the expense is automatically logged into a digital expense report and charged to the customer’s account. Called osaifu keitai in Japanese, the cell phone wallet frees people from carrying cash. Consumers use their cell phone wallets to buy subway, train, and airline tickets, and the phone’s chip also serves as an electronic key ID to control access doors to buildings or homes. Cell phone wallet holders can check their balances, loyalty point totals, and purchasing history from the handset and receive promotional discounts. 
+
+The technology to pay bills and buy products by mobile phone is well established, but the use of the cell phone to handle in-store transactions and track purchases and reward points is still in its infancy in most countries. Analysts predict that most cell phone manufacturers will soon embed the chips in their handsets, transforming in-store payments and marketing. 
+
+
+Pandora case
+============
+Pandora.com offers music lovers access to their own customized “radio stations.” Pandora’s website visitors can submit a favorite song, artist, or composer, and Pandora’s software builds a playlist of similar songs. The software that powers the playlist emerged from the Music Genome Project, launched by Pandora founder Tim Westergren. He and a team of musicians and musicologists analyze 10,000 songs a month for hundreds of attributes—harmony, rhythm, lyrics, instrumentation, vocals, genre, and others. The result of their efforts is an immense and continuously growing database that powers a recommendation engine to suggest music with similar attributes—the same “DNA.” 
+
+With over 50 million users, Pandora relies on targeted advertising and premium subscriptions for revenue. People can buy subscriptions for a few dollars a month to omit the ads. Although most users initially enjoyed Pandora’s services while sitting at their computer at home or work, they can now add the streaming, customized radio service to their smartphones. The shift makes their “radio” mobile, and this is what threatens to disrupt the music industry’s business model again.
+
+
+
+
+
+
+
+
+

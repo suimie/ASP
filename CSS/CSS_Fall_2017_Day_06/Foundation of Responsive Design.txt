@@ -1,0 +1,76 @@
+Respnsive Web Design
+====================
+When the iPhone was introduced in 2007, it was a turning point for web design. All of a sudden web designers lost control of the canvas on which we designed websites. Previously, websites only had to work on monitor screens, which varied in size, but not all that much. How were we supposed to make our websites work on these tiny little screens?
+
+For a while we made mobile websites, optimized for the size of an iPhone screen, that were separate from our "regular" websites. Two sites to maintain wasn’t that bad, but soon there were many phones of varying sizes, and then tablets, and smaller tablets, and eventually we realized we couldn’t make separate sites for each of the possible screens that our websites could be viewed on.
+
+We needed a solution that would work on all screen sizes, a way to design websites that could adapt to the screens they were being displayed on.
+
+It took a while, and a lot of different ideas, before one stuck. Responsive web design is a method of designing websites that are flexible, that don’t rely on a fixed screen size, and that are also able to detect the size of the screen and adjust the design to provide an optimal viewing experience for that device. Ethan Marcotte first wrote about responsive web design (http://alistapart.com/article/responsive-web-design) in A List Apart in 2010.
+
+Like any other new technique, responsive web design had a rocky start. Many people continued to argue—and some still do—that we needed to create separate websites for mobile phones. But with the proliferation of devices on the market today, it’s clear that we can’t rely on one model of mobile phone to be our design target; we have to be able to accommodate all of these devices, with screens at pretty much every measurement you can imagine.
+
+And responsive design has grown, too. It’s no longer just about adapting to screen sizes, but also adapting to the capabilities of different devices, such as touchscreens, retina displays, and slow connections.
+
+As of 2014, 58% of American adults own a smartphone—a phone with an operating system like iOS, Android, or Windows Phone that is feature-rich and allows the user full access to the Web.1 And 35% of American adults own a tablet.2 We have amazing devices, and responsive design helps us take full advantage of the Web.
+
+However, although the majority of American adults have smartphones, 32% of those polled have a mobile phone that’s not a smartphone. Many of those people use their phones to access the Web using browsers with limited capabilities that may not be able to display all websites as intended. Responsive web design is a solution for that too.
+
+A responsive website starts with a simple, content-focused design that doesn’t rely on advanced Cascading Style Sheets (CSS) or JavaScript and can be displayed on essentially any web-connected device. Using progressive enhancement, the responsive website builds on that, creating a design that is optimized for the size of the screen it’s displayed on and for the capabilities of the device. So the feature phones—the older phones with limited capabilities—get only what they can use, while newer devices get a rich design and interface that fits nicely on the screen and that takes advantage of the features of these devices.
+
+Responsive web design allows us to present the best website possible to all users, regardless of the devices they use. The Web needs to be available to everybody, and responsive design is how we can do that.
+
+Creating a responsive website isn’t just a matter of learning some new bits of code. It’s about reexamining the way we think about websites, focusing on the experience of the user, and making sure that the content and functionality are not afterthoughts to the design.
+
+We also have to change the way we work on websites, moving to a more collaborative process involving designers, developers, and other team members.
+
+There are some new bits of code to learn—but responsive design is not a new programming language. Creating a responsive website requires only HTML, CSS, and sometimes a little bit of JavaScript. You already know how to make websites, so much of what you learn in this course will be familiar to you. 
+
+You’ll need to keep in mind that when creating a responsive website, 90% of what you do is the same as what you do when creating a nonresponsive website. But besides adding on a few new techniques, you need to get the basics right, using properly structured, standards-compliant markup (HTML and CSS). Without that strong foundation, you can’t have confidence that your site will work correctly and display properly across devices.
+
+
+What Is Responsive Design?
+===================
+Responsive design is a way to make websites that can be easily viewed and used on any type of device and size of screen, all the way from the smallest mobile phones up to the widest desktop monitors.
+
+The easiest way to explain it is to compare responsive websites to sites that are not responsive, and look at how each type of site is viewed on smartphones.
+
+Imagine you’re using your smartphone to view a fixed-width website, that is, a site that is designed to always display at a set width, such as 960 pixels. You’ll see the entire website just as it appears on your desktop monitor, but it will initially be displayed at a tiny size to fit on the screen. You’ll have to continually zoom in and out to read text and navigate through the site,
+
+And then for some websites, there is a mobile website that is separate from the regular desktop site. This type of site displays at full size when you load it on your smartphone (no zooming necessary), but you’ll notice that it’s often very different from the same website when you view it on your desktop monitor—there’s often a lot of content missing, so the site owner can cut down on the work involved in maintaining multiple versions of the site.
+
+And because mobile sites are usually made for one specific device size, like an iPhone, if you have a different device, the website may not fit on the screen so well.
+
+Separate mobile websites are generally optimized to work on one size of device, but there are many different devices on the market, and building a mobile site to work on one device can mean leaving behind all the users who have different devices.
+
+
+
+MEDIA QUERIES
+=============
+The web design community again came back to the concept of fluid layouts, using percentage-based widths, and tried to figure out how to make that into a solution for smaller, mobile devices.
+
+Using percentages instead of pixels allows a web page and sections of the page to change width to fit in any screen size, so accounting for differences among similar-sized devices is easy.
+
+But once you look at the entire range of devices, you have a problem. Narrowing a three-column design into a smartphone width makes the columns of text too narrow to be readable. Likewise, a one-column layout that looks good on a smartphone screen would be too wide to easily read when viewed on a desktop monitor.
+
+Essentially, the problem was this: without having to create separate sites, how can a website be displayed in one column on narrow screens and multiple columns on wider screens? How can you ask the browser to make changes to the design, based on qualities of the device the site is being viewed on?
+
+Enter media queries.
+
+The CSS @media rule, which allows you to display different CSS styles based on device qualities, was actually part of CSS2 more than a decade ago, but back then it only supported queries of media types, such as screen or print. This was commonly used for creating a print version of a website’s design (which may include changes as basic as removing background colors that will waste printer ink), but its utility stopped there.
+
+
+So what do these media queries do?
+=========================
+Using a media query, we can ask the device how wide its screen is. Then we can tell it to display the content in two columns only if its screen is wide enough for the columns to fit nicely.
+
+Inside the media query, we add the CSS that will display the content in two columns instead of one. The browser will only use this CSS if the media query is true (i.e., if the screen is 40 ems or wider). If the screen is narrower, it ignores this CSS and the content remains in one column.
+
+By using media queries, we can change any aspect of the website’s style, not just the number of columns. Media queries can be used to move things around, change the text size, hide or display pieces of content, adjust margins and spacing, and adjust any other style that can be applied with CSS.
+
+
+
+
+
+
+

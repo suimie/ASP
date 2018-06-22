@@ -1,0 +1,54 @@
+﻿@model IEnumerable<VidPlace.Models.Customer>
+
+@{
+    ViewBag.Title = "Customers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*
+    This is comment Block
+*@
+
+
+<h2>Customers List</h2>
+
+@if (Model.Any())
+{
+    using (Html.BeginForm("Index", "Customer", FormMethod.Get))
+    {
+        <p>
+            Find customer by Name: @Html.TextBox("SearchString")
+            <input type="submit" value="Search" />
+        </p>
+    }
+}
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>@Html.ActionLink("Customer's Name", "Index", "Customer", new { sort = ViewBag.SortByName, SearchString = ViewBag.search }, null)</th>
+            <th>@Html.ActionLink("Membership Type", "Index", "Customer", new { sort = ViewBag.SortByMembership, SearchString = ViewBag.search }, null)</th>
+            <th>Functions</th>
+        </tr>
+    </thead>
+    @if (!Model.Any())
+    {
+        <p>There are no customers available.</p>
+    }
+    else { 
+    <tbody>
+        @foreach (var customer in Model)
+        {
+            <tr>
+                <td>@customer.Name</td>
+                <td>@customer.Membership.Name</td>
+                <td>
+                    @Html.ActionLink("Details", "Details", "Customer", new { id = customer.ID }, null)
+                </td>
+            </tr>
+        }
+    </tbody>
+    }
+</table>
+
+

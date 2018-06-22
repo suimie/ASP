@@ -1,0 +1,11 @@
+Windows Command Line
+
+ipconfig
+ipconfig /all
+ipconfig /displaydns
+ipconfig /flushdns
+cls
+time
+date
+getmac
+

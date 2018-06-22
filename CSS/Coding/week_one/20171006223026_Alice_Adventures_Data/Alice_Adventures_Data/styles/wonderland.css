@@ -1,0 +1,229 @@
+﻿/* CSS Document for the Alice on Wonderland Web Page */
+/* Developed by: Suim Park */
+/* Script Date: October 5, 2017 */
+@charset "utf-8";
+
+#container {
+    width:80%;
+    margin:0 auto;
+    border:10px inset #f0f;
+    padding:8px;
+    background:white;
+}
+
+
+body {
+    font-family:'Bookman Old Style';
+    font-size: 15px;
+    color: black;
+    background-color: #fafad2;
+    line-height:22px;
+}
+
+
+/* Styling the docTitle Independent Class */
+.docTitle, .Author{
+    font-size: 3em;
+    color: #00f;
+    background: #fff;
+    word-spacing: 10px;
+    font-family:'Old English Text MT';
+    line-height:30px;
+}
+
+/* Styling the Author Class */
+.AuthorTitle {
+    border-bottom: 1px solid #00f;
+    padding-bottom: 40px;
+    font-family: 'Old English Text MT';
+    line-height: 30px;
+    color: #00f;
+    font-size: 3em;
+}
+
+/* Styling the author  Class */
+.author {
+    letter-spacing: 10px;
+    border-bottom: 1px solid #00f;
+    padding-bottom: 12px;
+    line-height: 30px;
+}
+
+
+/* Styling the chapterTitle Class */
+.chapterTitle {
+    color:black;
+
+}
+
+/* styling the introduction Class using the pseudo-element first-line */
+.introduction::first-line {
+    color:#ff6a00;
+    text-transform:uppercase;
+}
+
+/* styling the firstLetter class using the pseudo-element */
+.firstLetter::first-letter {
+    font:2em 'Old English Text MT';
+    font-weight:bold;
+}
+
+/* styling thedescendant em selector inside p selector */
+p em {
+    color:#00f;
+    background:#cabcf2; /* lavender */
+}
+
+/* styling the copyright class */
+.copyright {
+    color:darkgreen;
+    background-color:#cabcf2;
+}
+
+/* Generic classes */
+.leftAlign {
+    text-align:left;
+}
+
+.rightAlign {
+    text-align:right;
+}
+
+.centerAlign{
+    text-align:center;
+}
+
+/* Styling the ID-nav */
+#nav {
+    background: black;
+    line-height:200%;
+    display:block;
+}
+#nav a {
+    color:#ff3e00;
+    font-weight:bold;
+}
+
+#nav ul li {
+    list-style-type:none;
+    display:inline;
+    padding-right:30px;
+}
+
+/* styling the nav using the pseudo-classes link, visited, active, and hover */
+#nav ul li a:link {
+    color: #ff3e00;
+    text-decoration: none;
+}
+
+
+#nav ul li a:hover {
+    color:white;
+    text-decoration:underline overline;
+}
+
+#nav ul li a:active {
+    text-decoration:none;
+    color:blue;
+    background-color:#add8ef;
+}
+
+
+#header img {
+    width:12%;
+    height:12%;
+}
+
+
+.picture_box_left {
+    border:2px solid black;
+    padding:5px;
+    float: left;
+}
+
+.picture_box_right {
+    border: 2px solid black;
+    padding: 5px;
+    float: right;
+}
+
+.small_quat_mark {
+    font-style:italic;
+    font-weight:bold;
+}
+
+.upperCase {
+    text-transform: uppercase;
+}
+
+.astrics_1_3, .astrics_2 {
+    text-indent: 25px;
+    letter-spacing: 50px;
+    font-weight: bold;
+}
+
+.astrics_2 {
+    text-indent: 50px;
+}
+
+
+.poison {
+    color:red;
+    font-weight:bold;
+}
+
+.nextChapter {
+    font-size:17px;
+}
+
+.nextChapter a:link {
+    color:darkgreen;
+    text-decoration:none;
+}
+
+.nextChapter a:hover {
+    text-decoration: none;
+    color:#ff6a00;
+}
+
+.nextChapter a:visited {
+    text-decoration: none;
+    color:darkgreen;
+}
+
+
+#message1, #message2, #message3, #message4{
+    text-indent: 55px;
+    font-weight: normal;
+}
+
+#message1 {
+    margin: 0 30px;
+}
+
+#message2 {
+    margin: 0 60px;
+}
+
+#message3 {
+    margin: 0 90px;
+}
+
+#message4 {
+    margin: 0 120px;
+}
+
+.song {
+    width:400px;
+    height:200px;
+    text-align:center;
+    font-style:italic;
+}
+
+#generalInfo {
+    border:2px solid black;
+    padding:10px;
+    color:brown;
+    font-size:20px;
+    line-height:30px;
+}

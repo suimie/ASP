@@ -1,0 +1,88 @@
+﻿/* CSS Document for the Alice on Wonderland Web Page */
+/* Developed by: Suim Park */
+/* Script Date: October 5, 2017 */
+@charset "utf-8";
+
+#container {
+    width:80%;
+    margin:0 auto;
+    border:10px inset #f0f;
+    padding:8px;
+    background:#fafad2;
+}
+
+
+body {
+    font:12px cursive;
+    color: #000;
+}
+
+
+/* Styling the docTitle Independent Class */
+.docTitle {
+    font-size: 2em;
+    color: #00f;
+    background: #fff;
+    word-spacing: 10px;
+}
+
+/* Styling the author  Class */
+.author {
+    letter-spacing:10px;
+    border-bottom:1px solid #00f;
+    padding-bottom:12px;
+}
+
+/* Styling the chapterNumber Class */
+.chapterNumber {
+    color:#f00;
+    background:#ccc;
+    display:inline-block;
+}
+
+/* Styling the chapterTitle Class */
+.chapterTitle {
+    color:#f0f;
+
+}
+
+/* styling the introduction Class using the pseudo-element first-line */
+.introduction::first-line {
+    color:#ff6a00;
+    text-transform:uppercase;
+}
+
+/* styling the firstLetter class using the pseudo-element */
+.firstLetter::first-letter {
+    color:#00f;
+    background:yellow;
+    font:2em 'Old English Text MT';
+    font-weight:bold;
+    border:3px solid #000080;
+    padding:1px;
+}
+
+/* styling thedescendant em selector inside p selector */
+p em {
+    color:#00f;
+    background:#cabcf2; /* lavender */
+}
+
+/* styling the copyright class */
+.copyright {
+    color:darkgreen;
+    background-color:#cabcf2;
+}
+
+/* Generic classes */
+.leftAlign {
+    text-align:left;
+}
+
+.rightAlign {
+    text-align:right;
+}
+
+.centerAlign{
+    text-align:center;
+}

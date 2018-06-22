@@ -1,0 +1,42 @@
+To be submitted via OmniVox Portal
+==========================
+Team submission:
+
+Team member names: 
+
+
+
+
+1. What are the benefits of networks?
+	- Sharing a high-speed Internet connection
+	- Sharing printers and peripheral devices
+	- Sharing files
+	- Common cummunications
+
+2. How fast does data move through networks?
+3. How does the distance between nodes define a network?
+4. How does the level of administration define a network?
+5. Ethernet Protocols: What network standard is used in your home network?
+6. Are there different standards for wired Ethernet?
+7. Transmission Media: What transmission media is used on a wired network?
+	1) Copper cable - Types of cable include unshielded twisted-pair(UTP), shielded twisted-pair(STP), and coaxial cable. Copper-based cables are inexpensive and easy to work with compared to fiber-optic cables, but as you'll learn when we get into the specifics, a major disavantage of cable is that it offers a rather limited spectrum that cannot handle the advanced applications of the future, such as teleimmersion and virtual reality.
+	2) Wireless - Wireless media include radio frequencies, microwave, satellite, and infrared.
+		Deployment of wireless media is faster and less costly than deployment of cable, particularly where there is little or no existing infrastructure. Wireless is also useful where environmental circumstances make it impossible or cost-prohibitive to use cable.
+	3) There are a few disadvantages associated with wireless, however. Historically, wireless solutions support much lower data rates than do wired solutions, although with new developments in wireless broadband, that is becoming less of an issue. Wireless is also greatly affected by external impairments, such as the impact of adverse weather, so reliability can be difficult to guarantee. However, new developments in laser-based communications-such as virtual fiber-can improve this situation. Of course, one of the biggest concerns with wireless is security:Data must be secured in order to ensure privacy.
+	4) Fiber optics - Fiber offers enormous bandwidth, immunity to many types of interference and noise, and improved security. Therefore, fiber provides very clear communications and a relatively noise-free environment. The downside of fiber is that it is costly to purchase and deploy because it requires specialized equipment and techniques.
+
+8. What type of  cable is used in most wired home network?
+9. Do all wired Thernet networks use the same kind of unshielded twisted pair (UTP) cable?
+10. What transmission media is used to connect nodes on a wireless network?
+11. Can you have both wired and wireless nodes on the same network?
+12. What equipment do you need in order to hook up to broadband?
+13. What hardware is needed for different nodes on the network to communicate?
+14. what hardware is necessary to transmit data through a network?
+15. What network software do home networks require?
+16. What exactly is braodband Internet Access?
+17. What types of braodband are available?
+18. How does cable Internet work?
+19. How does DSL work?
+20. How does fiber-optic service work?
+
+

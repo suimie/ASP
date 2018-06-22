@@ -1,0 +1,68 @@
+﻿@charset "utf-8";
+
+/* CSS document for The 3D-Cube */
+/* Script Date: Octorber 11, 2017 */
+/* Developed by : Suim Park */
+
+#container {
+    width:300px;
+    height:300px;
+    margin:100px auto;
+    perspective:1100px;
+    perspective-origin:-50% -50%;   /* x y */
+}
+
+.cube {
+    /* Vendor specific prefixes */
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    position:relative;
+    margin:0;
+    transition:1s;
+}
+
+.cube div {
+    width:298px;
+    height:188px;
+    /* background-color:rgba(0, 0, 0, 0.8); */
+    position:absolute;
+    border:1px solid white;
+    text-align:center;
+    padding-top:110px;
+    color:white;
+    font:3em 'Times New Roman',Times, Serif;
+}
+
+.front {
+    transform: translateZ(150px);
+    background-color: rgba(255, 106, 0, 0.8);
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(150px);
+    background-color: rgba(255, 0, 0, 0.8);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(150px);
+    background-color: rgba(128, 128, 128, 0.8);
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(150px);
+    background-color: rgba(182, 255, 0, 0.8);
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(150px);
+    background-color: rgba(0, 255, 255, 1);
+}
+
+.back {
+    transform: translateZ(-150px) rotateY(180deg);
+    background-color: rgba(0, 38, 255, 0.8);
+}
+

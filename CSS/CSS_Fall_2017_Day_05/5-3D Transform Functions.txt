@@ -1,0 +1,408 @@
+﻿2D Transform Functions
+=======================
+
+
+transform Creates a Local Coordinate System
+============================================
+You may recall from geometry class that the Cartesian coordinate system is a way of specifying points in a plane. You may also recall that a plane is a flat two-dimensional surface that extends infinitely along the horizontal and vertical axes. These axes are also known as the X-axis and Y-axis.
+
+Point values along the X-axis increase as you move from left to right, and decrease from right to left. Y-axis point values increase as you move up, and decrease as you move down. The X and Y axes are perpendicular to each other. Where they cross is known as the origin, and the coordinates of its location are always (0,0).
+
+
+In a three-dimensional coordinate system, there’s also a Z-axis. This axis is perpendicular to both the X and Y axes, as well as the screen. The point at which the Z axis crosses the X and Y axes is also known as the origin. Its coordinates are (0,0,0).
+
+A rendered HTML document is, essentially, a coordinate system. The top-left corner is the origin, with coordinates of (0,0) or (0,0,0). Values increase along the X-axis as you move right. Values increase along the Y-axis as you move down the screen or page. Z-axis values increase as elements move towards the viewer and decrease as they move away from the viewer.
+
+Setting the value of transform to a value besides none adds a local coordinate system to the selected elements. The origin—point (0,0) or (0,0,0)—in this local coordinate system sits at the center of the element’s bounding box. We can change the position of the origin, however, by using the transform-origin property. Points within the element’s bounding box are then transformed relative to this local origin.
+
+
+The transform-origin Property
+============================
+The transform-origin property accepts up to three values: one for each of the X, Y, and Z positions. For example, transform-origin: 300px 300px for a 2D transformation, or transform-origin: 0 0 200px for a 3D transformation.
+
+If one value is specified, the second value is assumed to be center, and the third value is assumed to be 0px.
+
+Both the X and Y coordinates may be percentages, lengths, or positioning keywords. Positioning keywords are left, center, right, top, and bottom. The Z position, however, must be a length. In other words, transform-origin: left bottom 200px works, but transform-origin: left bottom 20% does not.
+
+The position of the transform origin is relative to the element being transformed. It moves the (0,0) point of the local coordinate system to a new location within the element’s bounding box. This, of course, modifies the transformation, sometimes radically.
+
+
+Now that you know a little more about how transforms affect layout, let’s dig into the transform functions. This is how we make the magic. Transforms let us rotate, flip, skew, and scale elements. When combined with animations and transitions, we can create sophisticated motion graphic effects.
+
+Transforms can be grouped into two categories: 2D and 3D. Each group contains functions for rotating, skewing, scaling, and translating. 2D functions are concerned with transformations of points along the X and Y axes. 3D functions add the third dimension of depth and affect points along the Z-axis.
+
+
+2D Transform Functions
+======================
+Two-dimensional transform functions enjoy the widest browser support. They’re supported without vendor prefixes in Internet Explorer 10+, Firefox 15+, Chrome 35+, and Opera 23+.
+
+Safari ≤ 8, UC Browser, and Android 4 (or earlier) require a -webkit- prefix for all transforms. So do older versions of Chrome (4 to 35) and Opera (15 to 23). Firefox versions 10 through 14 and older require a -moz- prefix. Support in Internet Explorer 9 is available with an -ms- prefix, while IE8 does not support transforms.
+
+As we’ve mentioned, 2D transforms affect points in the X and Y dimensions. There are four primary functions: rotate, scale, skew, and translate. There are also functions that let us transform an element in one dimension: scaleX and scaleY; skewX and skewY; and translateX and translateY.
+
+◘ rotate()
+===========
+A rotation transform spins an element around its origin by the angle specified around the point specified. Using rotate() tilts an element clockwise (positive angle values) or counter-clockwise (negative angle values).
+
+The rotate() function accepts values in angle units. Angle units are defined by the CSS Values and Units Module Level 3 (https://drafts.csswg.org/css-values-3/#angles). These may be deg (degrees), rad (radians), grad (gradians), or turn units. One complete rotation is equal to 360deg, 6.28rad, 400grad, or 1turn.
+
+Rotation values that exceed one rotation (say, 540deg or 1.5turn) are rendered according to their remaindered value, unless animated or transitioned. In other words, 540deg is rendered the same as 180deg (540 degrees minus 360 degrees) and 1.5turn is rendered the same as .5turn (1.5 - 1). However, a transition or animation from 0deg to 540deg or 1turn to 1.5turn will rotate the element one-and-a-half times.
+
+
+2D Scaling Functions: scale, scaleX, and scaleY
+================================================
+With the scaling functions, we can increase or decrease the rendered size of an element in the X-dimension (scaleX), Y-dimension (scaleY), or both (scale). 
+
+just about any positive or negative number. Percentage values, however, aren’t supported. Positive multipliers greater than 1 will increase the size of an element. For example, scale(1.5) will increase the size of the element in the X and Y directions 1.5 times. Positive multipliers between 0 and 1 will reduce the size of an element.
+
+Values less than 0 still cause an element to scale up or down in size; however, using a negative scaling value causes a reflection (flip) transform. 
+
+Warning: Multipliers of Zero
+============================
+Using scale(0) will cause the element to disappear, because multiplying a number by zero results in a product of zero.
+
+Using scale(1) creates an identity transformation, which means it’s drawn to the screen as if no scaling transformation was applied. Using scale(-1) will not change the drawn size of an element, but the negative value will cause the element to be reflected.
+
+It’s possible to scale the X and Y dimensions separately using the scale function. Just pass it two arguments: scale(1.5, 2). The first argument scales the X-dimension; the second scales the Y-dimension. We could, for example, reflect an object along the X-axis alone using scale(-1, 1). Passing a single argument scales both dimensions by the same factor.
+
+
+2D Translation Functions: translateX, translateY, and translate
+================================================================
+Translating an element offsets its painted position from its layout position by the specified distance. As with other transforms, translating an element doesn’t change its offsetLeft or offsetTop positions. It does, however, affect where it’s visually positioned on screen.
+
+Each 2D translation function—translateX, translateY, and translate—accepts lengths or percentages for arguments. Length units include pixels (px), em, rem, and viewport units (vw and vh).
+
+The translateX function changes the relative horizontal rendering position of an element. If an element is positioned zero pixels from the left, transform: transitionX(50px) would shift its rendering 50 pixels to the right of its original position. Similarly, translateY changes the vertical rendering position of an element. A transform of transform: transitionY(50px) offsets the element vertically by 50 pixels.
+
+With translate(), we can shift an element vertically and horizontally using a single function. It accepts up to two arguments: the X translation value, and the Y translation value. 
+
+Passing a single argument to translate is the equivalent of using translateX; the Y translation value will be set to 0. Using translate() is the more concise option. Applying translate(100px, 200px) is the equivalent of translateX(100px) translateY(200px). Positive translation values move an element rightward (for translateX) or downward (for translateY). Negative values move an element to the left (translateX) or up (translateY).
+
+Translations are particularly great for moving items left, right, up, or down. Updating the value of the left, right, top, and bottom properties forces the browser to recalculate layout information for the entire document. But transforms are calculated after the layout has been calculated. They affect where the elements appear on screen, but not their actual dimensions.
+
+
+skew, skewX, and skewY
+=======================
+Skew transformations shift the angles and distances between points while keeping them in the same plane. Skew transformations are also known as shear transformations, and they distort the shapes of elements.
+
+The skew functions―skew, skewX, and skewY—accept most angle units as arguments. Degrees, gradians, and radians are valid angle units for the skew functions, while turn units, perhaps obviously, are not.
+The skewX function shears an element in the X or horizontal direction. It accepts a single parameter, which again must be an angle unit. Positive values shift the element to the left, and negative values shift it towards the right.
+
+
+Similarly, skewY shears an element in the Y or vertical direction, where Figure 6.16 shows the effect of transform: skewY(30deg). Points to the right of the origin are shifted downward with positive values. Negative values shift these points upward.
+
+This brings us to the skew function. The skew function requires one argument, but accepts up to two. The first argument skews an element in the X direction, and the second skews it in the Y direction. If only one argument is provided, the second value is assumed to be zero, making it the equivalent of skewing in the X direction alone. In other words, skew(45deg) renders the same as skewX(45deg).
+
+Current Transform Matrix
+=========================
+So far, we’ve discussed transform functions separately, but they can also be combined. Want to scale and rotate an object? No problem, use a transform list, for example:
+.rotatescale {
+   transform: rotate(45deg) scale(2);
+}
+
+Now, the order of transform functions matters quite a bit. This is a point that’s better shown than talked about, so let’s look at an example to illustrate. This CSS skews and rotates an element:
+
+.transformEl {
+   transform: skew(10deg, 15deg) rotate(45deg);
+}
+
+
+But what if you want to rotate an element first and then skew it? The CSS looks like this:
+.transformEl {
+   transform: rotate(45deg) skew(10deg, 15deg);
+}
+
+
+Each of these transforms has a different current transform matrix created by the order of its transform functions. To fully understand why this is, we’ll need to learn a little bit of matrix multiplication. This will also help us understand the matrix and matrix3d functions.
+
+
+
+3D Transform Functions
+=======================
+There are nine functions for creating 3D transforms. Each of these functions modifies the Z-coordinates of an element and/or its children. Remember, Z-coordinates are points along the plane that sit perpendicular to the viewer. With the exception of rotateZ(), these functions create and change the illusion of depth on screen. rotateX() and rotateY()
+
+The rotateX() and rotateY() functions rotate an element around the X and Y axes respectively. Using rotateX() creates a somersault effect, causing an object to flip topover-tail around a horizontal axis. With rotateY(), the effect is more like that of aspinning top, rotating around a vertical axis.
+
+Like rotate(), both rotateX() and rotateY() accept an angle measurement as an argument. This angle can be expressed in degrees (deg), radians (rad), gradians (grad), or turn units. rotateZ() works the same way as rotate(). It’s a relic from when 2D and 3D transforms were defined in separate specifications.
+
+
+Rotating around Multiple Axes with rotate3d()
+==============================================
+Sometimes, we want to rotate an object around more than one axis. Perhaps you want to rotate an element counter-clockwise and tilt it by 45°. This is what rotate3d() does.
+
+The rotate3d() function accepts four arguments. The first three make up an X, Y, Z direction vector, and each of these arguments should be a number. The fourth argument for rotate3d() should be an angle. The transformed object will be rotated by the angle around the direction vector defined by the first three arguments.
+
+What those first three numbers actually are matters less than the ratio between them. For example, transform: rotate3d(100,5,0,15deg); and transform: rotate3d(20,1,0,15deg); have equivalent 3D matrices and produce the same effect.
+
+That said, because of how the rotate3d matrix is calculated, something like transform: rotate3d(1, 500, 0, 15deg); won’t produce a significantly different effect than transform: rotate3d(1, 1, 0, 15deg);.
+
+Just about any non-zero value for any of the first three parameters will create a tilt along that axis. Zero values will prevent a tilt. As you may have guessed, rotateX(45deg) is the equivalent of rotate3d(1, 0, 0, 45deg) and rotateY(25deg) could also be written as rotate3d(0, 1, 0, 25deg).
+
+If the first three arguments are 0 (such as transform: rotate3d(0, 0, 0, 45deg)), the element won’t be transformed. Using negative numbers for the X, Y, or Z vector arguments is valid; it will just negate the value of the angle. In other words, rotate3d(-1, 0, 0, 45deg) is equivalent to rotate3d(1, 0, 0, -45deg).
+
+Using rotate3d() rotates an element by the given angle along multiple axes at once. If you want to rotate an element by different angles around multiple axes, you should use rotateX(), rotateY(), and rotate() or rotateZ() separately.
+
+
+
+perspective() Function
+=======================
+The perspective() function controls the foreshortening of an object when one end is tilted towards the viewer. Foreshortening is a specific way of drawing perspective; that is, simulating three dimensions when you only have two dimensions. With foreshortening, the end of objects that are tilted towards the viewer appear larger, and the end furthest from the viewer appears smaller. It mimics the distortion that occurs when you view an object up close versus viewing it at a distance.
+
+The more technical definition, pulled from the transforms specification (https://drafts.csswg.org/css-transforms/#funcdef-perspective), says that perspective() “creates a perspective projection matrix.” The definition continues: This matrix scales points in X and Y based on their Z value, scaling points with positive Z values away from the origin, and those with negative Z values towards the origin. Points on the Z=0 plane are unchanged.
+
+In practice, this means that perspective() will have a visible effect only when some of an object’s points have a non-zero Z-coordinate. Use it with another 3D function in a transform list (for example, transform: perspective(400px) rotateX(45deg)), or apply it to the child of a transformed parent.
+
+The perspective() function accepts a single argument. This argument must be a length greater than zero. Negative values are invalid, and the transform will not be applied. Lower values create a more exaggerated foreshortening effect.
+
+
+Higher values create a moderate amount of foreshortening. For example, perspective(500px) rotate3d(1,1,1,-45deg).
+
+
+Order really matters when working with the perspective() function. A good rule of thumb is to list it first, as we’ve done in the examples here. You can list it elsewhere in the transform list (for example, rotate3d(1,0,1,-45deg) perspective(100px)), but the resulting current transform matrix doesn’t create much of an effect.
+
+There’s also a point of diminishing returns with the perspective() function (and with the perspective property, for that matter). Increasing the argument’s value beyond a certain threshold will create little difference in how the element and its children are painted to the screen.
+
+
+Warning: The perspective() Function vs. the perspective Property
+==================================================================
+A word of caution: the transforms specification defines both a perspective() function and a perspective property. Though both are used to calculate the perspective matrix, they differ in how they’re used. The perspective property affects—and must be applied to—the containing element. It sets an imaginary distance between the viewer and the stage. The perspective() function, on the other hand, can be applied to elements as part of a transform list.
+
+
+Translating Depth with translateZ() and translate3d()
+=======================================================
+Earlier we discussed how to translate an element horizontally or vertically using translateX() and translateY(). We can also, however, translate along the Z-axis.
+
+There are two functions that allow us to do this: translateZ() and translate3d(). When combined with transitions, these functions make it possible to create interesting zoom effects.
+
+The translateZ() function accepts a single length parameter as its argument. Length units are the only valid units for this function; percentages won’t work. The translateZ() function shifts the object towards or away from the user by the specified number of pixels. Negative values shift the element or group away from the user, in effect shrinking it.
+
+Positive values shift the element towards the user where it appears larger. Sometimes the effect is to fill the entire viewport, appearing to engulf (sweep over) the user.
+If the value of translateZ() is large enough, the element will be disappear from view. It’s actually moved behind the viewer in this imagined 3D space. Similarly, if the value of
+ translateZ() is small enough, say translateZ(-40000px), the element will disappear from view because it is now “too far” from the user and too small to draw on screen. translate3d() is just a more concise way of translating in two or three directions at once. It accepts three arguments: one each for the X, Y, and Z directions. Translation values for the X and Y direction arguments may be lengths or percentages; however, its Z-direction argument (the third argument) must be a length value. Keep in mind that translateX(50%) translateY(10%) translateZ(100px) is the equivalent of translate3d(50%, 10%, 100px). Use translate3d when you want to translate more than one dimension, but want more concise code.
+
+
+Scaling the Z-dimension: scaleZ() and scale3d()
+=================================================
+We can also scale an object’s Z-dimension using the scaleZ() and scale3d() functions. The scaleZ() function transforms points along the Z-axis alone, while scale3d() lets us scale all three dimensions at once. Scaling the Z-dimension changes the depth of an object, but in some combinations can also be used to create zoom effects. Experiment with them and see.
+
+
+The scaleZ() function accepts a number as its argument. As with scaleX() and scaleY(), positive values greater than 1 increase the size of the element’s Z-dimension. Values between 0 and 1 decrease its size. Negative values between 0 and -1 decrease the element’s size along the Z-dimension, while values less than -1 increase it. Because these values are negative, however, the element and its children will be inverted. In Figure 6.35, the left die shows an element group with transform: scaleZ(0.5) applied. The box on the right has a transformation of scaleZ(-0.5) applied. Notice that positions of the sixdot face and single-dot face have been swapped in the example with a negative scale.
+
+
+The scale3d() function accepts three arguments, and all three arguments are required in order for this function to work. The first argument scales the X dimension. The second argument scales its Y dimension, and the third argument scales the Z dimension. As with translate3d(), the scale3d() function is just a more concise way to write transforms that scale in multiple dimensions. Rather than using scaleX(1.2) scaleY(5) scaleZ(2), for example, you could use scale3d(1.2, 5, 2).
+
+Transform functions are only part of what you need to create 3D transforms. You’ll also require a few more CSS properties. These properties manage how objects are drawn in a simulated three-dimensional space. Using them will make your 3D transforms more realistic.
+
+
+Creating Depth with the perspective Property
+============================================
+In order to make a 3D-transformed object look like it’s actually sitting in a threedimensional space, we must use the perspective property. The perspective property adjusts the distance between the drawing plane and the viewer. We’re still talking about a screen and the projection of three-dimensional coordinates into a two-dimensional space. But adding perspective to a containing element causes its children to have the appearance of sitting in a 3D space. Yes, you must apply perspective to a containing element.
+
+As with transform, perspective creates both a new containing block and a new stacking context when the value is something other than none. Along with the perspectiveorigin property, perspective is used to calculate the perspective matrix. We’ll cover perspective-origin in the next section.
+
+Aside from the none keyword, perspective also accepts a length as its value. Values must be positive (for example, 200px or 10em), and percentages will fail to work, as will negative values such as -20px.
+
+Larger values, on the other hand, make elements appear smaller. 
+
+
+Modifying the Point of View with perspective-origin
+===================================================
+If you’ve studied how to draw in perspective, the perspective-origin property will feel like old hat. To draw in perspective, you first make a point on your page or canvas. This point is known as the vanishing point. It’s the point in your drawing at which items will theoretically disappear from view.
+
+Next, draw a shape of your choosing. We’re going to keep this example simple, and use a rectangle.
+
+Step three is to draw a series of lines towards the vanishing point. These lines, also known as convergence lines, serve as guides for drawing shapes that are sized appropriately given their perceived distance from the viewer.
+
+The rectangles that appear closer to the viewer are larger. Those that appear further away are smaller
+
+This is essentially how the perspective-origin property works. It sets the coordinates of the vanishing point for the stage. Negative Y values give the impression that the viewer is looking down at the stage, while positive ones imply looking up from below it. Negative X values mimic the effect of looking from the right of the stage. Positive X values mimic looking from its left. 
+
+As with transform-origin, the initial value of perspective-origin is 50% 50%—the center point of the containing element. Values for perspective–origin may be lengths or percentages.
+
+Positioning keywords—left, right, top, bottom, and center—are also valid. The center keyword is the same as 50% 50%. Both bottom and right compute to positions of 100% along the vertical and horizontal positions respectively. The top and left keywords compute to vertical and horizontal positions of 0%. In all cases, perspective-origin is an offset from the top-left corner of the container.
+
+
+
+Preserving Three Dimensions with transform-style
+===================================================
+As you work with 3D transforms, you may stumble across a scenario in which your transforms fail to work—or they work, but only for one element. This is caused by grouping property values. Some combinations of CSS properties and values require the browser to flatten the representation of child elements before the property is applied. These include opacity when the value is less than 1 and overflow when the value is something other than visible.
+
+
+Here’s the counterintuitive part: transform and perspective also trigger this flattening when their value is something other than none. In effect, this means that child elements stack according to their source order if they have the same Z-index value, regardless of the transform applied. Consider the following source:
+
+<div class="wrapper">
+   <figure>a</figure>
+   <figure>f</figure>
+</div>
+
+And the following CSS:
+
+.wrapper {
+   perspective: 2000px;
+   perspective-origin: 50% -200px;
+} 
+
+.wrapper figure {
+   position: absolute;
+   top: 0;
+   width: 200px;
+   height: 200px;
+} 
+
+.wrapper figure:first-child {
+   transform: rotateY(60deg) translateZ(191px);
+   background: #3f51b5;
+} 
+
+.wrapper figure:nth-child(2) {
+   transform: rotateY(120deg) translateZ(191px);
+   background: #8bc34a;
+}
+
+In this example, since we’ve applied perspective: 1000px to .wrapper, our figure elements will be flattened. Since both elements also have the same calculated z-index, .wrapper figure:nth-child(2) will be the topmost element in the stack. Note that .wrapper figure:first-child is still visible. It’s just not the topmost element. Here the computed value of transform-style will be flat.
+
+
+To work around this, we set the value of transform-style to preserve-3d. Let’s update our CSS:
+.wrapper {
+   perspective: 2000px;
+   perspective-origin: 50% -200px;
+   transform-style: preserve-3d;
+} 
+
+.wrapper figure {
+   position: absolute;
+   top: 0;
+   width: 200px;
+   height: 200px;
+} 
+
+.wrapper figure:first-child {
+   transform: rotateY(60deg) translateZ(191px);
+   background: #3f51b5;
+} 
+
+.wrapper figure:nth-child(2) {
+   transform: rotateY(120deg) translateZ(191px);
+   background: #8bc34a;
+}
+
+Now .wrapper figure:first-child becomes the topmost element, as our rotateY functions suggest.
+
+In the vast majority of cases, you should use transform-style: preserve-3d. Use transform-style: flat only when you want to collapse child elements into the same layer as their parent.
+
+
+Showing Both Faces with the backface-visibility Property
+=========================================================
+By default, the back face of an element is a mirror image of its front face. With stacked or overlapping elements, the reverse side is always visible to the viewer, regardless of which side sits at the top of the stack.
+
+Sometimes, however, we don’t want this back side to be visible. 
+
+The initial value of backface-visibility is visible. Rear faces will always be shown.
+
+But if we want to hide a visible back face, we can use backface-visibility: hidden instead.
+
+Let’s create our playing card. First our HTML:
+
+<div class="card">
+   <div class="side front">
+      <div class="suit">&clubs;</div>
+   </div>
+   <div class="side back"></div>
+</div>
+
+In this markup, we’ve set up front and back sides for a card container. Here’s our card CSS:
+
+.card {
+   border: 1px solid #ccc;
+   height: 300px;
+   position: relative;
+   transition: transform 1s linear;
+   transform-style: preserve-3d;
+   width: 240px;
+}
+
+The important part to notice here is transform-style: preserve-3d. Again, we’ll need this property to prevent the flattening that occurs by default when we use the transform property. Now let’s set up the CSS for the front and back sides of our cards:
+
+
+/* Applies to both child div elements */
+.side {
+   height: inherit;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: inherit;
+}
+
+.front {
+   transform: rotateY(180deg);
+}
+
+.back {
+   background: rgba(204, 204, 204, 0.8);
+}
+
+.suit {
+   line-height: 1;
+   text-align: center;
+   font-size: 300px;
+}
+
+Both sides are absolutely positioned, so they’ll stack according to their source order. We’ve also flipped the .front sides around the Y-axis by 180°.
+
+
+Both sides of the card are visible at the same time. Let’s revise our CSS slightly. We’ll add backface-visibility: hidden to our .side rule set:
+
+.side {
+   backface-visibility: hidden;
+   height: inherit;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: inherit;
+}
+
+Now, div.front is hidden. If you see a gray box and no club symbol, it’s working as expected.
+
+The utility of backface-visibility: hidden becomes a little clearer when we flip div.card. Let’s add a .flipped class to our CSS:
+
+.flipped {
+   transform: rotateY(180deg);
+}
+
+Now when we flip our card over, we see div.front, and only div.front.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

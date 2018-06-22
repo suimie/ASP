@@ -1,0 +1,92 @@
+﻿@charset "utf-8";
+/*CSS document for the header of Tourism Travel Blog Web Site*/
+/*Developed by Suim Park */
+/*Script date: October 13, 2017*/
+
+ul {
+    list-style-image:url("../../images/icon-plus.png");
+    line-height:1.6em;
+}
+
+table {
+    border-spacing: 0;
+}
+th {
+    padding:10px;
+}
+
+tr.head th {
+    font-family:Arial;
+    background-color:#90b4d6;
+    border-bottom:2px solid#547ca0;
+    border-right:1px solid #749abe;
+    border-top:1px solid #90b4d6;
+    text-align:center;
+    text-shadow:-1px -1px 1px #666;
+    color:white;
+    letter-spacing:0.15em;
+}
+
+th:not(.head) {
+    text-align:left;
+}
+
+/*
+th:not(.head), td {
+    border:1px solid black;
+}
+*/
+
+tr.head th:first-child {
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    border-top-left-radius: 5px;
+}
+
+tr.head th:last-child {
+    -webkit-border-top-right-radius:5px;
+    -moz-border-radius-topright:5px;
+    border-top-right-radius:5px;
+}
+
+
+tr {
+    background-color: #b9daf7;
+}
+
+tr.even td, tr.even th {
+    background-color: #547ca0;
+}
+
+
+
+/*
+tr:nth-child(odd) {
+    background-color: #e8eff5;
+}
+
+tr:nth-child(even) {
+    background-color: #b9daf7;
+}
+*/
+fieldset {
+    width:50%;
+    background-color:palegreen;
+    border:5px solid red;
+    border-radius:5px 5px 5px 5px;
+}
+
+
+input:hover, input:focus{
+    background-color:#f3f3be;
+}
+
+input {
+    margin-bottom: 10px;
+    height:30px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+fieldset:hover {
+    background-color:#90b4d6;
+}

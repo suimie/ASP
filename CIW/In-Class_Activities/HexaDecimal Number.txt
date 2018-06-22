@@ -1,0 +1,97 @@
+0 - 9
+Base 2
+Base 10
+Base 16 Hexa(decimal)
+
+Conver tDecimal to Hexadecimal
+
+Steps:
+1. divide the decimal number by 16. treat the division as an integer division
+2. write dowm the remiander (in hexa)
+3. divide the result by 16. treat the division as an integer division
+4. repeat step 2 and 3 until the result equals to zero
+5. the hexa value is the digit sequence of the remainders from the last to first 
+
+Hexa	0	1	2	3	4	5	6	7	8	9	A	B 	C	D	E	F
+Decimal 0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15
+
+convert the number 1128 decimal to hexadecimal
+	Numeber			Result		Remainder
+1. 1128 / 16		70			8
+2. 70 / 16			4			6
+4. 4 / 16			0			4
+5. Answer: 468
+
+Arithmetic operators: () [] {} 
+						* /
+						+ -
+						% Modulus (Remaider of a division)
+
+						1128 % 16 = 8
+						
+♦ convert the number 256 decimal to hexadecimal
+answer: 100
+
+♦ convert the number 921 decimal to hexadecimal
+Answer: 399
+
+♦ convert the number 188 decimal to hexadecimal
+Answer: 188 / 16 = 11 and remainder 12 decimal (C)
+		11 / 16	= 0	and remainder 11 (B)
+		BC
+
+♦ convert the number 100 decimal to hexadecimal
+Answer: 64
+
+♦ convert the number 590 decimal to hexadecimal
+Answer: 24E
+
+convert hexadecimal to decimal
+==============================
+Steps:
+1. get the last digit of the hexa number, call this digit the currentDigit
+2. make a vriable, let's call it power. set the power to zero
+3. multiply the currentDigit with (16^ power), store the reult
+4. increment the power by 1
+5. set the currentDigit to the previous digit of the hexa number
+6. repeat from step 3 until all digits have been multiplied
+7. sum the results from step 3 to get the answer number
+
+♦ convert the number 1128 hexa to decimal
+	Hexa number		Result
+1. 8 x (16^0)		   8
+5. 2 x (16^1)		  32
+   1 x (16^2)		 256
+   1 x (16^3)		4096
+					-----
+					4392
+
+	8x(16^0) + 2x(16^1) + 1x(16^2) + 1x(16^3)
+   
+♦ convert the number 589 hexa to decimal
+Answer: 1417
+
+♦ convert the number FA8 hexa to decimal
+Answer: 4008
+
+♦ convert the number 8F hexa to decimal
+Answer: 143
+
+♦ convert the number A0 hexa to decimal
+Answer: 160
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

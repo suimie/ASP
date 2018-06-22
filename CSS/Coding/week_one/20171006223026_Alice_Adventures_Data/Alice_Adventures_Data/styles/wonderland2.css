@@ -1,0 +1,64 @@
+﻿@charset "utf-8";
+
+#container {
+    width: 80%;
+    border: 10px solid #c007f6;
+    background: #f7f3c7;
+    padding:10px;
+    margin:0 auto;
+}
+
+body {
+    font: 12px serif;
+    line-height: 2;
+}
+
+.docTitle {
+    color:blue;
+    font-size:2em;
+    background:white;
+}
+
+.author {
+    letter-spacing:5px;
+    border-bottom:2px solid blue;
+    padding-bottom:8px;
+}
+
+.chapterNumber {
+    color:red;
+    background:#e4e0e0;
+    display:inline-block;
+}
+
+.chapterTitle {
+    color:deeppink;
+    font-weight:bold;
+}
+
+.introduction::first-line {
+    text-transform:capitalize;
+    color:orange;
+}
+
+.firstLetter::first-letter {
+    background:yellow;
+    color:blue;
+    font-family:'Old English Text MT';
+    font-size:20px;
+    border:4px solid black;
+    padding:2px;
+}
+
+p em {
+    background:#ecb9fb;
+    font-style:italic;
+}
+
+.copyright {
+    background:#ecb9fb;
+}
+
+.centerAlign {
+    text-align:center;
+}

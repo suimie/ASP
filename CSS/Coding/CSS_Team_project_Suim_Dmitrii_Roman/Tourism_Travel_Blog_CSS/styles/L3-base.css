@@ -1,0 +1,88 @@
+﻿@charset "utf-8";
+/*CSS document for Tourism Travel Blog, Layout #3*/
+/*Developed by Roman Shaiko, Suim Park, Dmitrii Kudrik*/
+/*Script date: October 13, 2017*/
+
+/*Classes*/
+img.fig1 {
+    margin-left: 10px;
+    float:right;
+    width:50%;
+}
+img.fig2 {
+    margin-right: 10px;
+    float:left;
+    width:50%;
+}
+/*Styling article*/
+#article {
+margin:0 0 10px 0; 
+padding: 0 10px; 
+height:auto; 
+border:0px solid #0094ff; 
+float:left; 
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+#article img {
+    border-radius:15px;
+}
+#source {
+    text-align:right;
+}
+/*Styling comment form*/
+#comment_container {
+    border: 0px solid #dcdbdb;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#comment_form fieldset {
+    background-color: #eee;
+    color: darkblue;
+}
+
+/*Styling right sidebar*/
+#rightSidebar {
+    padding:25px 5px 0 33px; 
+    height:auto;
+    margin: 10px 15px 0 0;
+    width: 32%;
+    border-left: 1px solid #aaa;
+    float: right;
+    margin-left: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#rightSidebar a {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+#img_recommended {
+    width: 100%;
+    margin: 0 0 0 0;
+}
+aside img {
+    border-radius: 15px;
+}
+
+.sidebar {
+    transform:skewY(-7deg);
+        
+    transform-style: preserve-3d;
+}
+
+    .sidebar aside {
+        transition: transform .5s;
+    }
+
+        .sidebar aside:hover {
+            transform: skewY(7deg);
+            transition: transform .5s;
+        }
+/*Styling images of continents*/
+#cont1, #cont2 {
+    width: 84%;
+}
+#cont3, #cont4, #cont5 {
+    width:95%;
+}

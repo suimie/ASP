@@ -9,8 +9,8 @@ namespace OnlineShopPhono.ViewModel
 {
     public class PhoneFormViewModel
     {
-        public Phone Phone;
-        public IEnumerable<Brand> Brands;
-        public IEnumerable<PhoneType> PhoneTypes;
+        public Phone Phone { get; set; }
+        public IEnumerable<Brand> Brands { get; set; }
+        public IEnumerable<PhoneType> PhoneTypes { get; set; }
     }
 }

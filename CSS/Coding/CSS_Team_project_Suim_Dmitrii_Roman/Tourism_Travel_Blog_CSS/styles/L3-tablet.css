@@ -1,0 +1,44 @@
+﻿@charset "utf-8";
+/*CSS document for Tourism Travel Blog, Layout #3*/
+/*Developed by Roman Shaiko, Suim Park, Dmitrii Kudrik*/
+/*Script date: October 13, 2017*/
+#main {
+    width: 90%;
+    margin: 0 auto;
+    
+}
+
+aside {
+    display: none;
+}
+
+
+article {
+    width: 100%;
+    height:auto;
+}
+
+#comment_container {
+    margin: 15px auto;
+    padding: 10px 10px;
+    width: 100%;
+    text-align: center;
+    clear:left;
+}
+#comment_form fieldset {
+    width: 360px;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+#form_table {
+    width:300px;
+}
+
+#LogoPic {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+    bottom: 50px;
+    left: 90%;
+}

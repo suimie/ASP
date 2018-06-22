@@ -1,0 +1,33 @@
+Intel motherboard 
+====================
+Intel DX 79SI Extreme series motherboard with the individual components identified
+
+1. RAM slots. This motherboard includes eight dual in-line memory module (DIMM) slots for double data rate type 3 (DDR3) memory.
+
+2. SATA ports. Four SATA 3 GB/s ports and two SATA 6.0 GB/s ports are included. It’s not apparent in the figure, but the 3 GB/s ports are black and the 6 GB/s ports are blue, so that they can be distinguished from each other.
+
+3. Intel X79 Express Chipset. This chipset uses the Direct Media Interface (DMI) as an interface to the CPU.
+
+4. Voltage regulators covered by heat sinks. The heat sinks keep the voltage regulators cool. One is providing power for the CPU, and one is providing power to the chipset.
+
+5. CPU socket. This socket is for an Intel Core i7 processor with either four or six cores.
+
+6. One PCI expansion slot. This is for earlier-version PCI cards.
+
+7. Three PCI e 3.0 x 16 expansion slots. These are for newer PCIe boards.
+
+8. Power-on self test (POST) decoder. This displays different numbers as the system progresses through the startup cycle. It can be used for troubleshooting the motherboard in place of a PCI or PCIe card used for providing the same information.
+
+9. USB ports 3.0 ports. These are accessible via the back panel. Other connectors on the board can be routed to USB connectors on the front panel.
+
+10. Back panel ports. This group includes two RJ-45 network interface connections, one IEEE 1394 firewall connection, and six USB 2.0 connections.
+
+11. Audio back panel ports. This group includes multiple connections for different types of audio, including 7.1 systems.
+
+12. CMOS battery. This motherboard is using a circular battery, but the battery is inserted sideways into a battery slot.
+
+13. PCI e x1 expansion slots. These are for smaller x1 cards.
+
+
+
+

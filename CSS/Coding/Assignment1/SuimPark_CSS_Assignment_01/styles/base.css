@@ -1,0 +1,16 @@
+﻿@charset "utf-8";
+/* CSS document for basic design for every html */
+/* Script Date: Octorber 10, 2017 */
+/* Developed by : Suim Park */
+
+.alignLeft {
+    text-align:left;
+}
+
+.alignRight {
+    text-align: right;
+}
+
+.alignCenter {
+    text-align: center;
+}

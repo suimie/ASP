@@ -1,0 +1,94 @@
+﻿@charset "utf-8";
+/*CSS document for the header of Tourism Travel Blog Web Site*/
+/*Developed by Roman Shaiko, Suim Park, Dmitrii Kudrik*/
+/*Script date: October 13, 2017*/
+body {
+    margin: 0;
+    padding: 0;
+    overflow:scroll;
+    width:100%;
+}
+#container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    padding: 0;
+    margin: 0 auto;
+    border-bottom: 1px solid #aaa;
+    background-color: #eeeeee;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#hcontainer {
+    margin: 0 auto;
+    color:darkblue;
+}
+
+#slogan {
+    margin: 0;
+    padding:10px 0;
+    font-size:1.1em;
+    font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    font-style: italic;
+}
+
+
+    #search button {
+        font-size: 0.9em;
+        color: darkblue;
+        border: none;
+        background-color: #eee;
+    }
+    #search input {
+        text-align: center;
+        color: darkblue;
+        border: none
+    }
+
+#main_list {
+    display: block;
+    width: 100%;
+}
+
+#main_list li:not([class="activeButton"]) {
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+    background: linear-gradient(#A5BFF4, #CFE2F7, wheat, rgb(248, 201, 115), #9EECA9);
+    border: 1px solid #888;
+    text-decoration: none;
+}
+
+#main_list .activeButton {
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+    background: linear-gradient(#bfdaf7, wheat,#F1B36C);
+    border: 1px solid darkblue;
+    text-decoration: underline;
+}
+
+    /*styling the nav */
+#main_list li a:link {
+    color: darkblue;
+    text-decoration: none;
+}
+
+#main_list li a:visited {
+    color: darkblue;
+    text-decoration: none;
+}
+#main_list li:hover {
+    color: darkblue;
+    border: 1px solid darkblue;
+    background: linear-gradient(#bfdaf7, wheat,#F1B36C);
+    text-decoration: underline;
+}
+
+#main_list li a:active {
+    color: darkblue;
+    text-decoration: none;
+}

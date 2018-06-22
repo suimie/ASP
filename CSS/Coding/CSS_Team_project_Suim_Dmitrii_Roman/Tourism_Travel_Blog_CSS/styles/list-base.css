@@ -1,0 +1,165 @@
+﻿@charset "utf-8";
+
+/* list-base.css*/
+/* CSS document for Tourism Travel Blog */
+/* Script Date: Octorber 12, 2017 */
+/*Developed by Roman Shaiko, Suim Park, Dmitrii Kudrik*/
+
+/* styling for top image and text */
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    src: url("https://fonts.googleapis.com/css?family=Open+Sans");
+}
+
+
+.list-main {
+    width: 90%;
+    margin: 10px auto auto auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.list-top {
+    position:relative;
+    /*
+    top:8px;
+    right:16px;*/
+    margin:8px auto;
+}
+
+.list-top-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.list-top-image img {
+    width: 100%;
+}
+
+.list-top-text a {
+    text-decoration: none;
+    color:white;
+}
+
+/* styling for each title in the list */
+.list-image img {
+    width: 100%;
+}
+
+.list-lists > div {
+    width: 95%;
+    height: auto;
+    margin: auto;
+    background-color: white;
+}
+
+
+.list-lists > div a {
+    text-decoration: none;
+}
+
+.list-lists > div {
+    border-bottom: 5px solid #aaa;
+}
+
+.list-lists > div:last-child {
+    border:none;
+}
+
+.list-image {
+    width:280px;
+    height:auto;
+    margin:0 auto;
+}
+
+
+.general-texts {
+    font-size:medium;
+    line-height:32px;
+    padding:5px;
+}
+
+.general-texts p {
+    text-indent:20px;
+}
+
+.move-page table {
+    margin: 0 auto;
+    font-size: 0.7em;
+}
+
+.move-page table td {
+    padding-right: 10px;
+}
+
+.move-page table td a {
+    color:black;
+}
+    
+.move-page img {
+    width: 20px;
+    height: auto;
+}
+
+.contact-main form {
+    width: 340px;
+    height: auto;
+    margin: 0 auto 30px auto;
+}
+
+
+.contact-main form input[type=text],
+.contact-main form input[type=email],
+.contact-main form textarea,
+.contact-main form select {
+    width: 100%;
+}
+
+.contact-main form input[type=submit],
+.contact-main form input[type=reset] {
+    width:167px;
+}
+
+
+fieldset {
+    width: 340px;
+    border-radius:30px;
+    margin:auto;
+    margin-bottom:30px;
+    background-color:#f8e7e7;
+    border:4px outset #c2bfbf
+}
+
+
+    fieldset form input {
+        height: 25px;
+        border: 2px outset;
+    }
+
+    fieldset form input[type="submit"], fieldset form input[type="reset"]{
+        background-color:#92a9b9;
+        border-style:outset;
+    }
+    
+    fieldset form input:required:invalid, fieldset form textarea:required:invalid {
+        background-image: url("../images/error.png");
+        background-repeat: no-repeat;
+        background-position: 98% center;
+        background-color: lightgoldenrodyellow;
+    }
+
+    fieldset form input:required:valid, fieldset form textarea:required:valid {
+        background-image: url("../images/accept.png");
+        background-repeat: no-repeat;
+        background-position: 98% center;
+    }
+
+fieldset form input[type="email"]:required:invalid {
+    background-image: url("../images/email_error.png")
+}
+
+fieldset form input[type="email"]:required:invalid {
+    background-image: url("../images/email.png")
+}

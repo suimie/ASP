@@ -1,0 +1,12 @@
+﻿@charset "utf-8";
+
+
+
+#Mcontainer {
+    margin: 0 auto;
+    width: 980px;
+}
+#left_col, #right_col {
+    width: 43%;
+    height:470px; 
+}

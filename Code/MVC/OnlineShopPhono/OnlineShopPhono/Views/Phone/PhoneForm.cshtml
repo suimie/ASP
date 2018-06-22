@@ -24,7 +24,7 @@ else
     <div>
         @Html.LabelFor(m => m.Phone.BrandId)
         @Html.DropDownListFor(m => m.Phone.BrandId,
-                                new SelectList(Model.Brands, "Id", "BrandName"),
+                                new SelectList(Model.Brands, "ID", "BrandName"),
                                 "Please select a media type",
                                 new { @class = "form-control" })
 
@@ -42,7 +42,7 @@ else
     <div>
         @Html.LabelFor(m => m.Phone.PhoneTypeId)
         @Html.DropDownListFor(m => m.Phone.PhoneTypeId,
-                                new SelectList(Model.PhoneTypes, "Id", "Name"),
+                                new SelectList(Model.PhoneTypes, "ID", "Name"),
                                 "Please select a phone type",
                                 new { @class = "form-control" })
     </div>
