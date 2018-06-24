@@ -1,0 +1,36 @@
+﻿@model OnlineShopPhono.Models.Phone
+@{
+    ViewBag.Title = "Delete Phone";
+}
+
+<h2>Delete Record</h2>
+<h3>Are you sure you want to delete this phone record?</h3>
+
+<div>
+    <dl>
+        <dt>@Html.DisplayNameFor(m => m.PhoneName)</dt>
+        <dd>@Html.DisplayFor(m => m.PhoneName)</dd>
+
+        <dt>@Html.DisplayNameFor(m => m.Brand.BrandName)</dt>
+        <dd>@Html.DisplayFor(m => m.Brand.BrandName)</dd>
+
+        <dt>@Html.DisplayNameFor(m => m.DateRelease)</dt>
+        <dd>@Html.DisplayFor(m => m.DateRelease)</dd>
+
+        <dt>@Html.DisplayNameFor(m => m.ScreenSize)</dt>
+        <dd>@Html.DisplayFor(m => m.ScreenSize)</dd>
+
+        <dt>@Html.DisplayNameFor(m => m.PhoneType.Name)</dt>
+        <dd>@Html.DisplayFor(m => m.PhoneType.Name)</dd>
+
+    </dl>
+</div>
+
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        <input type="submit" value="Yes Delete" class="btn btn-default" /> |
+        @Html.ActionLink("Back to Phone List", "Index", "Phone")
+    </div>
+}

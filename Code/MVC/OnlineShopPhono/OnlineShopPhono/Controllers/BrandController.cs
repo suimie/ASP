@@ -19,11 +19,34 @@ namespace OnlineShopPhono.Controllers
             _context = new ApplicationDbContext();
         }
         // GET: Brand
-        public ActionResult Index()
+        public ActionResult Index(string SearchString, string sort)
         {
-            var brands = _context.Brands.ToList();
+            // Check for user
+            string view = "ReadOnlyList";
+            if (User.Identity.IsAuthenticated)
+                view = "List";
+            ViewBag.SortByBrandName = String.IsNullOrEmpty(sort) ? "name_desc" : "";
 
-            return View(brands);
+            var brands = _context.Brands.AsQueryable();
+
+            if (!String.IsNullOrEmpty(SearchString))
+            {
+                brands = brands.Where(c => c.BrandName.Contains(SearchString));
+                //brands = (from c in brands where c.BrandName.Contains(SearchString) select c);
+                ViewBag.search = SearchString;
+
+            }
+
+            if (sort == "name_desc")
+            {
+                brands = brands.OrderByDescending(b => b.BrandName);
+            }
+            else
+            {
+                brands = brands.OrderBy(b => b.BrandName);
+            }
+
+            return View(view, brands.ToList());
         }
 
         public ActionResult AvailablePhones(int id)
@@ -50,6 +73,7 @@ namespace OnlineShopPhono.Controllers
             return View(brand);
         }
 
+        [Authorize]
         public ActionResult New()
         {
             var brand = new Brand();
@@ -86,6 +110,7 @@ namespace OnlineShopPhono.Controllers
             return RedirectToAction("Index", "Brand");
         }
 
+        [Authorize]
         public ActionResult Edit(int id)
         {
             var brandInDB = _context.Brands.Single(m => m.ID == id);
@@ -96,14 +121,28 @@ namespace OnlineShopPhono.Controllers
             return View("BrandForm", brandInDB);
         }
 
+
+        [Authorize]
+        public ActionResult Delete(int? id)
+        {
+            var brand = _context.Brands
+                .SingleOrDefault(c => c.ID == id);
+
+            if (brand == null)
+                return HttpNotFound();
+
+            return View(brand);
+        }
+
+        [HttpPost]
         public ActionResult Delete(int id)
         {
-            var brandInDB = _context.Brands.Single(m => m.ID == id);
+            var brandInDB = _context.Brands.Find(id);
 
             _context.Brands.Remove(brandInDB);
             _context.SaveChanges();
 
-            return RedirectToAction("Index", "Brand");
+            return RedirectToAction("Index");
         }
 
     }

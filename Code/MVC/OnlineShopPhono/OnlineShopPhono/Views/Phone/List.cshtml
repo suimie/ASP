@@ -1,0 +1,46 @@
+﻿@model IEnumerable<OnlineShopPhono.Models.Phone>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Available Phones</h2>
+@Html.ActionLink("New Mobile Device", "New", "Phone", null, new { @class = "btn btn-primary", style = "margin-bottom:20px" })
+
+@if (!Model.Any())
+{
+    <p>There are no phones available.</p>
+}
+else
+{
+    using (Html.BeginForm("Index", "Phone", FormMethod.Get))
+    {
+        <p>
+            Find customer by Name: @Html.TextBox("SearchString")
+            <input type="submit" value="Search" />
+        </p>
+    }
+
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>@Html.ActionLink("Phone Name", "Index", "Phone", new { sort = ViewBag.SortByPhoneName, SearchString = ViewBag.SearchPhone }, null)</th>
+                <th>@Html.ActionLink("Date Released", "Index", "Phone", new { sort = ViewBag.SortByDateReleased, SearchString = ViewBag.SearchPhone }, null)</th>
+                <th>Functions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var phone in Model)
+            {
+                <tr>
+                    <td>@phone.PhoneName</td>
+                    <td>@phone.DateRelease.ToShortDateString()</td>
+                    <td>
+                        @Html.ActionLink("Details", "Details", "Phone", new { id = phone.ID }, null) |
+                        @Html.ActionLink("Edit", "Edit", "Phone", new { id = phone.ID }, null) |
+                        @Html.ActionLink("Delete", "Delete", "Phone", new { id = phone.ID }, null)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

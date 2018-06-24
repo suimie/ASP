@@ -1,0 +1,53 @@
+﻿@model IEnumerable<OnlineShopPhono.Models.Brand>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Available Brands</h2>
+
+@Html.ActionLink("New Brand", "New", "Brand", null, new { @class = "btn btn-primary", style = "margin-bottom:20px" })
+
+
+@if (Model.Any())
+{
+    using (Html.BeginForm("Index", "Brand", FormMethod.Get))
+    {
+        <p>
+            Find customer by Name: @Html.TextBox("SearchString")
+            <input type="submit" value="Search" />
+        </p>
+    }
+}
+
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>@Html.ActionLink("Brand Name", "Index", "Brand", new { sort = ViewBag.SortByBrandName, SearchString = ViewBag.search }, null)</th>
+            <th>Functions</th>
+        </tr>
+    </thead>
+    @if (!Model.Any())
+    {
+        <p>There are no brands available.</p>
+    }
+    else
+    {
+        <tbody>
+            @foreach (var brand in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.ActionLink(@brand.BrandName, "AvailablePhones", "Brand", new { id = brand.ID }, null)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Details", "Details", "Brand", new { id = brand.ID }, null) |
+                        @Html.ActionLink("Edit", "Edit", "Brand", new { id = brand.ID }, null) |
+                        @Html.ActionLink("Delete", "Delete", "Brand", new { id = brand.ID }, null)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    }
+</table>
+

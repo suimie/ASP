@@ -20,11 +20,40 @@ namespace OnlineShopPhono.Controllers
         }
 
         // GET: Phone
-        public ActionResult Index()
+        public ActionResult Index(String SearchString, String sort)
         {
-            var phones = _context.Phones.ToList();
+            // Check for user
+            string view = "ReadOnlyList";
+            if (User.Identity.IsAuthenticated)
+                view = "List";
 
-            return View(phones);
+            ViewBag.SortByPhoneName = String.IsNullOrEmpty(sort) ? "name_desc" : "";
+            ViewBag.SortByDateReleased = (sort == "date") ? "date_desc" : "date";
+
+            var phones = _context.Phones.AsQueryable();
+
+            if (!String.IsNullOrWhiteSpace(SearchString))
+            {
+                phones = phones.Where(p => p.PhoneName.Contains(SearchString));
+                ViewBag.SearchPhone = SearchString;
+            }
+
+            switch (sort)
+            {
+                case "name_desc":
+                    phones = phones.OrderByDescending(p => p.PhoneName);
+                    break;
+                case "date":
+                    phones = phones.OrderBy(p => p.DateRelease);
+                    break;
+                case "date_desc":
+                    phones = phones.OrderByDescending(p => p.DateRelease);
+                    break;
+                default:
+                    phones = phones.OrderBy(p => p.PhoneName);
+                    break;
+            }
+            return View(view, phones.ToList());
         }
 
         public ActionResult Details(int id)
@@ -40,6 +69,7 @@ namespace OnlineShopPhono.Controllers
             return View(phone);
         }
 
+        [Authorize]
         public ActionResult New()
         {
             var viewModel = new PhoneFormViewModel()
@@ -55,6 +85,7 @@ namespace OnlineShopPhono.Controllers
             return View("PhoneForm", viewModel);
         }
 
+        [Authorize]
         public ActionResult Edit(int id)
         {
             var phoneInDB = _context.Phones.Single(m => m.ID == id);
@@ -110,15 +141,33 @@ namespace OnlineShopPhono.Controllers
 
             return RedirectToAction("Index", "Phone");
         }
+
+        [Authorize]
+        public ActionResult Delete(int? id)
+        {
+            var phone = _context.Phones
+                .Include(m => m.Brand)
+                .Include(m => m.PhoneType)
+                .SingleOrDefault(c => c.ID == id);
+
+            if (phone == null)
+                return HttpNotFound();
+
+            return View(phone);
+        }
+
+        [HttpPost]
         public ActionResult Delete(int id)
         {
-            var phoneInDB = _context.Phones.Single(m => m.ID == id);
+            var phoneInDB = _context.Phones.Find(id);
 
             _context.Phones.Remove(phoneInDB);
             _context.SaveChanges();
 
             return RedirectToAction("Index", "Phone");
         }
+
+
     }
 
 }
