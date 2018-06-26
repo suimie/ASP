@@ -1,0 +1,27 @@
+﻿@model IEnumerable<SurveyOnline.Models.Survey>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Survey Title
+        </th>
+    </tr>
+
+@foreach (var survey in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink(survey.Title, "Answer", "AnswerSurvey", new { surveyId = survey.Id }, null)
+        </td>
+    </tr>
+}
+
+</table>

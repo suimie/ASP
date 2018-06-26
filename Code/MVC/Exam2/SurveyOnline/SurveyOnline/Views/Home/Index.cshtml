@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h1>Online Surveying System</h1>
+<div >
+    <img src="~/Images/answer-surveys.png" />
+    @Html.ActionLink("Back to List", "Index")
+    <a href="@Url.Action("Index", "AnswerSurvey")">
+        <img src="~/Images/answer-surveys.png" style="width:90%;margin:auto;padding-bottom:10px" />
+    </a>
+
+</div>

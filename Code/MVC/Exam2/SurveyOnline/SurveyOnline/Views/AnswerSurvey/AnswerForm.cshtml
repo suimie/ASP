@@ -1,0 +1,48 @@
+﻿@model SurveyOnline.ViewModels.AnswerFormViewModel
+
+@{
+    ViewBag.Title = "AnswerForm";
+}
+
+<h2>@Model.Survey.Title</h2>
+
+@using (Html.BeginForm("Save", "AnswerSurvey")) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Please answer the following survey question:</h4>
+        @Html.HiddenFor(m => m.Response.SurveyId)
+       <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Model.Survey.SurveyQuestion
+            @Html.TextBoxFor(m => m.Response.SurveyAnswer, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Survey.SurveyQuestion)
+        </div>
+        <h5>Responder Information:</h5>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Response.ResponderName)
+            @Html.TextBoxFor(m => m.Response.ResponderName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Response.ResponderName)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Response.Email)
+            @Html.TextBoxFor(m => m.Response.Email, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Response.Email)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Response.Phone)
+            @Html.TextBoxFor(m => m.Response.Phone, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Response.Phone)
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-10">
+                <input type="submit" value="Submit Answer" class="btn btn-primary" />
+                @Html.ActionLink("Back to List", "Index", null, new { @class="btn btn-primary" })
+            </div>
+        </div>
+    </div>
+}
+
